@@ -1,0 +1,289 @@
+body{
+  background-color: #fffad2;
+}
+.desktop-lugares {
+  background-color: #fffad2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+ }
+ 
+ .desktop-lugares .div {
+  background-color: #fffad2;
+  width: 1920px;
+  height: 1140px;
+  position: relative;
+ }
+ 
+ .desktop-lugares .default {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+ }
+ 
+ .desktop-lugares .breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+ }
+ 
+ .desktop-lugares .home {
+  position: relative;
+  width: 24px;
+  height: 24px;
+ }
+ 
+ .desktop-lugares .page {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #001b0a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25.6px;
+  white-space: nowrap;
+ }
+ 
+ .desktop-lugares .overlap {
+  position: absolute;
+  width: 511px;
+  height: 68px;
+  top: 115px;
+  left: 68px;
+ }
+ 
+ .desktop-lugares .group {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 7px;
+  left: 467px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  border-color: var(--grey-15);
+ }
+ 
+ .desktop-lugares .image {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 5px;
+  left: 2px;
+  object-fit: cover;
+ }
+ 
+ .desktop-lugares .text-wrapper {
+  position: absolute;
+  width: 489px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 51.2px;
+ }
+ 
+ .desktop-lugares .element-preferecencia {
+  position: absolute;
+  width: 389px;
+  height: 360px;
+  top: 280px;
+  left: 93px;
+ }
+ 
+ .desktop-lugares .overlap-group {
+  position: relative;
+  width: 387px;
+  height: 360px;
+  background-color: #fffad2;
+  border-radius: 25px;
+  border: 1px solid;
+  border-color: #000000;
+ }
+ 
+ .desktop-lugares .image-wrapper {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 291px;
+  left: 74px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  border-color: var(--grey-15);
+ }
+
+ .desktop-lugares .image-wrapper2 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 291px;
+  left: 300px;
+ }
+ 
+ .desktop-lugares .img {
+  width: 26px;
+  height: 26px;
+  top: 3px;
+  left: 1px;
+  position: absolute;
+  object-fit: cover;
+ }
+ 
+ .desktop-lugares .text-wrapper-2 {
+  position: absolute;
+  width: 122px;
+  top: 293px;
+  left: 132px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25.6px;
+  white-space: nowrap;
+ }
+ 
+ .desktop-lugares .image-2 {
+  width: 310px;
+  height: 248px;
+  top: 30px;
+  left: 38px;
+  position: absolute;
+  object-fit: cover;
+ }
+ 
+ .desktop-lugares .group-2 {
+  position: absolute;
+  width: 26px;
+  height: 23px;
+  top: 293px;
+  left: 275px;
+  background-image: url(./img/icon-share-4.png);
+  background-size: 100% 100%;
+ }
+ 
+ .desktop-lugares .overlap-wrapper {
+  position: absolute;
+  width: 387px;
+  height: 360px;
+  top: 280px;
+  left: 570px;
+ }
+ 
+ .desktop-lugares .overlap-2 {
+  position: relative;
+  width: 389px;
+  height: 360px;
+ }
+ 
+ .desktop-lugares .overlap-group-wrapper {
+  position: absolute;
+  width: 389px;
+  height: 360px;
+  top: 0;
+  left: 0;
+ }
+ 
+ .desktop-lugares .text-wrapper-3 {
+  position: absolute;
+  width: 122px;
+  top: 293px;
+  left: 112px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 25.6px;
+  white-space: nowrap;
+ }
+ 
+ .desktop-lugares .group-3 {
+  position: absolute;
+  width: 26px;
+  height: 23px;
+  top: 293px;
+  left: 275px;
+  background-image: url(./img/icon-share-2.png);
+  background-size: 100% 100%;
+ }
+ 
+ .desktop-lugares .image-3 {
+  position: absolute;
+  width: 310px;
+  height: 248px;
+  top: 31px;
+  left: 39px;
+  object-fit: cover;
+ }
+ 
+ .desktop-lugares .div-wrapper {
+  position: absolute;
+  width: 387px;
+  height: 360px;
+  top: 280px;
+  left: 1048px;
+ }
+ 
+ .desktop-lugares .group-4 {
+  position: absolute;
+  width: 26px;
+  height: 23px;
+  top: 293px;
+  left: 275px;
+  background-image: url(./img/icon-share-3.png);
+  background-size: 100% 100%;
+ }
+ 
+ .desktop-lugares .group-5 {
+  position: absolute;
+  width: 387px;
+  height: 360px;
+  top: 723px;
+  left: 93px;
+ }
+ 
+ .desktop-lugares .group-6 {
+  position: absolute;
+  width: 26px;
+  height: 23px;
+  top: 293px;
+  left: 275px;
+  background-image: url(./img/icon-share.png);
+  background-size: 100% 100%;
+ }
+ 
+ .desktop-lugares .image-4 {
+  width: 310px;
+  height: 248px;
+  top: 29px;
+  left: 39px;
+  position: absolute;
+  object-fit: cover;
+ }
+ 
+ .desktop-lugares .image-5 {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 1024px;
+  /*width: 396px;
+  height: 1140px;
+  top: 0;
+  left: 1524px;
+  position: absolute;
+  object-fit: cover;*/
+ }
+
