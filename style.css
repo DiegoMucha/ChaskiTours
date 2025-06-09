@@ -1,0 +1,793 @@
+.desktop-configura {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-configura .overlap-wrapper {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 1140px;
+}
+
+.desktop-configura .overlap {
+  position: relative;
+  height: 1140px;
+  left: -1px;
+}
+
+.desktop-configura .main-container {
+  display: flex;
+  width: 1920px;
+  height: 1140px;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fef9d1;
+}
+
+.desktop-configura .left-side-column {
+  position: absolute;
+  width: 1033px;
+  height: 1076px;
+  top: 9px;
+  left: 308px;
+}
+
+.desktop-configura .link {
+  position: absolute;
+  width: 353px;
+  height: 240px;
+  top: 250px;
+  left: 52px;
+  overflow: hidden;
+}
+
+.desktop-configura .overlap-group {
+  position: relative;
+  width: 354px;
+  height: 244px;
+  left: -1px;
+}
+
+.desktop-configura .image {
+  position: absolute;
+  width: 353px;
+  height: 240px;
+  top: 0;
+  left: 1px;
+  border-radius: 12px;
+  background-image: url(./img/image-5.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.desktop-configura .img {
+  position: absolute;
+  width: 353px;
+  height: 239px;
+  top: 1px;
+  left: 1px;
+}
+
+.desktop-configura .after {
+  position: absolute;
+  width: 353px;
+  height: 240px;
+  top: 4px;
+  left: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 7, 60, 0) 0%,
+    rgba(187, 150, 0, 1) 100%
+  );
+  opacity: 0.5;
+}
+
+.desktop-configura .heading-city-tours {
+  position: absolute;
+  width: 219px;
+  height: 55px;
+  top: 10px;
+  left: 68px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.desktop-configura .overlap-group-wrapper {
+  position: absolute;
+  width: 344px;
+  height: 240px;
+  top: 250px;
+  left: 490px;
+}
+
+.desktop-configura .div {
+  position: relative;
+  height: 240px;
+}
+
+.desktop-configura .image-2 {
+  position: absolute;
+  width: 344px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  background-image: url(./img/image.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.desktop-configura .image-3 {
+  position: absolute;
+  width: 344px;
+  height: 240px;
+  top: 0;
+  left: 0;
+}
+
+.desktop-configura .text-wrapper {
+  position: absolute;
+  width: 219px;
+  height: 55px;
+  top: 25px;
+  left: 62px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.desktop-configura .after-2 {
+  position: absolute;
+  width: 344px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 7, 60, 0) 0%,
+    rgba(187, 150, 0, 1) 100%
+  );
+  opacity: 0.5;
+}
+
+.desktop-configura .text-wrapper-2 {
+  position: absolute;
+  width: 711px;
+  height: 32px;
+  top: 74px;
+  left: 52px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #3d2b1f;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 0.34px;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.desktop-configura .text-wrapper-3 {
+  position: absolute;
+  width: 397px;
+  height: 32px;
+  top: 510px;
+  left: 8px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #3d2b1f;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 0.34px;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.desktop-configura .p {
+  position: absolute;
+  width: 561px;
+  height: 32px;
+  top: 195px;
+  left: 29px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #3d2b1f;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 0.34px;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.desktop-configura .text-wrapper-4 {
+  position: absolute;
+  width: 863px;
+  height: 47px;
+  top: 126px;
+  left: 59px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  font-size: 22px;
+  letter-spacing: 0.22px;
+  line-height: 35.2px;
+}
+
+.desktop-configura .emoji-normal {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  top: 62px;
+  left: 59px;
+}
+
+.desktop-configura .card {
+  display: flex;
+  flex-direction: column;
+  width: 452px;
+  height: 410px;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 40px;
+  position: absolute;
+  top: 549px;
+  left: 29px;
+  background-color: #fffad2;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--grey-15);
+}
+
+.desktop-configura .image-4 {
+  position: relative;
+  width: 174px;
+  height: 120px;
+  background-image: url(./img/image-3.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.desktop-configura .image-5 {
+  position: absolute;
+  width: 173px;
+  height: 121px;
+  top: 40px;
+  left: 40px;
+}
+
+.desktop-configura .container {
+  display: flex;
+  flex-direction: column;
+  width: 347px;
+  height: 131px;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+
+.desktop-configura .text-container {
+  display: flex;
+  flex-direction: column;
+  height: 131px;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.desktop-configura .heading {
+  text-align: justify;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3d2b1f;
+  font-size: 34px;
+  letter-spacing: 0;
+  line-height: 51px;
+}
+
+.desktop-configura .paragraph {
+  height: 85px;
+  margin-bottom: -10.00px;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  align-self: stretch;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+.desktop-configura .sub-container {
+  height: 45px;
+  margin-bottom: -75.00px;
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.desktop-configura .group {
+  position: relative;
+  width: 179px;
+  height: 62px;
+  margin-top: -17.00px;
+}
+
+.desktop-configura .shape-wrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  border-color: var(--grey-15);
+}
+
+.desktop-configura .shape {
+  position: relative;
+  width: 21.31px;
+  height: 20.36px;
+}
+
+.desktop-configura .text-container-2 {
+  width: 125px;
+  gap: 2px;
+  position: absolute;
+  top: 0;
+  left: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-configura .heading-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 34.5px;
+}
+
+.desktop-configura .paragraph-2 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #3d2b1f;
+  font-size: 26.5px;
+  letter-spacing: 0;
+  line-height: 24.4px;
+}
+
+.desktop-configura .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 24px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin-top: -18.00px;
+  background-color: #001b0a;
+  border-radius: 10px;
+}
+
+.desktop-configura .text {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  margin-left: -12.50px;
+  margin-right: -12.50px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--absolutewhite);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.desktop-configura .div-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 24px;
+  position: absolute;
+  top: 35px;
+  left: 917px;
+  border: 1px solid;
+  border-color: var(--grey-15);
+  background-color: #001b0a;
+  border-radius: 10px;
+}
+
+.desktop-configura .text-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--absolutewhite);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.desktop-configura .buttons-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 995px;
+  left: 387px;
+}
+
+.desktop-configura .text-button {
+  position: relative;
+  width: fit-content;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #001b0a;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.desktop-configura .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  border: 1px solid;
+  border-color: var(--grey-15);
+  background-color: #001b0a;
+  border-radius: 10px;
+}
+
+.desktop-configura .text-button-2 {
+  position: relative;
+  width: 10px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #001b0a;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+.desktop-configura .card-2 {
+  display: flex;
+  flex-direction: column;
+  width: 492px;
+  height: 410px;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+  position: absolute;
+  top: 549px;
+  left: 526px;
+  background-color: #fffad2;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--grey-15);
+}
+
+.desktop-configura .image-6 {
+  position: relative;
+  width: 186px;
+  height: 119px;
+  background-image: url(./img/image-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.desktop-configura .text-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop-configura .text-container-3 {
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-configura .heading-3 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #3d2b1f;
+  font-size: 34px;
+  letter-spacing: 0;
+  line-height: 51px;
+}
+
+.desktop-configura .paragraph-3 {
+  font-size: 19px;
+  line-height: 28.5px;
+  position: relative;
+  align-self: stretch;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+.desktop-configura .sub-container-2 {
+  flex: 0 0 auto;
+  margin-bottom: -27.00px;
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.desktop-configura .group-2 {
+  position: relative;
+  width: 186px;
+  height: 62px;
+}
+
+.desktop-configura .text-container-4 {
+  width: 132px;
+  gap: 2px;
+  position: absolute;
+  top: 0;
+  left: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-configura .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 24px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  background-color: #001b0a;
+  border-radius: 10px;
+}
+
+.desktop-configura .image-7 {
+  position: absolute;
+  width: 191px;
+  height: 133px;
+  top: 34px;
+  left: 40px;
+}
+
+.desktop-configura .container-2 {
+  position: absolute;
+  width: 618px;
+  height: 61px;
+  top: 544px;
+  left: -30px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: var(--grey-15);
+  transform: rotate(-90deg);
+}
+
+.desktop-configura .group-3 {
+  position: absolute;
+  width: 166px;
+  height: 26px;
+  top: 270px;
+  left: 83px;
+}
+
+.desktop-configura .icon-outline {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 1px;
+  left: 0;
+}
+
+.desktop-configura .breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  left: 32px;
+}
+
+.desktop-configura .page {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25.6px;
+  white-space: nowrap;
+}
+
+.desktop-configura .group-4 {
+  position: absolute;
+  width: 200px;
+  height: 24px;
+  top: 370px;
+  left: 83px;
+}
+
+.desktop-configura .img-2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+
+.desktop-configura .page-2 {
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #006626;
+  font-size: 15px;
+  line-height: 24.0px;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.desktop-configura .art {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.desktop-configura .text-wrapper-5 {
+  position: absolute;
+  width: 382px;
+  height: 16px;
+  top: 1061px;
+  left: 546px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #666666;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.16px;
+  line-height: 16px;
+}
+
+.desktop-configura .image-8 {
+  position: relative;
+  width: 525px;
+  height: 1054px;
+}
+
+.desktop-configura .default {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 32px;
+  left: 33px;
+}
+
+.desktop-configura .breadcrumbs-2 {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.desktop-configura .home {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.desktop-configura .page-3 {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #001b0a;
+  font-size: 16px;
+  line-height: 25.6px;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.desktop-configura .group-5 {
+  position: absolute;
+  width: 152px;
+  height: 26px;
+  top: 470px;
+  left: 84px;
+}
+
+.desktop-configura .breadcrumbs-wrapper {
+  position: absolute;
+  width: 121px;
+  height: 26px;
+  top: 0;
+  left: 31px;
+}
+
+.desktop-configura .breadcrumbs-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
