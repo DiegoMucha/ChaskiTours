@@ -1,0 +1,199 @@
+.desktop {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .desktop .overlap-group-wrapper {
+    background-color: #ffffff;
+    width: 1920px;
+    height: 1140px;
+  }
+  
+  .desktop .overlap-group {
+    position: relative;
+    height: 1140px;
+  }
+  
+  .desktop .main-container {
+    display: flex;
+    width: 1920px;
+    height: 1140px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fef9d1;
+  }
+  
+  .desktop .left-side-column {
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    flex-grow: 1;
+  }
+  
+  .desktop .text-wrapper {
+    position: absolute;
+    width: 420px;
+    height: 32px;
+    top: 74px;
+    left: 119px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #3d2b1f;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 0.34px;
+    line-height: 34px;
+    white-space: nowrap;
+  }
+  
+  .desktop .div {
+    position: absolute;
+    width: 382px;
+    height: 16px;
+    top: 1010px;
+    left: 200px;
+    font-family: "Urbanist-Regular", Helvetica;
+    font-weight: 400;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.16px;
+    line-height: 16px;
+  }
+  
+  .desktop .signpost {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    top: 67px;
+    left: 61px;
+  }
+  
+  .desktop .card {
+    display: flex;
+    flex-direction: column;
+    width: 1133px;
+    height: 685px;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 40px;
+    position: absolute;
+    top: 203px;
+    left: 95px;
+    background-color: #fffad2;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: var(--grey-15);
+  }
+  
+  .desktop .container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .desktop .text-container {
+    display: flex;
+    flex-direction: column;
+    width: 697px;
+    height: 51px;
+    align-items: flex-start;
+    gap: 6px;
+    position: relative;
+  }
+  
+  .desktop .heading {
+    position: relative;
+    width: 1060px;
+    margin-top: -1.00px;
+    margin-bottom: -560.00px;
+    margin-right: -363.00px;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-weight: 400;
+    color: #3d2b1f;
+    font-size: 34px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: 51px;
+  }
+  
+  .desktop .span {
+    font-weight: 800;
+  }
+  
+  .desktop .text-wrapper-2 {
+    font-family: "Inter-SemiBold", Helvetica;
+    font-weight: 600;
+  }
+  
+  .desktop .text-wrapper-3 {
+    position: absolute;
+    width: 716px;
+    height: 39px;
+    top: 145px;
+    left: 95px;
+    font-family: "Urbanist-Medium", Helvetica;
+    font-weight: 500;
+    color: #666666;
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    line-height: 35.2px;
+    white-space: nowrap;
+  }
+  
+  .desktop .default {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 32px;
+    left: 31px;
+  }
+  
+  .desktop .breadcrumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .desktop .home {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .desktop .page {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #001b0a;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 25.6px;
+    white-space: nowrap;
+  }
+  
+  .desktop .image {
+    position: absolute;
+    width: 554px;
+    height: 972px;
+    top: 79px;
+    left: 1303px;
+  }
+  
