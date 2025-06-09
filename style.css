@@ -1,0 +1,205 @@
+.desktop-elegir{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.desktop-elegir .overlap-group-wrapper{
+    background-color: #ffffff;
+    width: 1920px;
+    height: 1140px;
+}
+.desktop-elegir .overlap-group{
+    position: relative;
+    height: 1140px;
+}
+.desktop-elegir .main-container{
+    width: 1920px;
+    height: 1140px;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+    top: 0;
+    left: 0;
+    background-color: #fef9d1;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.desktop-elegir .art{
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    flex-grow: 1;
+}
+.desktop-elegir .text-wrapper{
+    position: absolute;
+    width: 402px;
+    height: 32px;
+    top: 74px;
+    left: 52px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #3d2b1f;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 0.34px;
+    line-height: 34px;
+    white-space: nowrap;
+}
+.desktop-elegir .icon-fill{
+    position: absolute;
+    width: 60px;
+    height: 59px;
+    top: 62px;
+    left: 59px;
+}
+.desktop-elegir .div{
+    position: absolute;
+    width: 716px;
+    height: 39px;
+    top: 130px;
+    left: 59px;
+    font-family: "Urbanist-Medium",Helvetica;
+    font-weight: 500;
+    color: #666666;
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    line-height: 35.2px;
+    white-space: nowrap;
+}
+.desktop-elegir .deseas-iniciar-sesi{
+    position: absolute;
+    width: 540px;
+    height: 82px;
+    top: 942px;
+    left: 62px;
+    font-family: "Urbanist-Regular",Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.18px;
+    line-height: 28.8px;
+}
+.desktop-elegir .span{
+    color: #666666;
+    letter-spacing: 0.03px;
+}
+.desktop-elegir .text-wrapper-2{
+    color: #006626;
+    letter-spacing: 0.03px;
+}
+.desktop-elegir .p{
+    position: absolute;
+    width: 382px;
+    height: 16px;
+    top: 1010px;
+    left: 200px;
+    font-family: "Urbanist-Regular",Helvetica;
+    font-weight: 400;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.16px;
+    line-height: 16px;
+}
+.desktop-elegir .main-button{
+    width: 482px;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 16px 0px;
+    top: 346px;
+    left: 176px;
+    background-color: #e5c07b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.desktop-elegir .sign-in{
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Urbanist-Regular",Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.20px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+.desktop-elegir .sign-in-wrapper{
+    top: 451px;
+    display: flex;
+    width: 482px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 16px 0px;
+    position: absolute;
+    left: 176px;
+    background-color: #e5c07b;
+    border-radius: 12px;
+}
+.desktop-elegir .div-wrapper{
+    top: 556px;
+    display: flex;
+    width: 482px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 16px 0px;
+   position: absolute;
+   left: 176px;
+   background-color: #e5c07b;
+   border-radius: 12px; 
+}
+.desktop-elegir .text-wrapper-3{
+    position: absolute;
+    width: 115px;
+    height: 29px;
+    top: 969px;
+    left: 508px;
+    font-family: "Urbanist-Regular",Helvetica;
+    font-weight: 400;
+    color: #006626;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.18px;
+    line-height: 28.8px;
+}
+.desktop-elegir .default{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+.desktop-elegir .breadcrumbs{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+}
+.desktop-elegir .home{
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+.desktop-elegir .page{
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Inter-Regular",Helvetica;
+    font-weight: 400;
+    color: #001b0a;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 25.6px;
+    white-space: nowrap;
+}
