@@ -1,0 +1,324 @@
+.desktop-perfil-de {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-perfil-de .overlap-group-wrapper {
+  background-color: #ffffff;
+  width: 1920px;
+  height: 1140px;
+}
+
+.desktop-perfil-de .overlap-group {
+  position: relative;
+  height: 1140px;
+}
+
+.desktop-perfil-de .main-container {
+  width: 1920px;
+  height: 1140px;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+  top: 0;
+  left: 0;
+  background-color: #fef9d1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.desktop-perfil-de .div {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.desktop-perfil-de .text-wrapper {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  top: 74px;
+  left: 119px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #3d2b1f;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 0.34px;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .text-wrapper-2 {
+  position: absolute;
+  width: 716px;
+  height: 39px;
+  top: 130px;
+  left: 59px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  font-size: 22px;
+  letter-spacing: 0.22px;
+  line-height: 35.2px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .p {
+  position: absolute;
+  width: 382px;
+  height: 16px;
+  top: 1010px;
+  left: 200px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #666666;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.16px;
+  line-height: 16px;
+}
+
+.desktop-perfil-de .main-button {
+  width: 482px;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 16px 0px;
+  top: 194px;
+  left: 59px;
+  background-color: #001b0a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.desktop-perfil-de .sign-in {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .sign-in-wrapper {
+  top: 259px;
+  display: flex;
+  width: 482px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 16px 0px;
+  position: absolute;
+  left: 59px;
+  background-color: #001b0a;
+  border-radius: 12px;
+}
+
+.desktop-perfil-de .sign-in-2 {
+  color: #fff8f8;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .div-wrapper {
+  top: 324px;
+  display: flex;
+  width: 482px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 16px 0px;
+  position: absolute;
+  left: 59px;
+  background-color: #001b0a;
+  border-radius: 12px;
+}
+
+.desktop-perfil-de .sign-in-3 {
+  color: #fffbfb;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .main-button-2 {
+  top: 389px;
+  display: flex;
+  width: 482px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 16px 0px;
+  position: absolute;
+  left: 59px;
+  background-color: #001b0a;
+  border-radius: 12px;
+}
+
+.desktop-perfil-de .main-button-3 {
+  top: 454px;
+  display: flex;
+  width: 482px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 16px 0px;
+  position: absolute;
+  left: 59px;
+  background-color: #001b0a;
+  border-radius: 12px;
+}
+
+.desktop-perfil-de .monitor {
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  top: 65px;
+  left: 59px;
+}
+
+.desktop-perfil-de .image {
+  position: absolute;
+  width: 912px;
+  height: 1076px;
+  top: 0;
+  left: 0;
+}
+
+.desktop-perfil-de .default {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 32px;
+  left: 17px;
+}
+
+.desktop-perfil-de .arrow-left {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.desktop-perfil-de .breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop-perfil-de .page {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #001b0a;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25.6px;
+  white-space: nowrap;
+}
+
+.desktop-perfil-de .text-wrapper-3 {
+  position: absolute;
+  width: 115px;
+  height: 29px;
+  top: 237px;
+  left: 584px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #006626;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.18px;
+  line-height: 28.8px;
+}
+
+.desktop-perfil-de .text-wrapper-4 {
+  top: 497px;
+  position: absolute;
+  width: 115px;
+  height: 29px;
+  left: 584px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #006626;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.18px;
+  line-height: 28.8px;
+}
+
+.desktop-perfil-de .text-wrapper-5 {
+  top: 432px;
+  position: absolute;
+  width: 115px;
+  height: 29px;
+  left: 584px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #006626;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.18px;
+  line-height: 28.8px;
+}
+
+.desktop-perfil-de .text-wrapper-6 {
+  top: 367px;
+  position: absolute;
+  width: 115px;
+  height: 29px;
+  left: 584px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #006626;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.18px;
+  line-height: 28.8px;
+}
+
+.desktop-perfil-de .text-wrapper-7 {
+  top: 302px;
+  position: absolute;
+  width: 115px;
+  height: 29px;
+  left: 584px;
+  font-family: "Urbanist-Regular", Helvetica;
+  font-weight: 400;
+  color: #006626;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.18px;
+  line-height: 28.8px;
+}
