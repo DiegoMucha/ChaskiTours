@@ -1,52 +1,17 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
-  height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
 html,
 body {
+  background-color: #fef9d1;
   margin: 0px;
-  height: 100%;
-}
-
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
-  height: 100%;
-  height: 1;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* a blue color as a generic focus style */
@@ -62,42 +27,36 @@ a {
     --absolutewhite: rgba(255, 255, 255, 1);
     --grey-15: rgba(38, 38, 38, 1);
   }
-  
-  :root {
-    --absolutewhite: rgba(255, 255, 255, 1);
-    --grey-15: rgba(38, 38, 38, 1);
-  }
-  
-  :root {
-    --absolutewhite: rgba(255, 255, 255, 1);
-    --grey-15: rgba(38, 38, 38, 1);
-  }
-  
 
 .desktop-ver-lugares {
     background-color: #fef9d1;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 1;
+    width: 100%;
+    height: 100%;
   }
   
   .desktop-ver-lugares .navigation-bar {
     display: flex;
-    height: 105px;
+    justify-content: space-between; /* Distribuye el contenido entre extremos */
     align-items: center;
-    gap: 1372px;
-    padding: 20px 162px;
-    position: relative;
-    align-self: stretch;
+    height: 105px;
+    padding: 0 16px;                /* Margen lateral más razonable */
     width: 100%;
     background-color: #fef9d1;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }
+  
   
   .desktop-ver-lugares .div {
     background-color: #fef9d1;
-    width: 1;
-    height: 1;
+    width: 100%;
+    height: 100%;
     position: relative;
   }
   
@@ -743,19 +702,53 @@ a {
   .desktop-ver-lugares .banner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 18px 160px;
-    position: relative;
-    align-self: stretch;
+    justify-content: center; /* Cambiado de space-between a center */
+    padding: 20px;
     width: 100%;
-    flex: 0 0 auto;
     background-color: #001b0a;
-    overflow: hidden;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-color: var(--grey-15);
+    color: var(--absolutewhite);
+    position: fixed;
+    z-index: 1010;
+    gap: 10px; /* Añadido para espaciar los elementos */
   }
+  
+  
+  /* Adjusted styles for responsive background and initial scaling */
+.desktop-ver-lugares .abstract-design {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure it does not overlap the text */
+}
+
+.desktop-ver-lugares .BACKGROUND-wrapper {
+  position: relative;
+  width: 100%; /* Ensure it spans the full width */
+  height: auto; /* Adjust height dynamically */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.desktop-ver-lugares .BACKGROUND {
+  width: 100%; /* Ensure the background image scales with the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container proportionally */
+}
+
+.desktop-ver-lugares .img-wrapper {
+  position: relative;
+  width: 100%; /* Ensure it spans the full width */
+  height: auto; /* Adjust height dynamically */
+  mix-blend-mode: color-dodge;
+}
+
+.desktop-ver-lugares .group-19 {
+  position: relative;
+  width: 100%; /* Ensure it spans the full width */
+  height: auto; /* Adjust height dynamically */
+  object-fit: cover; /* Ensure the image covers the container proportionally */
+}
   
   .desktop-ver-lugares .abstract-design {
     position: absolute;
@@ -767,35 +760,35 @@ a {
   
   .desktop-ver-lugares .BACKGROUND-wrapper {
     position: relative;
-    width: 1918px;
-    height: 1279px;
-    top: 1px;
-    left: 1px;
+    width: 100%; /* Ensure it spans the full width */
+    height: auto; /* Adjust height dynamically */
+    overflow: hidden; /* Prevent overflow issues */
   }
   
   .desktop-ver-lugares .BACKGROUND {
-    height: 1279px;
+    width: 100%; /* Ensure the background image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container proportionally */
   }
   
   .desktop-ver-lugares .img-wrapper {
     position: relative;
-    width: 1918px;
-    height: 1279px;
+    width: 100%; /* Ensure it spans the full width */
+    height: auto; /* Adjust height dynamically */
     mix-blend-mode: color-dodge;
   }
   
   .desktop-ver-lugares .group-19 {
-    position: absolute;
-    width: 1919px;
-    height: 63px;
-    top: 609px;
-    left: 0;
+    position: relative;
+    width: 100%; /* Ensure it spans the full width */
+    height: auto; /* Adjust height dynamically */
+    object-fit: cover; /* Ensure the image covers the container proportionally */
   }
   
   .desktop-ver-lugares .text-3 {
     position: relative;
     width: fit-content;
-    margin-top: -1.00px;
+    margin: 0; /* Resetear márgenes */
     font-family: "Urbanist-Medium", Helvetica;
     font-weight: 500;
     color: var(--absolutewhite);
@@ -808,7 +801,7 @@ a {
   
   .desktop-ver-lugares .text-button-3 {
     width: fit-content;
-    margin-top: -1.00px;
+    margin: 0; /* Resetear márgenes */
     color: var(--absolutewhite);
     text-align: center;
     text-decoration: underline;
@@ -968,9 +961,10 @@ a {
   }
   
   .desktop-eliminar .div {
+    padding-top: 165px;
     background-color: #fef9d1;
-    width: 1920px;
-    height: 1140px;
+    width: 100%;
+    height: 100%;
     position: relative;
   }
   
@@ -1374,16 +1368,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-eliminar .image {
-    position: absolute;
-    width: 777px;
-    height: 974px;
-    top: 85px;
-    left: 1101px;
-    object-fit: cover;
-  }
-  
-  .desktop-editar-datos {
+  .desktop-ver-editar-datos {
     background-color: #fef9d1;
     display: flex;
     flex-direction: row;
@@ -1391,14 +1376,14 @@ a {
     width: 100%;
   }
   
-  .desktop-editar-datos .div {
+  .desktop-ver-editar-datos .div {
     background-color: #fef9d1;
     width: 1920px;
     height: 1140px;
     position: relative;
   }
   
-  .desktop-editar-datos .default {
+  .desktop-ver-editar-datos .default {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1407,7 +1392,7 @@ a {
     left: 32px;
   }
   
-  .desktop-editar-datos .breadcrumbs {
+  .desktop-ver-editar-datos .breadcrumbs {
     flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
@@ -1415,13 +1400,13 @@ a {
     position: relative;
   }
   
-  .desktop-editar-datos .home {
+  .desktop-ver-editar-datos .home {
     position: relative;
     width: 24px;
     height: 24px;
   }
   
-  .desktop-editar-datos .page {
+  .desktop-ver-editar-datos .page {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -1434,7 +1419,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .text-wrapper {
+  .desktop-ver-editar-datos .text-wrapper {
     position: absolute;
     width: 284px;
     height: 48px;
@@ -1448,7 +1433,7 @@ a {
     line-height: 38px;
   }
   
-  .desktop-editar-datos .overlap {
+  .desktop-ver-editar-datos .overlap {
     position: absolute;
     width: 1016px;
     height: 623px;
@@ -1456,7 +1441,7 @@ a {
     left: 83px;
   }
   
-  .desktop-editar-datos .overlap-group {
+  .desktop-ver-editar-datos .overlap-group {
     position: absolute;
     width: 1016px;
     height: 623px;
@@ -1464,7 +1449,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .component-default {
+  .desktop-ver-editar-datos .component-default {
     display: flex;
     flex-direction: column;
     width: 641px;
@@ -1475,7 +1460,7 @@ a {
     left: 375px;
   }
   
-  .desktop-editar-datos .input {
+  .desktop-ver-editar-datos .input {
     display: flex;
     flex-direction: column;
     height: 72px;
@@ -1486,7 +1471,7 @@ a {
     width: 100%;
   }
   
-  .desktop-editar-datos .label {
+  .desktop-ver-editar-datos .label {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -1499,7 +1484,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .overlap-group-wrapper {
+  .desktop-ver-editar-datos .overlap-group-wrapper {
     height: 48px;
     margin-right: -2.00px;
     position: relative;
@@ -1507,7 +1492,7 @@ a {
     width: 100%;
   }
   
-  .desktop-editar-datos .placeholder-wrapper {
+  .desktop-ver-editar-datos .placeholder-wrapper {
     position: relative;
     width: 643px;
     height: 50px;
@@ -1519,7 +1504,7 @@ a {
     border-color: #3d2b1f;
   }
   
-  .desktop-editar-datos .placeholder {
+  .desktop-ver-editar-datos .placeholder {
     position: absolute;
     height: 16px;
     top: 16px;
@@ -1533,7 +1518,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .input-wrapper {
+  .desktop-ver-editar-datos .input-wrapper {
     height: 72px;
     top: 105px;
     left: 372px;
@@ -1544,7 +1529,7 @@ a {
     position: absolute;
   }
   
-  .desktop-editar-datos .div-wrapper {
+  .desktop-ver-editar-datos .div-wrapper {
     height: 72px;
     top: 210px;
     left: 372px;
@@ -1555,7 +1540,7 @@ a {
     position: absolute;
   }
   
-  .desktop-editar-datos .overlap-2 {
+  .desktop-ver-editar-datos .overlap-2 {
     position: absolute;
     width: 814px;
     height: 618px;
@@ -1563,7 +1548,7 @@ a {
     left: 199px;
   }
   
-  .desktop-editar-datos .component-default-2 {
+  .desktop-ver-editar-datos .component-default-2 {
     height: 72px;
     top: 309px;
     left: 173px;
@@ -1574,7 +1559,7 @@ a {
     position: absolute;
   }
   
-  .desktop-editar-datos .container {
+  .desktop-ver-editar-datos .container {
     position: absolute;
     width: 618px;
     height: 27px;
@@ -1586,7 +1571,7 @@ a {
     transform: rotate(-90deg);
   }
   
-  .desktop-editar-datos .component-default-3 {
+  .desktop-ver-editar-datos .component-default-3 {
     height: 151px;
     top: 419px;
     left: 372px;
@@ -1597,7 +1582,7 @@ a {
     position: absolute;
   }
   
-  .desktop-editar-datos .input-2 {
+  .desktop-ver-editar-datos .input-2 {
     display: flex;
     flex-direction: column;
     height: 165px;
@@ -1609,7 +1594,7 @@ a {
     width: 100%;
   }
   
-  .desktop-editar-datos .input-3 {
+  .desktop-ver-editar-datos .input-3 {
     flex: 1;
     flex-grow: 1;
     margin-right: -2.00px;
@@ -1618,7 +1603,7 @@ a {
     width: 100%;
   }
   
-  .desktop-editar-datos .overlap-group-2 {
+  .desktop-ver-editar-datos .overlap-group-2 {
     position: relative;
     width: 643px;
     height: 143px;
@@ -1630,7 +1615,7 @@ a {
     border-color: #3d2b1f;
   }
   
-  .desktop-editar-datos .placeholder-2 {
+  .desktop-ver-editar-datos .placeholder-2 {
     position: absolute;
     height: 16px;
     top: 62px;
@@ -1644,7 +1629,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .group {
+  .desktop-ver-editar-datos .group {
     position: absolute;
     width: 200px;
     height: 24px;
@@ -1652,7 +1637,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .img {
+  .desktop-ver-editar-datos .img {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -1660,7 +1645,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .breadcrumbs-2 {
+  .desktop-ver-editar-datos .breadcrumbs-2 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1669,7 +1654,7 @@ a {
     left: 32px;
   }
   
-  .desktop-editar-datos .page-2 {
+  .desktop-ver-editar-datos .page-2 {
     color: #000000;
     font-size: 15px;
     line-height: 24.0px;
@@ -1682,7 +1667,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .group-2 {
+  .desktop-ver-editar-datos .group-2 {
     position: absolute;
     width: 166px;
     height: 26px;
@@ -1690,7 +1675,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .icon-outline {
+  .desktop-ver-editar-datos .icon-outline {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -1698,7 +1683,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .page-3 {
+  .desktop-ver-editar-datos .page-3 {
     color: #006626;
     font-size: 16px;
     line-height: 25.6px;
@@ -1711,7 +1696,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .group-3 {
+  .desktop-ver-editar-datos .group-3 {
     position: absolute;
     width: 152px;
     height: 26px;
@@ -1719,7 +1704,7 @@ a {
     left: 0;
   }
   
-  .desktop-editar-datos .breadcrumbs-wrapper {
+  .desktop-ver-editar-datos .breadcrumbs-wrapper {
     position: absolute;
     width: 121px;
     height: 26px;
@@ -1727,14 +1712,14 @@ a {
     left: 31px;
   }
   
-  .desktop-editar-datos .breadcrumbs-3 {
+  .desktop-ver-editar-datos .breadcrumbs-3 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     position: relative;
   }
   
-  .desktop-editar-datos .page-4 {
+  .desktop-ver-editar-datos .page-4 {
     color: #000000;
     font-size: 16px;
     line-height: 25.6px;
@@ -1747,7 +1732,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .button {
+  .desktop-ver-editar-datos .button {
     all: unset;
     box-sizing: border-box;
     display: flex;
@@ -1764,7 +1749,7 @@ a {
     border: 1px solid;
   }
   
-  .desktop-editar-datos .text {
+  .desktop-ver-editar-datos .text {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -1779,7 +1764,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .button-2 {
+  .desktop-ver-editar-datos .button-2 {
     display: flex;
     width: 243px;
     height: 52px;
@@ -1794,7 +1779,7 @@ a {
     border: 1px solid;
   }
   
-  .desktop-editar-datos .p {
+  .desktop-ver-editar-datos .p {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -1810,7 +1795,7 @@ a {
     white-space: nowrap;
   }
   
-  .desktop-editar-datos .group-4 {
+  .desktop-ver-editar-datos .group-4 {
     position: absolute;
     width: 440px;
     height: 440px;
@@ -1818,11 +1803,939 @@ a {
     left: 1288px;
   }
   
-  .desktop-editar-datos .icon-fill {
+  .desktop-ver-editar-datos .icon-fill {
     position: absolute;
     width: 48px;
     height: 48px;
     top: 107px;
     left: 384px;
   }
-  
+
+body {
+  background-color: #fffad2;
+  font-family: Helvetica;
+}
+p {
+  font-family: Helvetica;
+}
+
+.valoraciones {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fffad2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #02260e;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #02260e;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a.faq {
+  background-color: #02260e;
+  color: white;
+}
+
+.nav-links a:hover:not(.faq) {
+  background-color: #e1e1e1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons img {
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.favoritos {
+  display: flex;
+}
+.contenido {
+  width: 1620px;
+  border: #000c05;
+}
+.titulo {
+  display: flex;
+}
+.corazon {
+  width: 34px;
+  height: 34px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-left: 10px;
+}
+.fondo {
+  box-sizing: border-box;
+}
+.fondo_imagen_fav {
+  box-sizing: border-box;
+}
+.lugares_fav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img_lugar {
+  width: 310px;
+  height: 248px;
+}
+.cuadrado {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000c05;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.txt_fav {
+  display: flex;
+  justify-content: center;
+}
+.img_fav {
+  width: 26px;
+  height: 26px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.txt_pre{
+    margin-top: 17px;
+}
+.compartir {
+  width: 26px;
+  height: 26px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.cont_calificacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img_cal {
+  width: 377px;
+  height: 302px;
+}
+.estrellas {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.estrella {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transition: background-color 0.2s ease;
+}
+
+.estrella:hover,
+.estrella:hover ~ .estrella {
+  background-color: yellow;
+}
+.texto {
+  width: 40%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Helvetica;
+  resize: none;
+  outline: none;
+}
+.boton {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+/* Efecto al pasar el mouse por encima de los botones */
+.boton:hover {
+  background-color: #0056b3;
+}
+/* Estilo para el botón de Cancelar */
+.boton.cancelar {
+  background-color: #dc3545;
+}
+.boton.cancelar:hover {
+  background-color: #c82333;
+}
+.cal_pro {
+  display: flex;
+}
+.resenas {
+  display: flex;
+  width: 55%;
+}
+.calif {
+  display: flex;
+}
+.img_per_cal {
+  width: 140px;
+}
+.valo {
+}
+.estrella_col {
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.estrella_peq {
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.desktop-seccin-FAQ {
+background-color: #fef9d1;
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+}
+
+.desktop-seccin-FAQ .div {
+background-color: #fef9d1;
+width: 1920px;
+height: 1140px;
+position: relative;
+}
+
+.desktop-seccin-FAQ .overlap {
+position: absolute;
+width: 1920px;
+height: 970px;
+top: 170px;
+left: 0;
+background-image: url(./img/fondo.png);
+background-size: cover;
+background-position: 50% 50%;
+}
+
+.desktop-seccin-FAQ .text-wrapper {
+position: absolute;
+width: 402px;
+height: 32px;
+top: 99px;
+left: 89px;
+font-family: "Inter-Bold", Helvetica;
+font-weight: 700;
+color: #000000;
+font-size: 34px;
+letter-spacing: 0.34px;
+line-height: 34px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .overlap-group {
+position: absolute;
+width: 1920px;
+height: 133px;
+top: 837px;
+left: 0;
+background-color: #fffad2;
+}
+
+.desktop-seccin-FAQ .rectangle {
+width: 486px;
+height: 65px;
+top: 41px;
+left: 52px;
+border-radius: 20px;
+position: absolute;
+background-color: #ffffff;
+}
+
+.desktop-seccin-FAQ .rectangle-2 {
+width: 904px;
+height: 65px;
+top: 41px;
+left: 676px;
+border-radius: 20px;
+position: absolute;
+background-color: #ffffff;
+}
+
+.desktop-seccin-FAQ .div-wrapper {
+position: absolute;
+width: 189px;
+height: 65px;
+top: 41px;
+left: 1690px;
+background-color: #e5c07b;
+border-radius: 20px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-2 {
+position: absolute;
+width: 92px;
+height: 17px;
+top: 23px;
+left: 49px;
+font-family: "Urbanist-Regular", Helvetica;
+font-weight: 400;
+color: #000000;
+font-size: 20px;
+text-align: center;
+letter-spacing: 0.20px;
+line-height: 20px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .text-wrapper-3 {
+position: absolute;
+width: 130px;
+top: 15px;
+left: 88px;
+font-family: "Inter-Medium", Helvetica;
+font-weight: 500;
+color: #828282;
+font-size: 20px;
+letter-spacing: 0;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-4 {
+position: absolute;
+width: 130px;
+top: 15px;
+left: 703px;
+font-family: "Inter-Medium", Helvetica;
+font-weight: 500;
+color: #828282;
+font-size: 20px;
+letter-spacing: 0;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .rectangle-3 {
+width: 617px;
+height: 54px;
+top: 90px;
+left: 545px;
+border-radius: 25px;
+position: absolute;
+background-color: #ffffff;
+}
+
+.desktop-seccin-FAQ .button {
+all: unset;
+box-sizing: border-box;
+position: absolute;
+width: 62px;
+height: 60px;
+top: 87px;
+left: 1188px;
+background-color: #001b0a;
+border-radius: 200px;
+}
+
+.desktop-seccin-FAQ .overlap-group-2 {
+position: relative;
+width: 24px;
+height: 24px;
+top: 18px;
+left: 19px;
+}
+
+.desktop-seccin-FAQ .symbol {
+position: absolute;
+width: 16px;
+height: 16px;
+top: 3px;
+left: 4px;
+font-family: "Inter-Regular", Helvetica;
+font-weight: 400;
+color: #ffffff;
+font-size: 16px;
+text-align: center;
+letter-spacing: 0;
+line-height: 16px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .search-normal {
+position: absolute;
+width: 24px;
+height: 24px;
+top: 0;
+left: 0;
+}
+
+.desktop-seccin-FAQ .overlap-2 {
+position: absolute;
+width: 1540px;
+height: 601px;
+top: 186px;
+left: 194px;
+border-radius: 16px;
+}
+
+.desktop-seccin-FAQ .text-background {
+position: absolute;
+width: 1540px;
+height: 601px;
+top: 0;
+left: 0;
+background-color: #0000004c;
+border-radius: 16px;
+border: none;
+backdrop-filter: blur(8px) brightness(100%);
+-webkit-backdrop-filter: blur(8px) brightness(100%);
+}
+
+.desktop-seccin-FAQ .text-background::before {
+content: "";
+position: absolute;
+inset: 0;
+padding: 1px;
+border-radius: 16px;
+background: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 0.04) 0%,
+  rgba(255, 255, 255, 1) 50%,
+  rgba(255, 255, 255, 0.08) 100%
+);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+z-index: 1;
+pointer-events: none;
+}
+
+.desktop-seccin-FAQ .paragraph {
+position: absolute;
+width: 1444px;
+top: 73px;
+left: 30px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #ffffff;
+font-size: 22px;
+text-align: justify;
+letter-spacing: 0;
+line-height: 33px;
+}
+
+.desktop-seccin-FAQ .p {
+top: 181px;
+position: absolute;
+width: 1444px;
+left: 30px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #ffffff;
+font-size: 22px;
+text-align: justify;
+letter-spacing: 0;
+line-height: 33px;
+}
+
+.desktop-seccin-FAQ .paragraph-2 {
+top: 299px;
+position: absolute;
+width: 1444px;
+left: 30px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #ffffff;
+font-size: 22px;
+text-align: justify;
+letter-spacing: 0;
+line-height: 33px;
+}
+
+.desktop-seccin-FAQ .paragraph-3 {
+top: 407px;
+position: absolute;
+width: 1444px;
+left: 30px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #ffffff;
+font-size: 22px;
+text-align: justify;
+letter-spacing: 0;
+line-height: 33px;
+}
+
+.desktop-seccin-FAQ .paragraph-4 {
+top: 532px;
+position: absolute;
+width: 1444px;
+left: 30px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #ffffff;
+font-size: 22px;
+text-align: justify;
+letter-spacing: 0;
+line-height: 33px;
+}
+
+.desktop-seccin-FAQ .preguntas-frecuentes {
+position: absolute;
+width: 979px;
+height: 516px;
+top: 20px;
+left: 15px;
+box-shadow: 0px 4px 4px #000000b2;
+}
+
+.desktop-seccin-FAQ .pregunta {
+display: inline-flex;
+align-items: center;
+gap: 332px;
+position: absolute;
+top: 0;
+left: 9px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-5 {
+position: relative;
+width: 499px;
+margin-top: -1.00px;
+height: 61px;
+font-family: "Inter-ExtraBold", Helvetica;
+font-weight: 800;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0.20px;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .pregunta-2 {
+position: absolute;
+width: 973px;
+height: 61px;
+top: 231px;
+left: 6px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-6 {
+position: absolute;
+width: 971px;
+height: 61px;
+top: 0;
+left: 0;
+font-family: "Inter-ExtraBold", Helvetica;
+font-weight: 800;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0.20px;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .pregunta-3 {
+position: absolute;
+width: 949px;
+height: 61px;
+top: 331px;
+left: 6px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-7 {
+position: absolute;
+width: 947px;
+height: 61px;
+top: 0;
+left: 0;
+font-family: "Inter-ExtraBold", Helvetica;
+font-weight: 800;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0.20px;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .pregunta-wrapper {
+position: absolute;
+width: 548px;
+height: 61px;
+top: 109px;
+left: 8px;
+}
+
+.desktop-seccin-FAQ .pregunta-4 {
+position: relative;
+width: 550px;
+height: 61px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-8 {
+position: absolute;
+width: 548px;
+height: 61px;
+top: 0;
+left: 0;
+font-family: "Inter-ExtraBold", Helvetica;
+font-weight: 800;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0.20px;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-9 {
+position: absolute;
+width: 767px;
+top: 455px;
+left: 0;
+height: 61px;
+font-family: "Inter-ExtraBold", Helvetica;
+font-weight: 800;
+color: #ffffff;
+font-size: 20px;
+letter-spacing: 0.20px;
+line-height: 20px;
+}
+
+.desktop-seccin-FAQ .header {
+display: flex;
+flex-direction: column;
+width: 1920px;
+align-items: flex-start;
+position: absolute;
+top: 0;
+left: 0;
+background-color: transparent;
+border-top-style: none;
+border-right-style: none;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-left-style: none;
+border-color: #fffad2;
+}
+
+.desktop-seccin-FAQ .banner {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 18px 160px;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+background-color: #001b0a;
+overflow: hidden;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-color: var(--grey-15);
+}
+
+.desktop-seccin-FAQ .abstract-design {
+position: absolute;
+width: 1920px;
+height: 1282px;
+top: -610px;
+left: 0;
+}
+
+.desktop-seccin-FAQ .group {
+position: relative;
+width: 1918px;
+height: 1279px;
+top: 1px;
+left: 1px;
+}
+
+.desktop-seccin-FAQ .BACKGROUND {
+height: 1279px;
+}
+
+.desktop-seccin-FAQ .group-wrapper {
+position: relative;
+width: 1918px;
+height: 1279px;
+mix-blend-mode: color-dodge;
+}
+
+.desktop-seccin-FAQ .img {
+position: absolute;
+width: 1919px;
+height: 63px;
+top: 609px;
+left: 0;
+}
+
+.desktop-seccin-FAQ .text {
+position: relative;
+width: fit-content;
+margin-top: -1.00px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: var(--absolutewhite);
+font-size: 18px;
+text-align: center;
+letter-spacing: 0;
+line-height: 27px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .text-button {
+position: relative;
+width: fit-content;
+margin-top: -1.00px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: var(--absolutewhite);
+font-size: 18px;
+text-align: center;
+letter-spacing: 0;
+line-height: 27px;
+text-decoration: underline;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .icon-wrapper {
+align-items: center;
+justify-content: center;
+padding: 4px;
+position: absolute;
+top: 15px;
+left: 1856px;
+background-color: #ffffff1a;
+border-radius: 75px;
+display: inline-flex;
+gap: 10px;
+}
+
+.desktop-seccin-FAQ .img-2 {
+position: relative;
+width: 24px;
+height: 24px;
+}
+
+.desktop-seccin-FAQ .navigation-bar {
+display: flex;
+height: 105px;
+align-items: center;
+gap: 1372px;
+padding: 20px 162px;
+position: relative;
+align-self: stretch;
+width: 100%;
+background-color: #fef9d1;
+}
+
+.desktop-seccin-FAQ .logo {
+position: relative;
+width: 160px;
+height: 48px;
+}
+
+.desktop-seccin-FAQ .chaski-isotipo {
+position: absolute;
+width: 47px;
+height: 55px;
+top: 0;
+left: 8px;
+object-fit: cover;
+}
+
+.desktop-seccin-FAQ .text-2 {
+position: absolute;
+width: 117px;
+top: -2px;
+left: 55px;
+font-family: "Marcellus SC-Regular", Helvetica;
+font-weight: 400;
+color: #001b0a;
+font-size: 26px;
+letter-spacing: 0;
+line-height: 26px;
+}
+
+.desktop-seccin-FAQ .buttons-container {
+display: inline-flex;
+align-items: center;
+gap: 30px;
+position: absolute;
+top: 25px;
+left: 789px;
+}
+
+.desktop-seccin-FAQ .text-button-2 {
+position: relative;
+width: fit-content;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: #001b0a;
+font-size: 18px;
+letter-spacing: 0;
+line-height: 27px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .button-2 {
+all: unset;
+box-sizing: border-box;
+align-items: flex-start;
+padding: 14px 24px;
+position: relative;
+flex: 0 0 auto;
+background-color: #001b0a;
+border-radius: 10px;
+border: 1px solid;
+border-color: var(--grey-15);
+display: inline-flex;
+gap: 10px;
+}
+
+.desktop-seccin-FAQ .text-3 {
+position: relative;
+width: fit-content;
+margin-top: -1.00px;
+font-family: "Urbanist-Medium", Helvetica;
+font-weight: 500;
+color: var(--absolutewhite);
+font-size: 18px;
+letter-spacing: 0;
+line-height: 27px;
+white-space: nowrap;
+}
+
+.desktop-seccin-FAQ .frame {
+display: flex;
+width: 40px;
+height: 43px;
+align-items: flex-start;
+justify-content: flex-end;
+gap: 4px;
+position: relative;
+}
+
+.desktop-seccin-FAQ .user-dropdown {
+position: relative;
+width: 137px;
+height: 227px;
+margin-bottom: -184.00px;
+margin-left: -97.00px;
+}
+
+.desktop-seccin-FAQ .listbox-main-wrapper {
+position: relative;
+width: 64px;
+height: 36px;
+left: 73px;
+}
+
+.desktop-seccin-FAQ .listbox-main {
+height: 36px;
+}
+
+.desktop-seccin-FAQ .frame-2 {
+display: flex;
+width: 64px;
+height: 36px;
+align-items: center;
+gap: 4px;
+position: relative;
+}
+
+.desktop-seccin-FAQ .ellipse {
+position: relative;
+width: 36px;
+height: 36px;
+object-fit: cover;
+}
+
+.desktop-seccin-FAQ .reserve {
+position: absolute;
+width: 30px;
+height: 30px;
+top: 34px;
+left: 1632px;
+}
