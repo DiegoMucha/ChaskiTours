@@ -1,69 +1,129 @@
-body{
-    background-color: #fffad2;
-    font-family: Helvetica;
+body {
+  background-color: #fffad2;
+  font-family: Helvetica;
 }
-p{
-    font-family: Helvetica;
+p {
+  font-family: Helvetica;
 }
-.favoritos{
-    display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.contenido{
-    width: 1620px;
-    border: #000c05;
-    
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fffad2;
 }
-.titulo{
-    display: flex;
-}
-.corazon{
-    width: 44px;
-    height: 44px;
-    background-color: #000c05;
-    border-radius: 100px;
-    border: 1px solid;
-    margin: 15px;
-}
-.fondo{
-    box-sizing: border-box;
-}
-.fondo_imagen_fav{
-    box-sizing: border-box;
-}
-.lugares_fav{
-    display: flex;
-    flex-wrap: wrap;
-}
-.img_lugar{
-    width: 310px;
-    height: 248px;
-}
-.cuadrado{
-    border-width: 2px;
-    border-style: solid;
-    border-color: #000c05;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-.txt_fav{
-    display: flex;
-    justify-content: center;
-}
-.img_fav{
-    width: 26px;
-    height: 26px;
-    background-color: #000c05;
-    border-radius: 100px;
-    border: 1px solid;
-    margin-top: 15px;
-    margin-right: 15px;
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #02260e;
 }
-.compartir{
-    width: 26px;
-    height: 26px;
-    margin-top: 15px;
-    margin-left: 15px;
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #02260e;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a.faq {
+  background-color: #02260e;
+  color: white;
+}
+
+.nav-links a:hover:not(.faq) {
+  background-color: #e1e1e1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.favoritos {
+  display: flex;
+}
+.contenido {
+  width: 1620px;
+  border: #000c05;
+}
+.titulo {
+  display: flex;
+}
+.corazon {
+  width: 34px;
+  height: 34px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-left: 10px;
+}
+.fondo {
+  box-sizing: border-box;
+}
+.fondo_imagen_fav {
+  box-sizing: border-box;
+}
+.lugares_fav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img_lugar {
+  width: 310px;
+  height: 248px;
+}
+.cuadrado {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000c05;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.txt_fav {
+  display: flex;
+  justify-content: center;
+}
+.img_fav {
+  width: 26px;
+  height: 26px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.txt_pre{
+    margin-top: 17px;
+}
+.compartir {
+  width: 26px;
+  height: 26px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
