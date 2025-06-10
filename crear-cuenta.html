@@ -1,79 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <title>Crear cuenta | Chaski Tours</title>
   </head>
   <body>
-    <div class="desktop-recuperar">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="main-container">
-            <div class="left-side-column">
-              <div class="login-form">
-                <div class="intro">
-                  <div class="text-wrapper">Recupera tu cuenta 🔑</div>
-                  <p class="div">Introduce tu correo asociado para cambiar tu contraseña</p>
-                </div>
-                <div class="form">
-                  <div class="input">
-                    <input class="label" placeholder="Email" type="email" />
-                    <div class="overlap-group-wrapper">
-                      <div class="overlap-group">
-                        <input class="placeholder" placeholder="Ejemplo@email.com" type="email" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="main-button"><div class="sign-in">Ingresar</div></div>
-                </div>
-                <p class="p">© 2025 ALL RIGHTS RESERVED</p>
+    <button class="close-circle" aria-label="Cerrar">
+      <img src="assets/icons/close-circle.png" alt="Cerrar" />
+    </button>
+    <header class="header">
+      <section class="banner" aria-label="Promoción">
+        <div class="abstract-design" aria-hidden="true">
+          <div class="group">
+            <div class="BACKGROUND">
+              <div class="group-wrapper">
+                <img class="img" src="assets/icons/vector.png" alt="" />
               </div>
-              <img class="vuesax-linear-arrow" src="assets/icons/arrow-circle-left.png" />
             </div>
-            <div class="art"><img class="login-art" src="assets/img/login-art.jpg" /></div>
           </div>
-          <header class="header">
-            <div class="banner">
-              <div class="abstract-design">
-                <div class="group">
-                  <div class="BACKGROUND">
-                    <div class="group-wrapper"><img class="img" src="assets/icons/vector.png" /></div>
-                  </div>
-                </div>
-              </div>
-              <p class="text">✨Descubre los encantos de Lima</p>
-              <div class="text-button">Más información</div>
-            </div>
-            <div class="navigation-bar">
-              <div class="logo">
-                <img class="chaski-isotipo" src="assets/icons/chaski-isotipo.png" />
-                <div class="text-2">Chaski Tours</div>
-              </div>
-              <div class="buttons-container">
-                <button class="button"><div class="text-3">Inicio</div></button>
-                <div class="text-button-2">Nosotros</div>
-                <div class="text-button-2">Lugares</div>
-                <div class="text-button-2">Preguntas Frecuentes</div>
-              </div>
-              <div class="frame">
-                <div class="user-dropdown">
-                  <div class="listbox-main-wrapper">
-                    <div class="listbox-main">
-                      <div class="frame-2">
-                        <img class="ellipse" src="assets/icons/ellipse-4.png" />
-                        <img class="chevron-down" src="assets/icons/chevron-down.png" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
         </div>
-      </div>
-    </div>
+        <p class="text">✨Descubre los encantos de Lima</p>
+        <a href="#" class="text-button">Más información</a>
+      </section>
+      <nav class="navigation-bar" aria-label="Navegación principal">
+        <a class="logo" href="#">
+          <img class="imagotipo" src="assets/icons/imagotipo.png" alt="Chaski Tours" />
+        </a>
+        <ul class="buttons-container">
+          <li><a class="button" href="#"><span class="text-3">Inicio</span></a></li>
+          <li><a class="text-button-2" href="#">Nosotros</a></li>
+          <li><a class="text-button-2" href="#">Lugares</a></li>
+          <li><a class="text-button-2" href="#">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="frame" aria-label="Usuario">
+          <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
+            <span class="listbox-main-wrapper">
+              <span class="listbox-main">
+                <span class="frame-2">
+                  <img class="ellipse" src="assets/icons/ellipse-4.png" alt="Usuario" />
+                  <img class="chevron-down" src="assets/icons/chevron-down.png" alt="" />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="desktop-inicio">
+      <section class="main-container">
+        <aside class="left-side-column">
+          <section class="login-form" aria-label="Formulario de registro">
+            <header class="intro">
+              <h1 class="bienvenido-de-nuevo">Crea tu cuenta 🚀</h1>
+              <p class="text-wrapper">Regístrate para comenzar a explorar Lima con Chaski Tours.</p>
+            </header>
+            <form class="form" autocomplete="on">
+              <div class="input">
+                <label for="nombre" class="label">Nombre</label>
+                <input id="nombre" name="nombre" class="input-field" type="text" placeholder="Tu nombre completo" required autocomplete="name" />
+              </div>
+              <div class="input">
+                <label for="email" class="label">Email</label>
+                <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
+              </div>
+              <div class="input">
+                <label for="password" class="label">Contraseña</label>
+                <input id="password" name="password" class="input-field" type="password" placeholder="Al menos 8 caracteres" minlength="8" required autocomplete="new-password" />
+              </div>
+              <div class="input">
+                <label for="confirm-password" class="label">Confirmar contraseña</label>
+                <input id="confirm-password" name="confirm-password" class="input-field" type="password" placeholder="Repite tu contraseña" minlength="8" required autocomplete="new-password" />
+              </div>
+              <button type="submit" class="main-button"><span class="sign-in">Crear cuenta</span></button>
+            </form>
+            <div class="social-sign-in">
+              <div class="or" aria-hidden="true">
+                <img class="line" src="img/line-2.svg" alt="" />
+                <span class="text-wrapper-3">O</span>
+                <img class="line" src="img/line-1.svg" alt="" />
+              </div>
+              <div class="social-buttons">
+                <button class="social-button" type="button">
+                  <img class="google" src="assets/icons/google.png" alt="Google" />
+                  <span class="sign-in-with">Registrarse con Google</span>
+                </button>
+              </div>
+            </div>
+            <p class="no-tienes-una-cuenta">
+              <span class="span">¿Ya tienes una cuenta?</span>
+              <span class="text-wrapper-4">&nbsp;</span>
+              <a href="#" class="text-wrapper-5">Inicia sesión</a>
+            </p>
+            <footer>
+              <small class="p">© 2025 ALL RIGHTS RESERVED</small>
+            </footer>
+          </section>
+        </aside>
+        <figure class="art">
+          <img class="login-art" src="assets/img/login-art.jpg" alt="Arte de registro" />
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
