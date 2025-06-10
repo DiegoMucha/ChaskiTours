@@ -1,0 +1,396 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* Colores Principales */
+  --primary-dark: #001b0a;
+  --primary-light: #fef9d1;
+  --background-main: #fef9d1;
+  --card-background: #fffad2;
+  
+  /* Colores de Texto */
+  --text-dark: #3d2b1f;
+  --text-light: #ffffff;
+  --text-muted: #666666;
+  
+  /* Colores de Componentes */
+  --grey-border: #e0e0e0;
+  --star-color: #ffc700;
+  --progress-bar-bg: #e0e0e0;
+  --progress-bar-fill: #3ab567;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: var(--background-main);
+  color: var(--text-dark);
+}
+
+.page-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+
+/* --- Encabezado --- */
+.header {
+  width: 100%;
+}
+
+.top-banner {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  position: relative;
+  font-size: 18px;
+  background-image: url('../assets/vector.png'); 
+  background-repeat: repeat;
+}
+.top-banner a {
+  text-decoration: underline;
+  margin-left: 8px;
+  color: var(--text-light);
+}
+.close-banner-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  line-height: 32px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: var(--primary-light);
+  border-bottom: 1px solid var(--grey-border);
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo-img {
+  height: 55px;
+  margin-top: 5px;
+}
+.logo-text {
+  font-family: 'Marcellus SC', serif;
+  font-size: 26px;
+  color: var(--primary-dark);
+  line-height: 1.0;
+  padding-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  padding: 10px 5px;
+}
+.nav-links a.active {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-profile-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.user-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.dropdown-arrow {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Botón Genérico --- */
+.btn {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #003a1a;
+}
+
+/* --- Paginación --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 0;
+}
+.pagination a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid var(--grey-border);
+  border-radius: 8px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+.pagination a.active, .pagination a:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  border-color: var(--primary-dark);
+}
+
+
+/* ==========================================================================
+ PÁGINA: SITIOS DESTACADOS (Grid de Tarjetas)
+ ========================================================================== */
+
+.content-wrapper {
+  padding: 60px 80px;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+.page-header h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+.page-header p {
+  font-size: 22px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.site-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--grey-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  height: 100%; /* Asegura que todas las tarjetas en una fila tengan la misma altura */
+}
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.rating-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ==========================================================================
+ PÁGINA: LISTA DE RESEÑAS (Layout de 2 columnas)
+ ========================================================================== */
+
+.reviews-page-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  padding: 40px 80px;
+  align-items: start;
+}
+
+.reviews-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.back-link {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+.page-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--text-dark);
+}
+
+.ratings-summary {
+  border: 1px solid var(--grey-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--card-background);
+}
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+.rating-row span:first-child {
+  width: 100px;
+  flex-shrink: 0;
+}
+.rating-row span:last-child {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+.rating-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: var(--progress-bar-bg);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background-color: var(--progress-bar-fill);
+  border-radius: 5px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.review-card {
+  border: 1px solid var(--grey-border);
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  width: 100px;
+}
+.review-card .user-avatar { /* Hereda de la regla del header */
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+}
+.user-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+.user-location {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+.review-body {
+  flex-grow: 1;
+}
+.review-stars {
+  color: var(--star-color);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.review-body p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+  border-radius: 12px;
+}
