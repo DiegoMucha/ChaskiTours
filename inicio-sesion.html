@@ -1,104 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    <title>Iniciar sesión | Chaski Tours</title>
   </head>
   <body>
-    <div class="desktop-inicio">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="main-container">
-            <div class="left-side-column">
-              <div class="login-form">
-                <div class="intro">
-                  <div class="bienvenido-de-nuevo">Bienvenido de nuevo&nbsp;&nbsp;👋</div>
-                  <p class="text-wrapper">Hoy es un nuevo día. Es tu día. Tú le das forma.</p>
-                </div>
-                <div class="form">
-                  <div class="input">
-                    <input class="label" placeholder="Email" type="email" />
-                    <div class="overlap-group-wrapper">
-                      <div class="overlap-group">
-                        <input class="placeholder" placeholder="Ejemplo@email.com" type="email" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input">
-                    <div class="div">Contraseña</div>
-                    <div class="overlap-group-wrapper">
-                      <div class="overlap-group"><div class="placeholder-2">Al menos 8 caracteres</div></div>
-                    </div>
-                  </div>
-                  <div class="text-wrapper-2">¿Olvidaste tu contraseña?</div>
-                  <div class="main-button"><div class="sign-in">Ingresar</div></div>
-                </div>
-                <div class="social-sign-in">
-                  <div class="or">
-                    <img class="line" src="img/line-2.svg" />
-                    <div class="text-wrapper-3">O</div>
-                    <img class="line" src="img/line-1.svg" />
-                  </div>
-                  <div class="social-buttons">
-                    <div class="social-button">
-                      <img class="google" src="assets/icons/google.png" />
-                      <div class="sign-in-with">Iniciar sesión con Google</div>
-                    </div>
-                  </div>
-                </div>
-                <p class="no-tienes-una-cuenta">
-                  <span class="span">¿No tienes una cuenta?</span>
-                  <span class="text-wrapper-4">&nbsp;</span>
-                  <span class="text-wrapper-5">Regístrate</span>
-                </p>
-                <p class="p">© 2025 ALL RIGHTS RESERVED</p>
+    <header class="header">
+      <section class="banner" aria-label="Promoción">
+        <div class="abstract-design" aria-hidden="true">
+          <div class="group">
+            <div class="BACKGROUND">
+              <div class="group-wrapper">
+                <img class="img" src="assets/icons/vector.png" alt="" />
               </div>
-              <img class="close-circle" src="assets/icons/close-circle.png" />
             </div>
-            <div class="art"><img class="login-art" src="assets/img/lima-dron.jpg" /></div>
           </div>
-          <header class="header">
-            <div class="banner">
-              <div class="abstract-design">
-                <div class="group">
-                  <div class="BACKGROUND">
-                    <div class="group-wrapper"><img class="img" src="assets/icons/vector.png" /></div>
-                  </div>
-                </div>
-              </div>
-              <p class="text">✨Descubre los encantos de Lima</p>
-              <div class="text-button">Más información</div>
-            </div>
-            <div class="navigation-bar">
-              <div class="logo">
-                <img class="chaski-isotipo" src="assets/icons/Chaski_Isotipo.png" />
-                <div class="text-2">Chaski Tours</div>
-              </div>
-              <div class="buttons-container">
-                <button class="button"><div class="text-3">Inicio</div></button>
-                <div class="text-button-2">Nosotros</div>
-                <div class="text-button-2">Lugares</div>
-                <div class="text-button-2">Preguntas Frecuentes</div>
-              </div>
-              <div class="frame">
-                <div class="user-dropdown">
-                  <div class="listbox-main-wrapper">
-                    <div class="listbox-main">
-                      <div class="frame-2">
-                        <img class="ellipse" src="assets/icons/ellipse-4.png" />
-                        <img class="chevron-down" src="assets/icons/chevron-down.png" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
         </div>
-      </div>
-    </div>
+        <p class="text">✨Descubre los encantos de Lima</p>
+        <a href="#" class="text-button">Más información</a>
+      </section>
+      <nav class="navigation-bar" aria-label="Navegación principal">
+        <a class="logo" href="#">
+          <img class="chaski-isotipo" src="assets/icons/Chaski_Isotipo.png" alt="Logo Chaski Tours" />
+          <span class="text-2">Chaski Tours</span>
+        </a>
+        <ul class="buttons-container">
+          <li><a class="button" href="#"><span class="text-3">Inicio</span></a></li>
+          <li><a class="text-button-2" href="#">Nosotros</a></li>
+          <li><a class="text-button-2" href="#">Lugares</a></li>
+          <li><a class="text-button-2" href="#">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="frame" aria-label="Usuario">
+          <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
+            <span class="listbox-main-wrapper">
+              <span class="listbox-main">
+                <span class="frame-2">
+                  <img class="ellipse" src="assets/icons/ellipse-4.png" alt="Usuario" />
+                  <img class="chevron-down" src="assets/icons/chevron-down.png" alt="" />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="desktop-inicio">
+      <section class="main-container">
+        <aside class="left-side-column">
+          <button class="close-circle" aria-label="Cerrar">
+            <img src="assets/icons/close-circle.png" alt="Cerrar" />
+          </button>
+          <section class="login-form" aria-label="Formulario de inicio de sesión">
+            <header class="intro">
+              <h1 class="bienvenido-de-nuevo">Bienvenido de nuevo 👋</h1>
+              <p class="text-wrapper">Hoy es un nuevo día. Es tu día. Tú le das forma.</p>
+            </header>
+            <form class="form" autocomplete="on">
+              <div class="input">
+                <label for="email" class="label">Email</label>
+                <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
+              </div>
+              <div class="input">
+                <label for="password" class="label">Contraseña</label>
+                <input id="password" name="password" class="input-field" type="password" placeholder="Al menos 8 caracteres" minlength="8" required autocomplete="current-password" />
+              </div>
+              <a href="#" class="text-wrapper-2">¿Olvidaste tu contraseña?</a>
+              <button type="submit" class="main-button"><span class="sign-in">Ingresar</span></button>
+            </form>
+            <div class="social-sign-in">
+              <div class="or" aria-hidden="true">
+                <img class="line" src="img/line-2.svg" alt="" />
+                <span class="text-wrapper-3">O</span>
+                <img class="line" src="img/line-1.svg" alt="" />
+              </div>
+              <div class="social-buttons">
+                <button class="social-button" type="button">
+                  <img class="google" src="assets/icons/google.png" alt="Google" />
+                  <span class="sign-in-with">Iniciar sesión con Google</span>
+                </button>
+              </div>
+            </div>
+            <p class="no-tienes-una-cuenta">
+              <span class="span">¿No tienes una cuenta?</span>
+              <span class="text-wrapper-4">&nbsp;</span>
+              <a href="#" class="text-wrapper-5">Regístrate</a>
+            </p>
+            <footer>
+              <small class="p">© 2025 ALL RIGHTS RESERVED</small>
+            </footer>
+          </section>
+        </aside>
+        <figure class="art">
+          <img class="login-art" src="assets/img/lima-dron.jpg" alt="Vista aérea de Lima" />
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
