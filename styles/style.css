@@ -1,289 +1,599 @@
-/* --- globals.css --- */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* ==========================================================================
+   1. GLOBALES Y RESET
+   ========================================================================== */
 
-/* --- Variables y Estilos Base --- */
-:root {
-    --primary-dark: #001b0a;
-    --primary-light: #fef9d1;
-    --text-dark: #3d2b1f;
-    --text-light: #ffffff;
-    --text-muted: #666666;
-    --grey-border: #e0e0e0;
-  }
-  
-  body {
-    font-family: 'Urbanist', sans-serif;
-    background-color: #ffffff; /* Un fondo blanco simple para el cuerpo */
-    color: var(--text-dark);
-  }
-  
-  .page-container {
-    max-width: 1920px; /* Ancho máximo igual al diseño */
-    margin: 0 auto; /* Centra el contenido en pantallas más grandes */
-    background-color: var(--primary-light); /* Color de fondo principal del diseño */
-  }
-  
-  /* --- Encabezado --- */
-  .header {
-    width: 100%;
-  }
-  
-  .user-profile-dropdown {
-    display: flex;
-    align-items: center;
-    gap: 4px; /* Espacio entre la foto de perfil y la flecha */
-    cursor: pointer;
-  }
-  
-  .dropdown-arrow {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .top-banner {
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 20px;
-    position: relative;
-    font-size: 18px;
-    background-image: url('../assets/img/vector.png');
-    background-repeat: repeat; /* Para que el patrón se repita tanto horizontal como verticalmente */
-  }
-  
-  .top-banner a {
-    text-decoration: underline;
-    margin-left: 8px;
-  }
-  .close-banner-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: white;
-    font-size: 24px;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    position: absolute;
-    right: 40px;
-    line-height: 32px;
-  }
-  
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    background-color: var(--primary-light);
-    border-bottom: 1px solid #e0e0e0;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    align-items: flex-start; 
-  }
-  .logo-img {
-    height: 55px;
-    margin-top: 5px;
-  }
-  .logo-text {
-    font-family: 'Marcellus SC', serif;
-    font-size: 26px;
-    color: var(--primary-dark);
-    line-height: 1.0;
-    padding-top: 5px;
-  }
-  .nav-links {
-    display: flex;
-    gap: 40px;
-    font-size: 18px;
-    font-weight: 500;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    color: var(--primary-dark); 
-    text-decoration: none;      
-    padding: 10px 5px;          
-  }
-  
-  .nav-links a.active {
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .action-icon {
-    height: 30px;
-    cursor: pointer;
-  }
-  .user-avatar {
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  /* --- Sección del Héroe --- */
-  .hero {
-    height: 460px;
-    background-image: url('../assets/img/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-  }
-  .hero-text-box {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: var(--text-light);
-    padding: 24px 48px;
-    border-radius: 16px;
-    max-width: 880px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .hero-text-box h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  .hero-text-box p {
-    font-size: 22px;
-    line-height: 1.5;
-    font-weight: 500;
-  }
-  
-  /* --- Sección de Información --- */
-  .info-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 80px 40px;
-    gap: 60px;
-  }
-  .info-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 380px;
-    flex-grow: 1;
-    position: relative;
-    padding: 0 30px;
-  }
-  /* Creamos los separadores verticales de forma robusta */
-  .info-card:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -30px; /* Posicionado en el medio del 'gap' */
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background-color: var(--grey-border);
-  }
-  .info-icon {
-    width: 80px; /* Tamaño reducido para mejor proporción */
-    height: 80px;
-    margin-bottom: 24px;
-  }
-  .info-card h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: #000;
-  }
-  .info-card p {
-    font-size: 22px;
-    line-height: 1.5;
-  }
-  
-  /* --- Sección de Acciones --- */
-  .actions-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px 80px 80px 80px;
-    gap: 40px;
-    border-top: 1px solid var(--grey-border);
-  }
-  
-  .action-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .action-icon-circle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--primary-dark);
-    padding: 10px; /* Para que el icono svg/png no toque los bordes */
-    flex-shrink: 0; /* Evita que el icono se encoja */
-  }
-  
-  .action-label {
-    font-size: 18px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .action-value {
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  
-  /* Estilo para los botones */
-  .btn {
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    border: none;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .btn:hover {
-    background-color: #003a1a;
-  }
-  /* Ajustes específicos para los items de acción con botones */
-  .action-item.review, .action-item.favorite {
-    flex-grow: 1; /* Permite que ocupen más espacio */
-    max-width: 450px;
-  }
-  .action-item.review .action-label,
-  .action-item.favorite .action-label {
-    font-size: 16px; /* Hacemos el texto un poco más pequeño para que quepa bien */
-  }
+   @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Marcellus+SC&family=Urbanist:wght@400;500;600&display=swap');
+   
+   :root {
+     /* Colores Principales */
+     --primary-dark: #001b0a;
+     --primary-light: #fef9d1;
+     --background-main: #fef9d1;
+     --card-background: #fffad2;
+     
+     /* Colores de Texto */
+     --text-dark: #3d2b1f;
+     --text-light: #ffffff;
+     --text-muted: #666666;
+     
+     /* Colores de Componentes */
+     --grey-border: #e0e0e0;
+     --star-color: #ffc700;
+     --progress-bar-bg: #e0e0e0;
+     --progress-bar-fill: #3ab567;
+   }
+   
+   * {
+     box-sizing: border-box;
+     -webkit-font-smoothing: antialiased;
+   }
+   
+   html, body {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+   }
+   
+   body {
+     font-family: 'Urbanist', sans-serif;
+     background-color: var(--background-main);
+     color: var(--text-dark);
+   }
+   
+   .page-container {
+     max-width: 1920px;
+     margin: 0 auto;
+     overflow-x: hidden; /* Previene scroll horizontal */
+   }
+   
+   a {
+     text-decoration: none;
+     color: inherit;
+   }
+   
+   /* ==========================================================================
+      2. COMPONENTES REUTILIZABLES (Botones, Header, Tarjetas, etc.)
+      ========================================================================== */
+   
+   /* --- Header (Común para todas las páginas) --- */
+   .header {
+     width: 100%;
+   }
+   
+   .top-banner {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 12px 20px;
+     position: relative;
+     font-size: 18px;
+     text-align: center;
+     background-image: url('../assets/img/vector.png'); 
+     background-repeat: repeat;
+   }
+   .top-banner a {
+     text-decoration: underline;
+     margin-left: 8px;
+     color: var(--text-light);
+   }
+   .close-banner-btn {
+     background: rgba(255, 255, 255, 0.1);
+     border: none;
+     color: white;
+     font-size: 24px;
+     border-radius: 50%;
+     width: 32px;
+     height: 32px;
+     cursor: pointer;
+     position: absolute;
+     right: 40px;
+     line-height: 32px;
+   }
+   
+   .main-nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 80px;
+     background-color: var(--primary-light);
+     border-bottom: 1px solid var(--grey-border);
+   }
+   
+   .logo {
+     display: flex;
+     align-items: flex-start;
+     gap: 12px;
+   }
+   .logo-img {
+     height: 55px;
+     margin-top: 5px;
+   }
+   .logo-text {
+     font-family: 'Marcellus SC', serif;
+     font-size: 26px;
+     color: var(--primary-dark);
+     line-height: 1.0;
+     padding-top: 5px;
+   }
+   
+   .nav-links {
+     display: flex;
+     gap: 40px;
+     font-size: 18px;
+     font-weight: 500;
+     align-items: center;
+   }
+   .nav-links a {
+     color: var(--primary-dark);
+     padding: 10px 5px;
+     transition: color 0.3s;
+   }
+   .nav-links a.active, .nav-links a:hover {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+     padding: 10px 20px;
+     border-radius: 8px;
+   }
+   .nav-links a.active {
+       font-weight: bold;
+   }
+   
+   .nav-actions {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+   }
+   .nav-actions .action-icon {
+       height: 30px;
+       cursor: pointer;
+   }
+   .user-profile-dropdown {
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     cursor: pointer;
+   }
+   .user-avatar {
+     height: 40px;
+     width: 40px;
+     border-radius: 50%;
+   }
+   .dropdown-arrow {
+     width: 24px;
+     height: 24px;
+   }
+   
+   /* --- Botón Genérico --- */
+   .btn {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+     border: none;
+     padding: 14px 24px;
+     font-size: 16px;
+     font-family: 'Urbanist', sans-serif;
+     font-weight: 500;
+     border-radius: 8px;
+     cursor: pointer;
+     text-decoration: none;
+     text-align: center;
+     transition: background-color 0.3s;
+   }
+   .btn:hover {
+     background-color: #003a1a;
+   }
+   
+   /* --- Paginación --- */
+   .pagination {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 12px;
+     padding: 40px 0;
+     flex-wrap: wrap;
+   }
+   .pagination a {
+     text-decoration: none;
+     padding: 10px 16px;
+     border: 1px solid var(--grey-border);
+     border-radius: 8px;
+     color: var(--text-dark);
+     font-weight: 500;
+     transition: background-color 0.3s, color 0.3s;
+   }
+   .pagination a.active, .pagination a:hover {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+     border-color: var(--primary-dark);
+   }
+   
+   /* --- Títulos de Página Genéricos --- */
+   .page-header {
+     text-align: center;
+     max-width: 800px;
+     margin: 0 auto 60px auto;
+   }
+   .page-header h1 {
+     font-family: 'Inter', sans-serif;
+     font-size: 48px;
+     font-weight: 700;
+     color: var(--text-dark);
+     margin-bottom: 14px;
+   }
+   .page-header p {
+     font-size: 22px;
+     color: var(--text-muted);
+     line-height: 1.5;
+   }
+   
+   
+   /* ==========================================================================
+      3. ESTILOS ESPECÍFICOS POR PÁGINA
+      ========================================================================== */
+   
+   /* --- 3.1 Página: SITIOS DESTACADOS (Grid de Tarjetas) --- */
+   .content-wrapper {
+     padding: 60px 80px;
+   }
+   
+   .grid-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+   }
+   
+   .site-card {
+     background-color: var(--card-background);
+     border: 1px solid var(--grey-border);
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+     height: 100%;
+   }
+   .card-image {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+   }
+   .card-content {
+     padding: 24px;
+     display: flex;
+     flex-direction: column;
+     flex-grow: 1; 
+   }
+   .card-title {
+     font-family: 'Inter', sans-serif;
+     font-weight: 600;
+     font-size: 28px;
+     color: var(--text-dark);
+     margin-bottom: 24px;
+     flex-grow: 1;
+   }
+   .card-footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   .site-card .rating {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-size: 18px;
+     font-weight: 600;
+   }
+   .rating-icon {
+     width: 24px;
+     height: 24px;
+   }
+   
+   /* --- 3.2 Página: RESEÑAS (2 columnas) --- */
+   .reviews-page-layout {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     gap: 48px;
+     padding: 40px 80px;
+     align-items: start;
+   }
+   
+   .reviews-content {
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+   }
+   .back-link {
+     color: var(--primary-dark);
+     font-weight: 500;
+     font-size: 18px;
+   }
+   .reviews-page-layout .page-title {
+     font-family: 'Inter', sans-serif;
+     font-weight: 700;
+     font-size: 34px;
+     color: var(--text-dark);
+   }
+   
+   .ratings-summary {
+     border: 1px solid var(--grey-border);
+     border-radius: 12px;
+     padding: 24px;
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     background-color: var(--card-background);
+   }
+   .rating-row {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     font-size: 16px;
+     color: var(--text-muted);
+   }
+   .rating-row span:first-child { width: 100px; flex-shrink: 0; }
+   .rating-row span:last-child { font-weight: bold; color: var(--text-dark); }
+   .rating-bar {
+     flex-grow: 1;
+     height: 10px;
+     background-color: var(--progress-bar-bg);
+     border-radius: 5px;
+     overflow: hidden;
+   }
+   .bar-fill {
+     height: 100%;
+     background-color: var(--progress-bar-fill);
+     border-radius: 5px;
+   }
+   
+   .reviews-list {
+     display: flex;
+     flex-direction: column;
+     gap: 24px;
+   }
+   .review-card {
+     border: 1px solid var(--grey-border);
+     background-color: var(--card-background);
+     border-radius: 12px;
+     padding: 24px;
+     display: flex;
+     gap: 24px;
+   }
+   .user-info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     flex-shrink: 0;
+     width: 100px;
+   }
+   .review-card .user-avatar {
+     width: 60px;
+     height: 60px;
+     margin-bottom: 8px;
+   }
+   .user-name {
+     font-weight: bold;
+     font-size: 18px;
+     color: var(--text-dark);
+   }
+   .user-location {
+     font-size: 16px;
+     color: var(--text-muted);
+   }
+   .review-body {
+     flex-grow: 1;
+   }
+   .review-stars {
+     color: var(--star-color);
+     font-size: 24px;
+     margin-bottom: 12px;
+   }
+   .review-body p {
+     font-size: 18px;
+     line-height: 1.6;
+     color: var(--text-dark);
+   }
+   
+   .featured-image img {
+     width: 100%;
+     height: 100%;
+     max-height: 90vh;
+     object-fit: cover;
+     border-radius: 12px;
+   }
+   
+   /* --- 3.3 Página: VER DETALLES --- */
+   .hero {
+     height: 460px;
+     background-image: url('../assets/img/hero-background.jpg'); /* Asegúrate que la ruta es correcta */
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: center;
+     padding: 0 80px;
+   }
+   .hero-text-box {
+     background-color: rgba(0, 0, 0, 0.3);
+     backdrop-filter: blur(8px);
+     color: var(--text-light);
+     padding: 24px 48px;
+     border-radius: 16px;
+     max-width: 880px;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+   }
+   .hero-text-box h1 {
+     font-family: 'Inter', sans-serif;
+     font-size: 60px;
+     font-weight: 600;
+     margin-bottom: 16px;
+   }
+   .hero-text-box p {
+     font-size: 22px;
+     line-height: 1.5;
+     font-weight: 500;
+   }
+   
+   .info-section {
+     display: flex;
+     justify-content: center;
+     padding: 80px 40px;
+     gap: 60px;
+     border-bottom: 1px solid var(--grey-border);
+   }
+   .info-card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     max-width: 380px;
+     flex-grow: 1;
+     position: relative;
+     padding: 0 30px;
+   }
+   .info-card:not(:last-child)::after {
+     content: '';
+     position: absolute;
+     right: -30px;
+     top: 20%;
+     height: 60%;
+     width: 1px;
+     background-color: var(--grey-border);
+   }
+   .info-icon {
+     width: 80px;
+     height: 80px;
+     margin-bottom: 24px;
+   }
+   .info-card h2 {
+     font-family: 'Inter', sans-serif;
+     font-size: 34px;
+     font-weight: 700;
+     margin-bottom: 16px;
+     color: #000;
+   }
+   .info-card p {
+     font-size: 22px;
+     line-height: 1.5;
+   }
+   
+   .actions-section {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 40px 80px 80px 80px;
+     gap: 40px;
+     flex-wrap: wrap;
+   }
+   .action-item {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+   }
+   .action-icon-circle {
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     background-color: var(--primary-dark);
+     padding: 10px;
+     flex-shrink: 0;
+   }
+   .action-label {
+     font-size: 18px;
+     color: var(--text-muted);
+     margin-bottom: 8px;
+   }
+   .action-value {
+     font-family: 'Inter', sans-serif;
+     font-size: 22px;
+     font-weight: bold;
+   }
+   .action-item.review, .action-item.favorite {
+     flex-grow: 1;
+     max-width: 450px;
+   }
+   
+   /* ==========================================================================
+      4. RESPONSIVIDAD (Media Queries)
+      ========================================================================== */
+   
+   /* --- Tablet (hasta 1024px) --- */
+   @media (max-width: 1024px) {
+     .main-nav, .content-wrapper, .reviews-page-layout, .hero, .actions-section {
+       padding-left: 40px;
+       padding-right: 40px;
+     }
+     
+     .nav-links {
+       gap: 20px; /* Reducir espacio entre links */
+     }
+   
+     .grid-container {
+       grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+     }
+   
+     .reviews-page-layout {
+       grid-template-columns: 1fr; /* Apila las columnas */
+     }
+     .featured-image {
+         display: none; /* Oculta la imagen grande en tablet para ahorrar espacio */
+     }
+     
+     .info-section {
+         flex-direction: column;
+         align-items: center;
+         gap: 40px;
+     }
+     .info-card:not(:last-child)::after {
+         display: none; /* Oculta los separadores verticales */
+     }
+   }
+   
+   /* --- Móvil (hasta 768px) --- */
+   @media (max-width: 768px) {
+     .main-nav {
+       flex-direction: column;
+       gap: 20px;
+       padding: 20px;
+     }
+     .nav-links {
+       flex-direction: column; /* Apila los links de navegación */
+       gap: 15px;
+       width: 100%;
+       text-align: center;
+     }
+     .nav-actions {
+         justify-content: center;
+     }
+   
+     .content-wrapper, .reviews-page-layout, .hero, .actions-section {
+       padding-left: 20px;
+       padding-right: 20px;
+     }
+   
+     .page-header h1 { font-size: 36px; }
+     .page-header p { font-size: 18px; }
+   
+     .grid-container {
+       grid-template-columns: 1fr; /* 1 columna en móvil */
+     }
+     
+     .review-card {
+         flex-direction: column;
+         align-items: center;
+     }
+   
+     .hero {
+         height: auto;
+         padding-top: 40px;
+         padding-bottom: 40px;
+     }
+     .hero-text-box h1 { font-size: 40px; }
+     .hero-text-box p { font-size: 18px; }
+   
+     .actions-section {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+   }
