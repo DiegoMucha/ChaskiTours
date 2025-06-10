@@ -5,11 +5,13 @@ body {
 p {
   font-family: Helvetica;
 }
+
 .valoraciones {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +70,70 @@ p {
   height: 20px;
   cursor: pointer;
 }
+
+
+.favoritos {
+  display: flex;
+}
+.contenido {
+  width: 1620px;
+  border: #000c05;
+}
+.titulo {
+  display: flex;
+}
+.corazon {
+  width: 34px;
+  height: 34px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-left: 10px;
+}
+.fondo {
+  box-sizing: border-box;
+}
+.fondo_imagen_fav {
+  box-sizing: border-box;
+}
+.lugares_fav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img_lugar {
+  width: 310px;
+  height: 248px;
+}
+.cuadrado {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000c05;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.txt_fav {
+  display: flex;
+  justify-content: center;
+}
+.img_fav {
+  width: 26px;
+  height: 26px;
+  background-color: #000c05;
+  border-radius: 100px;
+  border: 1px solid;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.txt_pre{
+    margin-top: 17px;
+}
+.compartir {
+  width: 26px;
+  height: 26px;
+  margin-top: 15px;
+  margin-left: 15px;
 
 .cont_calificacion {
   display: flex;
