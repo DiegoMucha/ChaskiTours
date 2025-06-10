@@ -1,79 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <title>Recuperar contraseña | Chaski Tours</title>
   </head>
   <body>
-    <div class="desktop-recuperar">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="main-container">
-            <div class="left-side-column">
-              <div class="login-form">
-                <div class="intro">
-                  <div class="text-wrapper">Recupera tu cuenta 🔑</div>
-                  <p class="div">Introduce tu correo asociado para cambiar tu contraseña</p>
-                </div>
-                <div class="form">
-                  <div class="input">
-                    <input class="label" placeholder="Email" type="email" />
-                    <div class="overlap-group-wrapper">
-                      <div class="overlap-group">
-                        <input class="placeholder" placeholder="Ejemplo@email.com" type="email" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="main-button"><div class="sign-in">Ingresar</div></div>
-                </div>
-                <p class="p">© 2025 ALL RIGHTS RESERVED</p>
+    <button class="close-circle" aria-label="Cerrar">
+      <img src="assets/icons/close-circle.png" alt="Cerrar" />
+    </button>
+    <header class="header">
+      <section class="banner" aria-label="Promoción">
+        <div class="abstract-design" aria-hidden="true">
+          <div class="group">
+            <div class="BACKGROUND">
+              <div class="group-wrapper">
+                <img class="img" src="assets/icons/vector.png" alt="" />
               </div>
-              <img class="vuesax-linear-arrow" src="assets/icons/arrow-circle-left.png" />
             </div>
-            <div class="art"><img class="login-art" src="assets/img/lima-dron.jpg" /></div>
           </div>
-          <header class="header">
-            <div class="banner">
-              <div class="abstract-design">
-                <div class="group">
-                  <div class="BACKGROUND">
-                    <div class="group-wrapper"><img class="img" src="assets/icons/vector.png" /></div>
-                  </div>
-                </div>
-              </div>
-              <p class="text">✨Descubre los encantos de Lima</p>
-              <div class="text-button">Más información</div>
-            </div>
-            <div class="navigation-bar">
-              <div class="logo">
-                <img class="chaski-isotipo" src="assets/icons/Chaski_Isotipo.png" />
-                <div class="text-2">Chaski Tours</div>
-              </div>
-              <div class="buttons-container">
-                <button class="button"><div class="text-3">Inicio</div></button>
-                <div class="text-button-2">Nosotros</div>
-                <div class="text-button-2">Lugares</div>
-                <div class="text-button-2">Preguntas Frecuentes</div>
-              </div>
-              <div class="frame">
-                <div class="user-dropdown">
-                  <div class="listbox-main-wrapper">
-                    <div class="listbox-main">
-                      <div class="frame-2">
-                        <img class="ellipse" src="assets/icons/ellipse-4.png" />
-                        <img class="chevron-down" src="assets/icons/chevron-down.png" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
         </div>
-      </div>
-    </div>
+        <p class="text">✨Descubre los encantos de Lima</p>
+        <a href="#" class="text-button">Más información</a>
+      </section>
+      <nav class="navigation-bar" aria-label="Navegación principal">
+        <a class="logo" href="#">
+          <img class="imagotipo" src="assets/icons/imagotipo.png" alt="Chaski Tours" />
+        </a>
+        <ul class="buttons-container">
+          <li><a class="button" href="#"><span class="text-3">Inicio</span></a></li>
+          <li><a class="text-button-2" href="#">Nosotros</a></li>
+          <li><a class="text-button-2" href="#">Lugares</a></li>
+          <li><a class="text-button-2" href="#">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="frame" aria-label="Usuario">
+          <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
+            <span class="listbox-main-wrapper">
+              <span class="listbox-main">
+                <span class="frame-2">
+                  <img class="ellipse" src="assets/icons/ellipse-4.png" alt="Usuario" />
+                  <img class="chevron-down" src="assets/icons/chevron-down.png" alt="" />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="desktop-inicio">
+      <section class="main-container">
+        <aside class="left-side-column">
+          <section class="login-form" aria-label="Formulario de recuperación de contraseña">
+            <header class="intro">
+              <h1 class="bienvenido-de-nuevo">Recupera tu cuenta 🔑</h1>
+              <p class="text-wrapper">Introduce tu correo asociado para cambiar tu contraseña</p>
+            </header>
+            <form class="form" autocomplete="on">
+              <div class="input">
+                <label for="email" class="label">Email</label>
+                <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
+              </div>
+              <button type="submit" class="main-button"><span class="sign-in">Enviar enlace</span></button>
+            </form>
+            <footer>
+              <small class="p">© 2025 ALL RIGHTS RESERVED</small>
+            </footer>
+          </section>
+        </aside>
+        <figure class="art">
+          <img class="login-art" src="assets/img/lima-dron.jpg" alt="Vista aérea de Lima" />
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
