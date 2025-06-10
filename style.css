@@ -1,3 +1,27 @@
+/* --- Globales y variables --- */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+:root {
+  --absolutewhite: rgba(255, 255, 255, 1);
+  --grey-15: rgba(38, 38, 38, 1);
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
 /* --- Reset y tipografía base --- */
 *,
 *::before,
@@ -25,11 +49,50 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 140px; /* Mucha más separación entre columnas */
   padding: 48px 0;
   max-width: 1920px;
   margin: 0 auto;
   min-height: 80vh;
+  position: relative;
+}
+
+/* Elimina la línea divisoria vertical entre columnas */
+.main-container::before {
+  display: none;
+}
+
+.left-side-column,
+.art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .main-container {
+    gap: 32px;
+  }
+  .main-container::before {
+    height: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .main-container::before {
+    display: none;
+  }
+  .left-side-column,
+  .art {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 /* --- Header y navegación --- */
@@ -56,8 +119,31 @@ body {
   box-sizing: border-box;
 }
 
+/* Ajusta la imagen decorativa para que no altere el tamaño del banner */
 .banner .abstract-design {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.banner .abstract-design .img {
+  height: 100%;
+  width: auto;
+  max-width: 100vw;
+  object-fit: contain;
+  opacity: 0.18; /* Opcional: baja opacidad para no tapar el texto */
+}
+
+.banner .text,
+.banner .text-button {
+  position: relative;
+  z-index: 1;
 }
 
 .banner .text {
@@ -103,6 +189,10 @@ body {
   justify-content: space-between;
   background: #fef9d1;
   padding: 20px 8vw;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0;
 }
 
 .logo {
@@ -121,12 +211,52 @@ body {
   font-family: 'Marcellus SC', serif;
   font-size: 26px;
   color: #001b0a;
+  line-height: 1.05;
+  text-align: left;
+  display: block;
+  white-space: pre-line;
+}
+
+/* Ajusta el tamaño del imagotipo para que sea grande pero responsivo */
+.logo .imagotipo {
+  width: 180px;
+  max-width: 40vw;
+  height: auto;
+  display: block;
+}
+
+/* Responsive: reduce el tamaño del imagotipo en pantallas pequeñas */
+@media (max-width: 900px) {
+  .logo .imagotipo {
+    width: 130px;
+    max-width: 32vw;
+  }
+  .navigation-bar {
+    padding: 16px 4vw;
+  }
+}
+@media (max-width: 600px) {
+  .logo .imagotipo {
+    width: 100px;
+    max-width: 50vw;
+  }
+  .navigation-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 2vw;
+    gap: 10px;
+  }
+  .logo {
+    margin-bottom: 8px;
+  }
 }
 
 .buttons-container {
   display: flex;
   gap: 30px;
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .button,
@@ -149,7 +279,8 @@ body {
 
 .button:hover,
 .text-button-2:hover {
-  background: #e6e6e6;
+  background: #006626;
+  color: #fff;
 }
 
 .text-button-2 {
@@ -194,14 +325,43 @@ body {
   padding-top: 56px; /* Espacio para el botón cerrar */
 }
 
+/* Botón cerrar en una posición fija respecto al flujo de la página, fuera de la columna izquierda */
 .close-circle {
   position: absolute;
-  top: 16px;
-  right: 16px; /* Cambia de left a right */
+  top: 220px; /* Más abajo para quedar fuera del header en mobile */
+  left: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3000;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.close-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .close-circle {
+    top: 210px;
+    left: 1rem;
+    width: 24px;
+    height: 24px;
+    z-index: 3000;
+  }
+}
+@media (max-width: 600px) {
+  .close-circle {
+    top: 180px;
+    left: 0.5rem;
+    width: 22px;
+    height: 22px;
+    z-index: 3000;
+  }
 }
 
 .login-form {
