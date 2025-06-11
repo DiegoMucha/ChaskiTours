@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/rgf-old-style.css" />
+    <title>Crear cuenta | Chaski Tours</title>
+  </head>
+  <body>
+     <button class="close-circle" aria-label="Cerrar" onclick="location.href='inicio-sesion.html'">
+      <img src="assets/icons/close-circle.png" alt="Cerrar" />
+    </button>
+    <header class="header">
+      <section class="banner" aria-label="Promoción">
+        <div class="abstract-design" aria-hidden="true">
+          <div class="group">
+            <div class="BACKGROUND">
+              <div class="group-wrapper">
+                <img class="img" src="assets/icons/vector.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text">✨Descubre los encantos de Lima</p>
+        <a href="landing-page.html" class="text-button">Más información</a>
+      </section>
+      <nav class="navigation-bar" aria-label="Navegación principal">
+        <a class="logo" href="home.html">
+          <img class="imagotipo" src="assets/icons/imagotipo.png" alt="Chaski Tours" />
+        </a>
+        <ul class="buttons-container">
+          <li><a class="button" href="home.html"><span class="text-3">Inicio</span></a></li>
+          <li><a class="text-button-2" href="nosotros.html">Nosotros</a></li>
+          <li><a class="text-button-2" href="sitios-destacados.html">Lugares</a></li>
+          <li><a class="text-button-2" href="preguntas-freq.html">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="frame" aria-label="Usuario">
+          <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
+            <span class="listbox-main-wrapper">
+              <span class="listbox-main">
+                <span class="frame-2">
+                  <img class="ellipse" src="assets/icons/ellipse-4.png" alt="Usuario" />
+                  <img class="chevron-down" src="assets/icons/chevron-down.png" alt="" />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="desktop-inicio">
+      <section class="main-container">
+        <aside class="left-side-column">
+          <section class="login-form" aria-label="Formulario de registro">
+            <header class="intro">
+              <h1 class="bienvenido-de-nuevo">Crea tu cuenta 🚀</h1>
+              <p class="text-wrapper">Regístrate para comenzar a explorar Lima con Chaski Tours.</p>
+            </header>
+            <form class="form" autocomplete="on">
+              <div class="input">
+                <label for="nombre" class="label">Nombre</label>
+                <input id="nombre" name="nombre" class="input-field" type="text" placeholder="Tu nombre completo" required autocomplete="name" />
+              </div>
+              <div class="input">
+                <label for="email" class="label">Email</label>
+                <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
+              </div>
+              <div class="input">
+                <label for="password" class="label">Contraseña</label>
+                <input id="password" name="password" class="input-field" type="password" placeholder="Al menos 8 caracteres" minlength="8" required autocomplete="new-password" />
+              </div>
+              <div class="input">
+                <label for="confirm-password" class="label">Confirmar contraseña</label>
+                <input id="confirm-password" name="confirm-password" class="input-field" type="password" placeholder="Repite tu contraseña" minlength="8" required autocomplete="new-password" />
+              </div>
+              <button type="submit" class="main-button"><span class="sign-in">Crear cuenta</span></button>
+            </form>
+            <div class="social-sign-in">
+              <div class="or" aria-hidden="true">
+                <img class="line" src="img/line-2.svg" alt="" />
+                <span class="text-wrapper-3">O</span>
+                <img class="line" src="img/line-1.svg" alt="" />
+              </div>
+              <div class="social-buttons">
+                <button class="social-button" type="button">
+                  <img class="google" src="assets/icons/google.png" alt="Google" />
+                  <span class="sign-in-with">Registrarse con Google</span>
+                </button>
+              </div>
+            </div>
+            <p class="no-tienes-una-cuenta">
+              <span class="span">¿Ya tienes una cuenta?</span>
+              <span class="text-wrapper-4">&nbsp;</span>
+              <a href="inicio-sesion.html" class="text-wrapper-5">Inicia sesión</a>
+            </p>
+            <footer>
+              <small class="p">© 2025 ALL RIGHTS RESERVED</small>
+            </footer>
+          </section>
+        </aside>
+        <figure class="art">
+          <img class="login-art" src="assets/img/login-art.jpg" alt="Arte de registro" />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
