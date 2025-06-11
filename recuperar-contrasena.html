@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="rgf-styles/old-style.css" />
     <title>Recuperar contraseña | Chaski Tours</title>
   </head>
   <body>
-    <button class="close-circle" aria-label="Cerrar">
+    <button class="close-circle" aria-label="Cerrar" onclick="location.href='inicio-sesion.html'">
       <img src="assets/icons/close-circle.png" alt="Cerrar" />
     </button>
     <header class="header">
@@ -22,17 +22,17 @@
           </div>
         </div>
         <p class="text">✨Descubre los encantos de Lima</p>
-        <a href="#" class="text-button">Más información</a>
+        <a href="landing-page.html" class="text-button">Más información</a>
       </section>
       <nav class="navigation-bar" aria-label="Navegación principal">
-        <a class="logo" href="#">
+        <a class="logo" href="home.html">
           <img class="imagotipo" src="assets/icons/imagotipo.png" alt="Chaski Tours" />
         </a>
         <ul class="buttons-container">
-          <li><a class="button" href="#"><span class="text-3">Inicio</span></a></li>
-          <li><a class="text-button-2" href="#">Nosotros</a></li>
-          <li><a class="text-button-2" href="#">Lugares</a></li>
-          <li><a class="text-button-2" href="#">Preguntas Frecuentes</a></li>
+          <li><a class="button" href="home.html"><span class="text-3">Inicio</span></a></li>
+          <li><a class="text-button-2" href="nosotros.html">Nosotros</a></li>
+          <li><a class="text-button-2" href="sitios-destacados.html">Lugares</a></li>
+          <li><a class="text-button-2" href="preguntas-freq.html">Preguntas Frecuentes</a></li>
         </ul>
         <div class="frame" aria-label="Usuario">
           <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
@@ -48,7 +48,7 @@
         </div>
       </nav>
     </header>
-    <main class="desktop-inicio">
+    <main class="desktop-recuperar">
       <section class="main-container">
         <aside class="left-side-column">
           <section class="login-form" aria-label="Formulario de recuperación de contraseña">
@@ -56,13 +56,18 @@
               <h1 class="bienvenido-de-nuevo">Recupera tu cuenta 🔑</h1>
               <p class="text-wrapper">Introduce tu correo asociado para cambiar tu contraseña</p>
             </header>
-            <form class="form" autocomplete="on">
+            <form class="form" autocomplete="on" action="recuperar-contrasena-exito.html" method="get">
               <div class="input">
                 <label for="email" class="label">Email</label>
                 <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
               </div>
               <button type="submit" class="main-button"><span class="sign-in">Enviar enlace</span></button>
             </form>
+            <p class="no-tienes-una-cuenta">
+              <span class="span">¿No tienes una cuenta?</span>
+              <span class="text-wrapper-4">&nbsp;</span>
+              <a href="crear-cuenta.html" class="text-wrapper-5">Regístrate</a>
+            </p>
             <footer>
               <small class="p">© 2025 ALL RIGHTS RESERVED</small>
             </footer>
