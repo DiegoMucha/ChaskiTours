@@ -254,7 +254,7 @@ a {
 /* --- 6.1 Hero de la Página de Inicio --- */
 .hero-home {
     min-height: 550px;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/img/hero-background.jpg'); /* Pon tu imagen de fondo aquí */
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../assets/img/hero-background.jpg'); /* Pon tu imagen de fondo aquí */
     background-size: cover;
     background-position: center;
     display: flex;
