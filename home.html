@@ -39,10 +39,27 @@
         <section class="hero-home">
             <div class="hero-home-content">
                 <h1>La vida es una aventura, <br>sácale el máximo provecho</h1>
-                <!--Mal, esto no es un video, es una barra de busqueda-->
-                <button class="play-button" aria-label="Reproducir video">
-                    <img src="assets/icons/play-icon.svg" alt="Play">
-                </button>
+            
+                <div class="hero-search-bar">
+                    <div class="search-input-group">
+                        <img src="assets/icons/location.png" alt="Ícono de ubicación" class="search-icon">
+                        <div class="input-text">
+                            <label for="destination">Dónde</label>
+                            <input type="text" id="destination" placeholder="Buscar destino">
+                        </div>
+                    </div>
+                    <div class="search-input-group">
+                        <img src="assets/icons/filter.png" alt="Ícono de tipo de tour" class="search-icon">
+                        <div class="input-text">
+                            <label for="tour-type">Tipo de tour</label>
+                            <input type="text" id="tour-type" placeholder="Tipo de tour">
+                        </div>
+                    </div>
+                    <button class="search-action-btn" aria-label="Buscar">
+                         <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda">
+                    </button>
+                </div>
+                <a href="#" class="btn btn-primary-hero">Buscar tour</a>
             </div>
         </section>
 
