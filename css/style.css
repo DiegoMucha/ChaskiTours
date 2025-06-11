@@ -1,5 +1,25 @@
-body{
-    background-color: #fef9d1;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --absolutewhite: rgba(255, 255, 255, 1);
+  --grey-15: rgba(38, 38, 38, 1);
 }
 
 .desktop-seccin-FAQ {
@@ -20,74 +40,105 @@ body{
 .desktop-seccin-FAQ .overlap {
   position: absolute;
   width: 1920px;
-  height: 970px;
-  top: 170px;
+  height: 971px;
+  top: 169px;
   left: 0;
-  background-image: url(./img/fondo.png);
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
-.desktop-seccin-FAQ .text-wrapper {
+.desktop-seccin-FAQ .fondo {
   position: absolute;
-  width: 402px;
-  height: 32px;
-  top: 99px;
-  left: 89px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 34px;
-  letter-spacing: 0.34px;
-  line-height: 34px;
-  white-space: nowrap;
+  width: 1918px;
+  height: 840px;
+  top: 0;
+  left: 1px;
+  object-fit: cover;
 }
 
-.desktop-seccin-FAQ .overlap-group {
+.desktop-seccin-FAQ .rectangle {
   position: absolute;
   width: 1920px;
   height: 133px;
-  top: 837px;
+  top: 838px;
   left: 0;
   background-color: #fffad2;
 }
 
-.desktop-seccin-FAQ .rectangle {
-  width: 486px;
-  height: 65px;
-  top: 41px;
-  left: 52px;
-  border-radius: 20px;
-  position: absolute;
-  background-color: #ffffff;
-}
-
-.desktop-seccin-FAQ .rectangle-2 {
-  width: 904px;
-  height: 65px;
-  top: 41px;
-  left: 676px;
-  border-radius: 20px;
-  position: absolute;
-  background-color: #ffffff;
-}
-
-.desktop-seccin-FAQ .div-wrapper {
+.desktop-seccin-FAQ .btn-enviar {
   position: absolute;
   width: 189px;
   height: 65px;
-  top: 41px;
+  top: 879px;
   left: 1690px;
-  background-color: #e5c07b;
+}
+
+.desktop-seccin-FAQ .consulta-container {
+  position: absolute;
+  width: 906px;
+  height: 90px;
+  top: 854px;
+  left: 676px;
+}
+
+.desktop-seccin-FAQ .rectangle-2 {
+  position: absolute;
+  width: 904px;
+  height: 65px;
+  top: 25px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.desktop-seccin-FAQ .text-wrapper {
+  position: absolute;
+  width: 130px;
+  top: 0;
+  left: 27px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #828282;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.desktop-seccin-FAQ .email-container {
+  position: absolute;
+  width: 488px;
+  height: 90px;
+  top: 854px;
+  left: 52px;
+}
+
+.desktop-seccin-FAQ .rectangle-3 {
+  position: absolute;
+  width: 486px;
+  height: 65px;
+  top: 25px;
+  left: 0;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 
 .desktop-seccin-FAQ .text-wrapper-2 {
   position: absolute;
+  width: 130px;
+  top: 0;
+  left: 36px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #828282;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-3 {
+  position: absolute;
   width: 92px;
   height: 17px;
-  top: 23px;
-  left: 49px;
+  top: 902px;
+  left: 1739px;
   font-family: "Urbanist-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -98,101 +149,12 @@ body{
   white-space: nowrap;
 }
 
-.desktop-seccin-FAQ .text-wrapper-3 {
-  position: absolute;
-  width: 130px;
-  top: 15px;
-  left: 88px;
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
-  color: #828282;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 20px;
-}
-
-.desktop-seccin-FAQ .text-wrapper-4 {
-  position: absolute;
-  width: 130px;
-  top: 15px;
-  left: 703px;
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
-  color: #828282;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 20px;
-}
-
-.desktop-seccin-FAQ .rectangle-3 {
-  width: 617px;
-  height: 54px;
-  top: 90px;
-  left: 545px;
-  border-radius: 25px;
-  position: absolute;
-  background-color: #ffffff;
-}
-
-.desktop-seccin-FAQ .button {
-  all: unset;
-  box-sizing: border-box;
-  position: absolute;
-  width: 62px;
-  height: 60px;
-  top: 87px;
-  left: 1188px;
-  background-color: #001b0a;
-  border-radius: 200px;
-}
-
-.desktop-seccin-FAQ .overlap-group-2 {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  top: 18px;
-  left: 19px;
-}
-
-.desktop-seccin-FAQ .symbol {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 3px;
-  left: 4px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 16px;
-  white-space: nowrap;
-}
-
-.desktop-seccin-FAQ .search-normal {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 0;
-  left: 0;
-}
-
-.desktop-seccin-FAQ .overlap-2 {
+.desktop-seccin-FAQ .preguntas-frequentes {
   position: absolute;
   width: 1540px;
-  height: 601px;
-  top: 186px;
+  height: 621px;
+  top: 187px;
   left: 194px;
-  border-radius: 16px;
-}
-
-.desktop-seccin-FAQ .text-background {
-  position: absolute;
-  width: 1540px;
-  height: 601px;
-  top: 0;
-  left: 0;
   background-color: #0000004c;
   border-radius: 16px;
   border: none;
@@ -200,7 +162,7 @@ body{
   -webkit-backdrop-filter: blur(8px) brightness(100%);
 }
 
-.desktop-seccin-FAQ .text-background::before {
+.desktop-seccin-FAQ .preguntas-frequentes::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -222,8 +184,8 @@ body{
 .desktop-seccin-FAQ .paragraph {
   position: absolute;
   width: 1444px;
-  top: 73px;
-  left: 30px;
+  top: 164px;
+  left: 48px;
   font-family: "Urbanist-Medium", Helvetica;
   font-weight: 500;
   color: #ffffff;
@@ -234,84 +196,11 @@ body{
 }
 
 .desktop-seccin-FAQ .p {
-  top: 181px;
-  position: absolute;
   width: 1444px;
-  left: 30px;
-  font-family: "Urbanist-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 22px;
-  text-align: justify;
-  letter-spacing: 0;
-  line-height: 33px;
-}
-
-.desktop-seccin-FAQ .paragraph-2 {
-  top: 299px;
-  position: absolute;
-  width: 1444px;
-  left: 30px;
-  font-family: "Urbanist-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 22px;
-  text-align: justify;
-  letter-spacing: 0;
-  line-height: 33px;
-}
-
-.desktop-seccin-FAQ .paragraph-3 {
-  top: 407px;
-  position: absolute;
-  width: 1444px;
-  left: 30px;
-  font-family: "Urbanist-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 22px;
-  text-align: justify;
-  letter-spacing: 0;
-  line-height: 33px;
-}
-
-.desktop-seccin-FAQ .paragraph-4 {
-  top: 532px;
-  position: absolute;
-  width: 1444px;
-  left: 30px;
-  font-family: "Urbanist-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 22px;
-  text-align: justify;
-  letter-spacing: 0;
-  line-height: 33px;
-}
-
-.desktop-seccin-FAQ .preguntas-frecuentes {
-  position: absolute;
-  width: 979px;
-  height: 516px;
-  top: 20px;
-  left: 15px;
-  box-shadow: 0px 4px 4px #000000b2;
-}
-
-.desktop-seccin-FAQ .pregunta {
-  display: inline-flex;
-  align-items: center;
-  gap: 332px;
-  position: absolute;
-  top: 0;
-  left: 9px;
-}
-
-.desktop-seccin-FAQ .text-wrapper-5 {
-  position: relative;
-  width: 499px;
-  margin-top: -1.00px;
   height: 61px;
+  top: 103px;
+  left: 48px;
+  position: absolute;
   font-family: "Inter-ExtraBold", Helvetica;
   font-weight: 800;
   color: #ffffff;
@@ -320,20 +209,82 @@ body{
   line-height: 20px;
 }
 
-.desktop-seccin-FAQ .pregunta-2 {
+.desktop-seccin-FAQ .paragraph-2 {
+  top: 531px;
+  left: 48px;
   position: absolute;
-  width: 973px;
+  width: 1444px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 33px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-4 {
+  position: absolute;
+  width: 1444px;
   height: 61px;
-  top: 231px;
-  left: 6px;
+  top: 456px;
+  left: 48px;
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0.20px;
+  line-height: 20px;
+}
+
+.desktop-seccin-FAQ .paragraph-3 {
+  top: 265px;
+  left: 48px;
+  position: absolute;
+  width: 1444px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 33px;
+}
+
+.desktop-seccin-FAQ .text-wrapper-5 {
+  position: absolute;
+  width: 1444px;
+  height: 61px;
+  top: 204px;
+  left: 48px;
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0.20px;
+  line-height: 20px;
+}
+
+.desktop-seccin-FAQ .paragraph-4 {
+  top: 383px;
+  left: 48px;
+  position: absolute;
+  width: 1444px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 33px;
 }
 
 .desktop-seccin-FAQ .text-wrapper-6 {
   position: absolute;
-  width: 971px;
-  height: 61px;
-  top: 0;
-  left: 0;
+  width: 1444px;
+  height: 64px;
+  top: 312px;
+  left: 48px;
   font-family: "Inter-ExtraBold", Helvetica;
   font-weight: 800;
   color: #ffffff;
@@ -342,20 +293,35 @@ body{
   line-height: 20px;
 }
 
-.desktop-seccin-FAQ .pregunta-3 {
+.desktop-seccin-FAQ .overlap-group {
   position: absolute;
-  width: 949px;
-  height: 61px;
-  top: 331px;
-  left: 6px;
+  width: 1444px;
+  height: 94px;
+  top: 9px;
+  left: 48px;
+}
+
+.desktop-seccin-FAQ .paragraph-5 {
+  top: 58px;
+  left: 0;
+  white-space: nowrap;
+  position: absolute;
+  width: 1444px;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 33px;
 }
 
 .desktop-seccin-FAQ .text-wrapper-7 {
-  position: absolute;
-  width: 947px;
-  height: 61px;
+  width: 499px;
+  height: 66px;
   top: 0;
   left: 0;
+  position: absolute;
   font-family: "Inter-ExtraBold", Helvetica;
   font-weight: 800;
   color: #ffffff;
@@ -364,46 +330,76 @@ body{
   line-height: 20px;
 }
 
-.desktop-seccin-FAQ .pregunta-wrapper {
+.desktop-seccin-FAQ .button {
+  all: unset;
+  box-sizing: border-box;
   position: absolute;
-  width: 548px;
-  height: 61px;
-  top: 109px;
-  left: 8px;
+  width: 62px;
+  height: 60px;
+  top: 88px;
+  left: 1188px;
+  background-color: #001b0a;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.desktop-seccin-FAQ .pregunta-4 {
+.desktop-seccin-FAQ .overlap-2 {
   position: relative;
-  width: 550px;
-  height: 61px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.desktop-seccin-FAQ .text-wrapper-8 {
+.desktop-seccin-FAQ .symbol {
   position: absolute;
-  width: 548px;
-  height: 61px;
-  top: 0;
-  left: 0;
-  font-family: "Inter-ExtraBold", Helvetica;
-  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 4px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
   color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0.20px;
-  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
 }
 
-.desktop-seccin-FAQ .text-wrapper-9 {
+.desktop-seccin-FAQ .search-normal {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.desktop-seccin-FAQ .rectangle-4 {
   position: absolute;
-  width: 767px;
-  top: 455px;
-  left: 0;
-  height: 61px;
-  font-family: "Inter-ExtraBold", Helvetica;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0.20px;
-  line-height: 20px;
+  width: 617px;
+  height: 54px;
+  top: 91px;
+  left: 545px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.desktop-seccin-FAQ .title-pregfreq {
+  position: absolute;
+  width: 402px;
+  height: 32px;
+  top: 100px;
+  left: 89px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  letter-spacing: 0.34px;
+  line-height: 34px;
+  white-space: nowrap;
 }
 
 .desktop-seccin-FAQ .header {
@@ -584,7 +580,7 @@ body{
   white-space: nowrap;
 }
 
-.desktop-seccin-FAQ .button-2 {
+.desktop-seccin-FAQ .div-wrapper {
   all: unset;
   box-sizing: border-box;
   align-items: flex-start;
@@ -663,4 +659,29 @@ body{
   height: 30px;
   top: 34px;
   left: 1632px;
+}
+
+.desktop-seccin-FAQ .faq-item {
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.desktop-seccin-FAQ .faq-question {
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+.desktop-seccin-FAQ .faq-answer {
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 20px;
 }
