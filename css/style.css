@@ -1,31 +1,79 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Marcellus+SC&family=Urbanist:wght@400;500;600&display=swap');
+
+:root {
+  /* Colores Principales */
+  --primary-dark: #001b0a;
+  --primary-light: #fef9d1;
+  --background-main: #fef9d1;
+  --card-background: #fffad2;
+  
+  /* Colores de Texto */
+  --text-dark: #3d2b1f;
+  --text-light: #ffffff;
+  --text-muted: #666666;
+  
+  /* Colores de Componentes */
+  --grey-border: #e0e0e0;
+  --star-color: #ffc700;
+  --progress-bar-bg: #e0e0e0;
+  --progress-bar-fill: #3ab567;
 }
 
-html,
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
-  background-color: #fef9d1;
-  margin: 0px;
-  height: 100vh;
-  width: 100vw;
+  font-family: 'Urbanist', sans-serif;
+  background-color: var(--background-main);
+  color: var(--text-dark);
+}
+
+.page-container {
+  max-width: 1920px;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-:root {
-  --absolutewhite: rgba(255, 255, 255, 1);
-  --grey-15: rgba(38, 38, 38, 1);
-}
+.header { width: 100%; }
+.top-banner { background-color: var(--primary-dark); color: var(--text-light); display: flex; justify-content: center; align-items: center; padding: 12px 20px; position: relative; font-size: 18px; text-align: center; background-image: url('../assets/img/vector.png'); background-repeat: repeat; }
+.desktop-configura .top-banner { background-color: var(--primary-dark); color: var(--text-light); display: flex; justify-content: center; align-items: center; padding: 12px 20px; position: relative; font-size: 18px; text-align: center; background-image: url('../assets/img/vector.png'); background-repeat: repeat; }
+.top-banner a { text-decoration: underline; margin-left: 8px; color: var(--text-light); }
+.close-banner-btn { background: rgba(255, 255, 255, 0.1); border: none; color: white; font-size: 24px; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; position: absolute; right: 40px; line-height: 32px; }
+.main-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; background-color: var(--primary-light); border-bottom: 1px solid var(--grey-border); }
+.logo { display: flex; align-items: flex-start; gap: 12px; }
+.logo-img { height: 55px; margin-top: 5px; }
+.logo-text { font-family: 'Marcellus SC', serif; font-size: 26px; color: var(--primary-dark); line-height: 1.0; padding-top: 5px; }
+.nav-links { display: flex; gap: 40px; font-size: 18px; font-weight: 500; align-items: center; }
+.nav-links a { color: var(--primary-dark); padding: 10px 5px; transition: color 0.3s; }
+.nav-links a.active, .nav-links a:hover { background-color: var(--primary-dark); color: var(--text-light); padding: 10px 20px; border-radius: 8px; }
+.nav-links a.active { font-weight: bold; }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.nav-actions .action-icon { height: 30px; cursor: pointer; }
+.user-profile-dropdown { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+.user-avatar { height: 40px; width: 40px; border-radius: 50%; }
+.dropdown-arrow { width: 24px; height: 24px; }
+.btn { background-color: var(--primary-dark); color: var(--text-light); border: none; padding: 14px 24px; font-size: 16px; font-family: 'Urbanist', sans-serif; font-weight: 500; border-radius: 8px; cursor: pointer; text-decoration: none; text-align: center; transition: background-color 0.3s; }
+.btn:hover { background-color: #003a1a; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 40px 0; flex-wrap: wrap; }
+.pagination a { text-decoration: none; padding: 10px 16px; border: 1px solid var(--grey-border); border-radius: 8px; color: var(--text-dark); font-weight: 500; transition: background-color 0.3s, color 0.3s; }
+.pagination a.active, .pagination a:hover { background-color: var(--primary-dark); color: var(--text-light); border-color: var(--primary-dark); }
+.page-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+.page-header h1 { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; color: var(--text-dark); margin-bottom: 14px; }
+.page-header p { font-size: 22px; color: var(--text-muted); line-height: 1.5; }
 
 .desktop-configura {
   background-color: #ffffff;
@@ -35,17 +83,20 @@ a {
   width: 100%;
 }
 
-.desktop-configura .overlap-wrapper {
-  background-color: #ffffff;
-  overflow: hidden;
-  width: 1920px;
-  height: 1140px;
+.desktop-configura .overlap-group-2 {
+  position: absolute;
+  width: 77.5%;
+  height: 623px;
+  top: 0;
+  left: 13%;
 }
 
 .desktop-configura .overlap {
-  position: relative;
-  height: 1140px;
-  left: -1px;
+  position: absolute;
+  width: 1920px;
+  height: 1548px;
+  top: 15.3%;
+  left: 4.4%;
 }
 
 .desktop-configura .main-container {
@@ -80,10 +131,11 @@ a {
 }
 
 .desktop-configura .overlap-group {
-  position: relative;
-  width: 354px;
-  height: 244px;
-  left: -1px;
+  position: absolute;
+  width: 11.5%;
+  height: 623px;
+  top: 0;
+  left: 0;
 }
 
 .desktop-configura .image {
@@ -98,12 +150,23 @@ a {
   background-position: 50% 50%;
 }
 
+.desktop-configura .div-wrapper {
+  height: 72px;
+  top: 210px;
+  left: 372px;
+  display: flex;
+  flex-direction: column;
+  width: 641px;
+  align-items: flex-start;
+  position: absolute;
+}
+
 .desktop-configura .img {
   position: absolute;
-  width: 353px;
-  height: 239px;
-  top: 1px;
-  left: 1px;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
 }
 
 .desktop-configura .after {
@@ -137,16 +200,18 @@ a {
 }
 
 .desktop-configura .overlap-group-wrapper {
-  position: absolute;
-  width: 344px;
-  height: 240px;
-  top: 250px;
-  left: 490px;
+  height: 48px;
+  margin-right: -2.00px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
 }
 
 .desktop-configura .div {
+  background-color: #fef9d1;
+  width: 1920px;
+  height: 1694px;
   position: relative;
-  height: 240px;
 }
 
 .desktop-configura .image-2 {
@@ -171,17 +236,16 @@ a {
 
 .desktop-configura .text-wrapper {
   position: absolute;
-  width: 219px;
-  height: 55px;
-  top: 25px;
-  left: 62px;
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 32px;
-  text-align: center;
+  width: 1000px;
+  height: 48px;
+  top: 70px;
+  left: 455px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #102228;
+  font-size: 34px;
   letter-spacing: 0;
-  line-height: 40px;
+  line-height: 38px;
 }
 
 .desktop-configura .after-2 {
@@ -201,18 +265,16 @@ a {
 
 .desktop-configura .text-wrapper-2 {
   position: absolute;
-  width: 711px;
-  height: 32px;
-  top: 74px;
-  left: 52px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #3d2b1f;
-  font-size: 34px;
-  text-align: center;
-  letter-spacing: 0.34px;
-  line-height: 34px;
-  white-space: nowrap;
+  width: 1003px;
+  height: 47px;
+  top: 7%;
+  left: 20.5%;
+  font-family: "Urbanist-Medium", Helvetica;
+  font-weight: 500;
+  color: #666666;
+  font-size: 22px;
+  letter-spacing: 0.22px;
+  line-height: 35.2px;
 }
 
 .desktop-configura .text-wrapper-3 {
@@ -304,16 +366,6 @@ a {
   left: 40px;
 }
 
-.desktop-configura .container {
-  display: flex;
-  flex-direction: column;
-  width: 347px;
-  height: 131px;
-  align-items: flex-start;
-  gap: 30px;
-  position: relative;
-}
-
 .desktop-configura .text-container {
   display: flex;
   flex-direction: column;
@@ -364,10 +416,105 @@ a {
 }
 
 .desktop-configura .group {
+  position: absolute;
+  width: 166px;
+  height: 26px;
+  top: 10px;
+  left: 0;
+}
+
+.desktop-configura .group-2 {
+  position: absolute;
+  width: 200px;
+  height: 24px;
+  top: 110px;
+  left: 0;
+}
+
+.desktop-configura .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.desktop-configura .site-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--grey-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  height: 100%;
+}
+.desktop-configura .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.desktop-configura .card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+.desktop-configura .card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.desktop-configura .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.desktop-configura .site-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.desktop-configura .rating-icon {
+  width: 24px;
+  height: 24px;
+}
+.desktop-configura .component-default {
+  display: flex;
+  flex-direction: column;
+  width: 641px;
+  height: 72px;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 375px;
+}
+
+.desktop-configura .input {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  align-items: flex-start;
+  gap: 8px;
   position: relative;
-  width: 179px;
-  height: 62px;
-  margin-top: -17.00px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.desktop-configura .label {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #3d2b1f;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 16px;
+  white-space: nowrap;
 }
 
 .desktop-configura .shape-wrapper {
@@ -455,22 +602,6 @@ a {
   white-space: nowrap;
 }
 
-.desktop-configura .div-wrapper {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 14px 24px;
-  position: absolute;
-  top: 35px;
-  left: 917px;
-  border: 1px solid;
-  border-color: var(--grey-15);
-  background-color: #001b0a;
-  border-radius: 10px;
-}
-
 .desktop-configura .text-2 {
   position: relative;
   width: fit-content;
@@ -491,6 +622,113 @@ a {
   position: absolute;
   top: 995px;
   left: 387px;
+}
+
+.desktop-configura .header {
+  width: 100%;
+}
+  
+.desktop-configura .top-banner {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  background-image: url('../assets/img/vector.png'); 
+  background-repeat: repeat;
+}
+.desktop-configura .top-banner a {
+  text-decoration: underline;
+  margin-left: 8px;
+  color: var(--text-light);
+}
+.desktop-configura .close-banner-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  line-height: 32px;
+}
+  
+.desktop-configura .main-nav {
+  position: absolute;
+  display: flex;
+  left: 5%;
+  top: 150px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 750px;
+  background-color: var(--primary-light);
+  border-bottom: 1px solid var(--grey-border);
+}
+  
+.desktop-configura .nav-links {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+}
+.desktop-configura .nav-links a {
+  color: var(--primary-dark);
+  padding: 10px 5px;
+  transition: color 0.3s;
+}
+.desktop-configura .nav-links a.active, .nav-links a:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.desktop-configura .nav-links a.active {
+    font-weight: bold;
+}
+  
+.desktop-configura .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+  
+.desktop-configura .overlap-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5px;
+  left: 100%;
+}
+  
+.desktop-configura .component-default-2 {
+  height: 72px;
+  top: 309px;
+  left: 173px;
+  display: flex;
+  flex-direction: column;
+  width: 641px;
+  align-items: flex-start;
+  position: absolute;
+}
+  
+.desktop-configura .container {
+  position: absolute;
+  width: 80%;
+  height: 1%;
+  top: 59%;
+  left: -24.4%;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: var(--grey-15);
+  transform: rotate(-90deg);
 }
 
 .desktop-configura .text-button {
@@ -3122,12 +3360,6 @@ width: 100%;
   width: 100%;
 }
 
-.desktop-configura .group-2 {
-  position: relative;
-  width: 186px;
-  height: 62px;
-}
-
 .desktop-configura .text-container-4 {
   width: 132px;
   gap: 2px;
@@ -3176,10 +3408,10 @@ width: 100%;
 
 .desktop-configura .group-3 {
   position: absolute;
-  width: 166px;
+  width: 152px;
   height: 26px;
-  top: 270px;
-  left: 83px;
+  top: 210px;
+  left: 0;
 }
 
 .desktop-configura .icon-outline {
@@ -3190,13 +3422,20 @@ width: 100%;
   left: 0;
 }
 
+.desktop-configura .icon-fill {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 70px;
+  left: 384px;
+}
+
 .desktop-configura .breadcrumbs {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  position: absolute;
-  top: 0;
-  left: 32px;
+  position: relative;
 }
 
 .desktop-configura .page {
@@ -3214,10 +3453,10 @@ width: 100%;
 
 .desktop-configura .group-4 {
   position: absolute;
-  width: 200px;
-  height: 24px;
-  top: 370px;
-  left: 83px;
+  width: 440px;
+  height: 440px;
+  top: 276px;
+  left: 1288px;
 }
 
 .desktop-configura .img-2 {
@@ -3229,14 +3468,14 @@ width: 100%;
 }
 
 .desktop-configura .page-2 {
-  font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
-  color: #006626;
+  color: #000000;
   font-size: 15px;
   line-height: 24.0px;
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -3274,16 +3513,17 @@ width: 100%;
   align-items: center;
   gap: 8px;
   position: absolute;
-  top: 32px;
-  left: 33px;
+  top: 50px;
+  left: 32px;
 }
 
 .desktop-configura .breadcrumbs-2 {
-  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  position: relative;
+  position: absolute;
+  top: 1%;
+  left: 32px;
 }
 
 .desktop-configura .home {
