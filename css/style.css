@@ -2471,6 +2471,8 @@ p {
 }
 .cal_pro {
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 .resenas {
   display: flex;
@@ -2478,13 +2480,14 @@ p {
 }
 .calif {
   display: flex;
+  margin-bottom: 10px;
 }
 .img_per_cal {
   width: 140px;
 }
 
 .estrella_col {
-  margin-top: 15px;
+  margin-top: 0px;
   width: 20px;
   height: 20px;
   background-color: yellow;
@@ -2502,7 +2505,7 @@ p {
   );
 }
 .estrella_peq {
-  margin-top: 15px;
+  margin-top: 0px;
   width: 20px;
   height: 20px;
   background-color: black;
