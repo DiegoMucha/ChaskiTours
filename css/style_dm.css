@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Urbanist:wght@400;500;700&display=swap');
+
+/* Definicion de colores y valores principales*/
+:root {
+    --color-principal: #FEF9D1
+}
+
+/* CSS para el body, lo básico que se va a ver*/
+html, body {
+    background-color: var(--color-principal);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-principal);
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Cards */
+.cards-container {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+    align-items: stretch;
+}
+
+.card {
+    background-color: var(--color-principal);
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.card img {
+    width: 100%;
+    min-height: 220px;
+    height: 50%; /* If you want fixed image height, change to height: 220px; */
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 0 30px;
+    margin-top: 10px; /* Kept this for space below image */
+    margin-bottom: 5px; /* Kept this for space below h3 */
+    font-size: 35px;
+    font-family: 'Inter', sans-serif;
+    color: #3D2B1F;
+}
+
+.card p {
+    margin-top: 0px; /* Keep this to remove default p top margin */
+    padding: 0 30px;
+    font-size: 20px;
+    font-family: 'Urbanist', sans-serif;
+    color: #666666;
+    text-align: justify;
+    flex-grow: 1;
+    /* REDUCE THIS MARGIN-BOTTOM TO BRING P CLOSER TO FOOTER */
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: auto auto;
+    gap: 8px 10px;
+    align-items: start;
+    margin-top: auto;
+}
+
+.card-footer .rating {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 5px;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.card-footer .rating .rating-image {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.card-footer .rating .rating-image img {
+    width: 40px;
+    height: 40px;
+    min-height: 24px;;
+    object-fit: contain;
+}
+
+.card-footer .rating .rating-text {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column; /* Para apilar el título y los números */
+    justify-content: center; /* Centra el texto verticalmente en su bloque */
+    gap: 2px;
+    /* 'align-self: center;' aquí es redundante si el padre (.rating) ya tiene align-items: center */
+    padding: 0;
+    margin: 0;
+}
+
+.card-footer .rating .rating-text .title {
+    font-size: clamp(0.85rem, 1vw + 0.3rem, 1rem); /* Consider using clamp() */
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+.card-footer .rating .rating-text .rating-numbers {
+    font-size: clamp(0.9rem, 1.2vw + 0.3rem, 1.1rem); /* Consider using clamp() */
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.card-footer .ver-detalles {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #002d26;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    justify-self: end;
+    white-space: nowrap;
+    font-size: clamp(0.8rem, 0.9vw + 0.3rem, 0.9rem); /* Consider using clamp() */
+}
+
+.card-footer .favorito {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(0.85rem, 1vw + 0.3rem, 1rem); /* Consider using clamp() */
+}
+
+.card-footer .guardar-favorito {
+    background-color: #002d26;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    white-space: nowrap;
+    font-size: clamp(0.8rem, 0.9vw + 0.3rem, 0.9rem); /* Consider using clamp() */
+}
+
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.page {
+    background-color: #002d26;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.page.active {
+    background-color: black;
+}

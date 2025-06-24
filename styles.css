@@ -1,0 +1,81 @@
+/* CSS para el top banner*/
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+.top-banner {
+    background-image: url('assets/img/vector.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #001d0d;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.top-banner a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+/* CSS para la barra de navegación*/
+.navigation-bar {
+    background-color: #fef9d6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+}
+
+.navigation-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-bar .chaski-isotipo {
+    height: 48px;
+    margin-right: 12px;
+}
+
+.navigation-bar .text-logo {
+    font-family: 'Marcellus SC', serif;
+    font-size: 22px;
+    line-height: 22px;
+    color: #001d0d;
+}
+
+.navigation-bar .buttons-container {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.navigation-bar .buttons-container form {
+    margin: 0;
+}
+
+.navigation-bar .buttons-container button {
+    background: none;
+    border: none;
+    color: #001d0d;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.navigation-bar .buttons-container button:hover {
+    text-decoration: underline;
+}
+
+.navigation-bar .user-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navigation-bar .icon {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
