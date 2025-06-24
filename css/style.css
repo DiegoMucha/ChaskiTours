@@ -2400,6 +2400,7 @@ p {
   align-items: center;
 }
 .img_cal {
+  margin: 20px;
   width: 377px;
   height: 302px;
 }
@@ -2409,6 +2410,7 @@ p {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .estrella {
