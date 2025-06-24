@@ -731,6 +731,30 @@
    .footer-links a:hover { color: var(--text-light); }
    
    /* ==========================================================================
+   3.6 Estilos: Caja de Búsqueda Sola
+   ========================================================================== */
+
+    .search-section {
+      display: flex;
+      justify-content: center; /* Centramos la caja de búsqueda */
+      margin-bottom: 40px;
+    }
+
+    .search-wrapper {
+      width: 100%;
+      max-width: 600px; /* Le damos un ancho máximo para que no sea demasiado grande */
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--grey-border);
+      font-size: 16px;
+      font-family: 'Urbanist', sans-serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil para destacarla */
+    }
+   /* ==========================================================================
       4. RESPONSIVIDAD (Media Queries)
       ========================================================================== */
    
