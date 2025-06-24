@@ -118,15 +118,58 @@ a {
     border-color: var(--grey-15);
   }
 
-    .desktop .card-1 {
+  .desktop .card-1 {
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
     display: flex;
     width: 235%;
     height: 100%;
     
     gap: 10%;
-    padding: 20%;
+    padding: 30px 100px 200px 20px;
     position: absolute;
-    top: 0%;
+    top: -15%;
+    left: 0%;
+    background-color: #fffad2;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: var(--grey-15);
+  }
+
+    .desktop .card-2 {
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    width: 235%;
+    height: 100%;
+    
+    gap: 10%;
+    padding: 30px 100px 200px 20px;
+    position: absolute;
+    top: 485%;
+    left: 0%;
+    background-color: #fffad2;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: var(--grey-15);
+  }
+
+      .desktop .card-3 {
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    width: 235%;
+    height: 100%;
+    
+    gap: 10%;
+    padding: 30px 100px 200px 20px;
+    position: absolute;
+    top: 985%;
     left: 0%;
     background-color: #fffad2;
     border-radius: 12px;
@@ -169,15 +212,24 @@ a {
     line-height: 51px;
   }
   
-  .desktop .span {
-    font-weight: 800;
-  }
-  
-  .desktop .text-wrapper-2 {
-    font-family: "Inter-SemiBold", Helvetica;
-    font-weight: 600;
-    border-color: var(--grey-15);
-  }
+.desktop .span {
+  font-weight: 800;
+  font-size: 35px;             /* Aumentado */
+  color: #3a2f2f;
+  text-align: left;
+  margin-bottom: 8px;
+  width: 100%;   
+}
+
+.desktop .text-wrapper-2 {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 20px;             /* Un poco más grande */
+  color: #3a2f2f;
+  line-height: 1.4;
+  text-align: left;
+  width: 100%;
+}
   
   .desktop .text-wrapper-3 {
     position: absolute;
