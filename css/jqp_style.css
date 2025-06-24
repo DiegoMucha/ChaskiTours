@@ -285,9 +285,10 @@ a {
   
   .desktop .image {
     position: absolute;
-    width: 554px;
-    height: 972px;
-    top: 79px;
-    left: 1303px;
+    border-radius: 12px;
+    width: 27%;
+    height: 90%;
+    top: 5%;
+    left: 60%;
   }
   
