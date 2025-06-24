@@ -21,23 +21,25 @@
                 <button class="close-banner-btn" aria-label="Cerrar">×</button>
             </div>
             <nav class="main-nav">
-                <a href="#" class="logo">
+                <a href="home.html" class="logo">
                     <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
                     <span class="logo-text">Chaski<br>Tours</span>
                 </a>
                 <div class="nav-links">
                     <a href="home.html">Inicio</a>
-                    <a href="nosotros.html">Nosotros</a>
                     <a href="listado_lugares.html" class="active">Lugares</a>
                     <a href="preguntas_freq.html">Preguntas Frecuentes</a>
                 </div>
                 <div class="nav-actions">
-                    <img src="assets/icons/signpost.svg" alt="Carrito de compras" class="action-icon">
-
-                    <div class="user-profile-dropdown">
-                      <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                      <img src="assets/icons/chevron-down.svg" alt="Desplegar menú" class="dropdown-arrow">
-                    </div>
+                    <a href="preferidos.html">
+                        <img src="assets/icons/signpost.svg" alt="Carrito de compras" class="action-icon">
+                    </a>
+                    <a href="inicio-sesion.html">
+                        <div class="user-profile-dropdown">
+                            <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                            <img src="assets/icons/chevron-down.svg" alt="Desplegar menú" class="dropdown-arrow">
+                        </div>
+                    </a>
                 </div>
             </nav>
         </header>
@@ -48,6 +50,11 @@
                 <p>Explora nuestra selección de sitios destacados. Cada anuncio ofrece un vistazo a lugares excepcionales disponibles a través de Chaski Tours.</p>
             </section>
 
+            <section class="search-section">
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" placeholder="Buscar sitio por nombre...">
+                </div>
+            </section>
             <div class="grid-container">
 
                 <article class="site-card">
@@ -134,49 +141,49 @@
                     </div>
                 </article>
                 
-                 <article class="site-card">
-                  <img src="assets/img/image-6.png" alt="Parque de las leyendas" class="card-image">
-                  <div class="card-content">
-                      <h2 class="card-title">Parque de las leyendas</h2>
-                      <div class="card-footer">
-                          <div class="rating">
-                              <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
-                              <span>4.9 (150)</span>
-                          </div>
-                          <a href="ver-detalles.html" class="btn">Ver detalles</a>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="site-card">
-                <img src="assets/img/image-4.png" alt="Parque de la imaginacion" class="card-image">
-                <div class="card-content">
-                    <h2 class="card-title">Parque de la imaginacion</h2>
-                    <div class="card-footer">
-                        <div class="rating">
-                            <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
-                            <span>4.9 (150)</span>
+                <article class="site-card">
+                    <img src="assets/img/image-6.png" alt="Parque de las leyendas" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Parque de las leyendas</h2>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
+                                <span>4.9 (150)</span>
+                            </div>
+                            <a href="ver-detalles.html" class="btn">Ver detalles</a>
                         </div>
-                        <a href="ver-detalles.html" class="btn">Ver detalles</a>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="site-card">
-              <img src="assets/img/image-12.png" alt="Museo Pedro de Osma" class="card-image">
-              <div class="card-content">
-                  <h2 class="card-title">Museo Pedro de Osma</h2>
-                  <div class="card-footer">
-                      <div class="rating">
-                          <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
-                          <span>4.9 (150)</span>
-                      </div>
-                      <a href="ver-detalles.html" class="btn">Ver detalles</a>
-                  </div>
-              </div>
-          </article>
+                <article class="site-card">
+                    <img src="assets/img/image-4.png" alt="Parque de la imaginacion" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Parque de la imaginacion</h2>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
+                                <span>4.9 (150)</span>
+                            </div>
+                            <a href="ver-detalles.html" class="btn">Ver detalles</a>
+                        </div>
+                    </div>
+                </article>
 
-        </div>
+                <article class="site-card">
+                    <img src="assets/img/image-12.png" alt="Museo Pedro de Osma" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Museo Pedro de Osma</h2>
+                        <div class="card-footer">
+                            <div class="rating">
+                                <img src="assets/icons/shape.svg" alt="Estrella" class="rating-icon">
+                                <span>4.9 (150)</span>
+                            </div>
+                            <a href="ver-detalles.html" class="btn">Ver detalles</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
 
             <nav class="pagination">
                 <a href="#" class="page-number active">1</a>
@@ -187,6 +194,5 @@
 
         </main>
     </div>
-
-</body>
+    </body>
 </html>
