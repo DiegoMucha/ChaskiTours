@@ -10,10 +10,10 @@
 
 <div class="page-container">
 
-    <header class="header">
+    <header class="header" id="main-header">
        <div class="top-banner" id="top-banner">
          <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
-         <button class="close-banner-btn" id="close-banner-btn" aria-label="Cerrar">&times;</button>
+         <button class="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
              <a href="home.html" class="logo">
@@ -21,23 +21,23 @@
                  <span class="logo-text">Chaski<br>Tours</span>
              </a>
              <div class="nav-links">
-                 <a href="home.html" class="active">Inicio</a>
+                 <a href="home.html">Inicio</a>
                  <a href="listado_lugares.html">Lugares</a>
                  <a href="preguntas_freq.html">Preguntas Frecuentes</a>
              </div>
-      <div class="nav-actions">
-    <div class="user-profile-dropdown" id="user-dropdown-container">
-        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar" id="user-avatar-icon">
-        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-        
-        <div class="dropdown-menu" id="user-dropdown-menu">
-            <a href="editar-perfil.html">Mi Perfil</a>
-            <a href="preferidos.html">Lugares Preferidos</a>
-            <div class="dropdown-divider"></div>
-            <a href="inicio-sesion.html">Cerrar Sesión</a>
-        </div>
-    </div>
-</div>
+             <div class="nav-actions">
+                 <div class="user-profile-dropdown" id="user-profile-container">
+                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                 
+                     <div class="dropdown-menu" id="user-dropdown-menu">
+                         <a href="editar_perfil.html">Mi Perfil</a>
+                         <a href="preferidos.html">Mis Preferidos</a>
+                         <div class="dropdown-divider"></div>
+                         <a href="inicio-sesión.html" id="logout-btn">Cerrar Sesión</a>
+                     </div>
+                 </div>
+             </div>
         </nav>
     </header>
 
@@ -172,4 +172,3 @@
 </div>
 <script src="js/main.js"></script> </body>
 </html>
->>>>>>> 59fdab6 (feat: añadido main.js con menu desplegable en el usuario, boton cerrar banner funcional)

@@ -1,67 +1,105 @@
-// Espera a que todo el contenido del HTML se cargue antes de ejecutar el script
 document.addEventListener('DOMContentLoaded', function() {
 
-    /**
-     * Funcionalidad 1: Cerrar el banner superior
-     */
-    const topBanner = document.getElementById('top-banner');
-    const closeBannerBtn = document.getElementById('close-banner-btn');
+    // --- LÓGICA DE INICIO DE SESIÓN ---
 
-    // Si el botón de cierre existe, le añade un evento de clic
-    if (closeBannerBtn) {
-        closeBannerBtn.addEventListener('click', function() {
-            // Oculta el banner al hacer clic
-            if (topBanner) {
-                topBanner.style.display = 'none';
-            }
-        });
-    }
-
-
-    /**
-     * Funcionalidad 2: Menú desplegable del usuario
-     */
-    const dropdownContainer = document.getElementById('user-dropdown-container');
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const profileContainer = document.getElementById('user-profile-container');
     const dropdownMenu = document.getElementById('user-dropdown-menu');
+    const loginForm = document.getElementById('login-form');
+    const logoutBtn = document.getElementById('logout-btn');
+    const signupForm = document.getElementById('signup-form');
 
-    // Si el contenedor del menú existe, gestiona su visibilidad
-    if (dropdownContainer && dropdownMenu) {
-        dropdownContainer.addEventListener('click', function(event) {
-            // Evita que el clic en el contenedor cierre el menú inmediatamente
-            event.stopPropagation(); 
-            // Muestra u oculta el menú
-            dropdownMenu.classList.toggle('show');
-        });
-
-        // Cierra el menú si se hace clic en cualquier otro lugar de la página
-        document.addEventListener('click', function() {
-            if (dropdownMenu.classList.contains('show')) {
-                dropdownMenu.classList.remove('show');
-            }
-        });
-    }
-
-
-    /**
-     * Funcionalidad 3: Header Fijo (Sticky Header)
-     */
-    const header = document.getElementById('main-header');
-    // Obtiene la altura de la barra de navegación principal
-    const navOffsetTop = header ? header.querySelector('.main-nav').offsetTop : 0;
-
-    function handleScroll() {
-        if (window.scrollY > navOffsetTop) {
-            // Añade la clase 'sticky' si el scroll supera la posición de la nav
-            header.classList.add('sticky');
+    if (profileContainer) {
+        if (isLoggedIn) {
+            // **COMPORTAMIENTO SI LA SESIÓN ESTÁ INICIADA**
+            profileContainer.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
         } else {
-            // Quita la clase 'sticky' si el scroll vuelve arriba
-            header.classList.remove('sticky');
+            // **COMPORTAMIENTO SI LA SESIÓN NO ESTÁ INICIADA**
+            profileContainer.addEventListener('click', function() {
+                // Redirige a la página de inicio de sesión
+                window.location.href = 'inicio-sesion.html';
+            });
         }
     }
 
-    // Ejecuta la función handleScroll cada vez que el usuario hace scroll
-    if(header) {
-       window.addEventListener('scroll', handleScroll);
+    // Event listener para el botón de INICIAR SESIÓN
+    if (loginForm) {
+    loginForm.addEventListener('submit', function(event) {
+        // Esto solo se ejecuta si los campos 'required' están llenos
+        event.preventDefault(); // Previene la recarga de la página
+        
+        // Simula el inicio de sesión
+        localStorage.setItem('isLoggedIn', 'true');
+        
+        // Redirige al home
+        window.location.href = 'home.html';
+        });
     }
 
+    // Event listener para el botón de CERRAR SESIÓN
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            // Simula el cierre de sesión
+            localStorage.setItem('isLoggedIn', 'false');
+            // Redirige a la página de inicio de sesión
+            window.location.href = 'inicio-sesion.html';
+        });
+    }
+
+    // Cierra el menú desplegable si se hace clic fuera de él
+    document.addEventListener('click', function() {
+        if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+
+    if (signupForm) {
+    signupForm.addEventListener('submit', function(event) {
+        // Esto solo se ejecuta si los campos 'required' están llenos
+        event.preventDefault(); // Previene la recarga de la página
+
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Validación extra: verificar que las contraseñas coinciden
+        if (password !== confirmPassword) {
+            alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+            return; // Detiene la ejecución si no coinciden
+        }
+
+        // Simula la creación de cuenta e inicio de sesión
+        localStorage.setItem('isLoggedIn', 'true');
+        
+        // Redirige al home
+        window.location.href = 'home.html';
+        });
+    }
+
+    // --- OTRAS FUNCIONALIDADES ---
+
+    // Funcionalidad para cerrar el banner superior
+    const topBanner = document.querySelector('.top-banner');
+    const closeBannerBtn = document.querySelector('.close-banner-btn');
+    if (topBanner && closeBannerBtn) {
+        closeBannerBtn.addEventListener('click', () => {
+            topBanner.style.display = 'none';
+        });
+    }
+
+    // Funcionalidad para el Header Fijo (Sticky Header)
+    const header = document.getElementById('main-header');
+    if (header) {
+        const navOffsetTop = header.querySelector('.main-nav').offsetTop;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > navOffsetTop) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    }
 });
