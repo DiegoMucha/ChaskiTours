@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const profileContainer = document.getElementById('user-profile-container');
     const dropdownMenu = document.getElementById('user-dropdown-menu');
-    const loginBtn = document.getElementById('login-btn');
+    const loginForm = document.getElementById('login-form');
     const logoutBtn = document.getElementById('logout-btn');
 
     if (profileContainer) {
@@ -25,13 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listener para el botón de INICIAR SESIÓN
-    if (loginBtn) {
-        loginBtn.addEventListener('click', function(event) {
-            event.preventDefault(); // Previene el envío del formulario
-            // Simula el inicio de sesión
-            localStorage.setItem('isLoggedIn', 'true');
-            // Redirige al home
-            window.location.href = 'home.html';
+    if (loginForm) {
+    loginForm.addEventListener('submit', function(event) {
+        // Esto solo se ejecuta si los campos 'required' están llenos
+        event.preventDefault(); // Previene la recarga de la página
+        
+        // Simula el inicio de sesión
+        localStorage.setItem('isLoggedIn', 'true');
+        
+        // Redirige al home
+        window.location.href = 'home.html';
         });
     }
 

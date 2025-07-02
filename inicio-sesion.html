@@ -9,24 +9,31 @@
 <body class="login-page">
 
     <header class="header">
-        <div class="top-banner" id="top-banner">
-            <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
-            <button class="close-banner-btn" id="close-banner-btn" aria-label="Cerrar">&times;</button>
+       <div class="top-banner" id="top-banner">
+         <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+         <button class="close-banner-btn" id="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
-            <a href="home.html" class="logo">
-                <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
-                <span class="logo-text">Chaski<br>Tours</span>
-            </a>
-            <div class="nav-links">
-                <a href="home.html">Inicio</a>
-                <a href="listado_lugares.html">Lugares</a>
-                <a href="pregunta_freq.html">Preguntas Frecuentes</a>
-            </div>
+             <a href="home.html" class="logo">
+                 <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                 <span class="logo-text">Chaski<br>Tours</span>
+             </a>
+             <div class="nav-links">
+                 <a href="home.html" class="active">Inicio</a>
+                 <a href="listado_lugares.html">Lugares</a>
+                 <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+             </div>
             <div class="nav-actions">
-                <div class="user-profile-dropdown">
+                <div class="user-profile-dropdown" id="user-profile-container">
                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                
+                    <div class="dropdown-menu" id="user-dropdown-menu">
+                        <a href="editar_perfil.html">Mi Perfil</a>
+                        <a href="preferidos.html">Mis Preferidos</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="inicio-sesion" id="logout-btn">Cerrar Sesión</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -39,7 +46,7 @@
                 <p>Hoy es un nuevo día. Es tu día. Tú le das forma.</p>
             </div>
 
-            <form class="login-form">
+            <form class="login-form" id="login-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="ejemplo@email.com" required>
@@ -49,13 +56,9 @@
                     <input type="password" id="password" placeholder="Al menos 8 caracteres" required>
                 </div>
                 <a href="recuperar-contrasena" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
-                
-                <button type="submit" id="login-btn" formaction="home.html" class="btn btn-full-width">Ingresar</button>
-                <div class="divider">o</div>
-                <a href="https://accounts.google.com/signin" class="btn btn-secondary btn-full-width">
-                    <img src="assets/icons/google.png" alt="Google" class="google-icon">
-                    <span>Iniciar sesión con Google</span>
-                </a>
+
+                <button type="submit" id="login-btn" class="btn btn-full-width">Ingresar</button>
+            
             </form>
 
             <p class="signup-link">
