@@ -107,15 +107,16 @@ a {
     height: 70%;
     align-items: flex-start;
     gap: 25px;
-    padding: 40px;
-    position: absolute;
     top: 203px;
     left: 95px;
-    background-color: #fffad2;
-    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid;
     border-color: var(--grey-15);
+    position: relative;
+    padding: 40px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #fffad2;
+    transition: all 0.3s ease-in-out;
   }
 
   .desktop .card-1 {
@@ -190,10 +191,8 @@ a {
   .desktop .text-container {
     display: flex;
     flex-direction: column;
-    width: 697px;
-    height: 51px;
-    align-items: flex-start;
-    gap: 6px;
+    gap: 20px;
+    padding: 20px;
     position: relative;
   }
   
@@ -229,6 +228,12 @@ a {
   line-height: 1.4;
   text-align: left;
   width: 100%;
+}
+
+.desktop .notificaciones-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
   
   .desktop .text-wrapper-3 {
@@ -286,9 +291,9 @@ a {
   .desktop .image {
     position: absolute;
     border-radius: 12px;
-    width: 27%;
-    height: 90%;
-    top: 5%;
-    left: 60%;
+    width: 37%;
+    height: 120%;
+    top: -10%;
+    left: 120%;
   }
   
