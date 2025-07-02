@@ -7,20 +7,17 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Marcellus+SC&family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Marcellus+SC&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/ebl-style.css" />
 </head>
 <body>
-
     <div class="page-container">
-
-        <header class="header">
-            <div class="top-banner">
+        <header class="header" id="main-header">
+            <div class="top-banner" id="top-banner">
                 <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
                 <button class="close-banner-btn" aria-label="Cerrar">×</button>
             </div>
-
             <nav class="main-nav">
                 <a href="home.html" class="logo">
                     <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
@@ -33,23 +30,30 @@
                 </div>
                 <div class="nav-actions">
                     <a href="preferidos.html">
-                        <img src="assets/icons/signpost.svg" alt="Carrito de compras" class="action-icon">
+                        <img src="assets/icons/signpost.svg" alt="Mis Preferidos" class="action-icon">
                     </a>
-                    <a href="inicio-sesion.html">
-                        <div class="user-profile-dropdown">
-                            <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                            <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                    <div class="user-profile-dropdown" id="user-profile-container">
+                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                        <div class="dropdown-menu" id="user-dropdown-menu">
+                            <a href="editar_perfil.html">Mi Perfil</a>
+                            <a href="preferidos.html">Mis Preferidos</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logout-btn">Cerrar Sesión</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-          </nav>
+                </nav>
         </header>
 
         <main>
             <section class="hero">
                 <div class="hero-text-box">
                     <h1>Circuito Mágico del Agua</h1>
-                    <p>Complejo de 13 fuentes cibernéticas ubicado en el Parque de la Reserva, Cercado de Lima. Galardonado con un Récord Guinness por ser el mayor conjunto de fuentes en un parque público, ofrece espectáculos nocturnos de agua, luz y música que iluminan el cielo limeño cada hora.</p>
+                    <p>Complejo de 13 fuentes cibernéticas ubicado en el Parque de la Reserva. Galardonado con un Récord Guinness, ofrece espectáculos nocturnos de agua, luz y música que iluminan el cielo limeño.</p>
+                    <div class="hero-rating">
+                        <span>⭐ 4.76 (343 reseñas)</span>
+                    </div>
                 </div>
             </section>
 
@@ -57,12 +61,12 @@
                 <div class="info-card">
                     <img src="assets/icons/map.svg" alt="Icono de Dirección" class="info-icon">
                     <h2>Dirección</h2>
-                    <p>Parque de la Reserva, Av. Arequipa cuadra 6, Cercado de Lima 15046, Lima – Perú</p>
+                    <p>Parque de la Reserva, Av. Arequipa cdra. 6, Cercado de Lima</p>
                 </div>
                 <div class="info-card">
                     <img src="assets/icons/calendar-search.svg" alt="Icono de Horario" class="info-icon">
                     <h2>Horario</h2>
-                    <p>Lunes a Domingo · 3:00 p.m. – 10:00 p.m.<br>Shows multimedia: 7:15 p.m., 8:15 p.m., 9:10 p.m.</p>
+                    <p>Lunes a Domingo · 3:00 p.m. – 10:00 p.m.<br>Shows: 7:15, 8:15, 9:10 p.m.</p>
                 </div>
                 <div class="info-card">
                     <img src="assets/icons/bookmark.svg" alt="Icono de Categoría" class="info-icon">
@@ -70,35 +74,94 @@
                     <p>Entretenimiento · Arte & Cultura</p>
                 </div>
             </section>
-
-            <section class="actions-section">
-                <div class="action-item rating">
-                    <img src="assets/icons/Shape.svg" alt="Estrella de calificación" class="action-icon-circle">
-                    <div>
-                        <p class="action-label">Calificación</p>
-                        <p class="action-value">4.76 (343)</p>
-                    </div>
+            
+            <section class="content-wrapper planning-section">
+                <div class="section-header">
+                    <h2>Planifica tu Visita</h2>
                 </div>
-
-                <div class="action-item review">
-                    <img src="assets/icons/Shape.svg" alt="Icono de reseña" class="action-icon-circle">
-                    <div>
-                        <p class="action-label">¿Deseas dar una calificación a este lugar?</p>
-                        <a href="valoraciones.html"><button class="btn">Dar Reseña</button></a>
+                <div class="planning-grid">
+                    <div class="planning-item">
+                        <img src="assets/icons/ticket.png" alt="Precios" class="planning-icon">
+                        <h3>Precios</h3>
+                        <p><strong>Entrada General:</strong> S/ 4.00<br>Niños menores de 5 años y adultos mayores de 65 no pagan.</p>
                     </div>
-                </div>
-                
-                <div class="action-item favorite">
-                    <img src="assets/icons/favorite.svg" alt="Icono de favorito" class="action-icon-circle">
-                    <div>
-                        <p class="action-label">¿Desea guardar el lugar como favorito?</p>
-                        <button class="btn">Guardar como favorito</button>
+                    <div class="planning-item">
+                        <img src="assets/icons/wheelchair.png" alt="Accesibilidad" class="planning-icon">
+                        <h3>Accesibilidad</h3>
+                        <p>El parque cuenta con rampas de acceso y caminos pavimentados aptos para sillas de ruedas y coches de bebé.</p>
+                    </div>
+                    <div class="planning-item">
+                        <img src="assets/icons/lightbulb.png" alt="Recomendaciones" class="planning-icon">
+                        <h3>Recomendaciones</h3>
+                        <p>Lleva una casaca ligera para la noche y ten cuidado con mojarte en las fuentes interactivas. ¡Ideal para ir en familia!</p>
                     </div>
                 </div>
             </section>
+
+            <section class="content-wrapper gallery-section">
+                <div class="section-header">
+                   <h2>Galería de Fotos</h2>
+               </div>
+               <div class="gallery-grid">
+                   <a href="assets/img/ArteyCultura.jpg" class="gallery-item"><img src="assets/img/ArteyCultura.jpg" alt="Foto 1 del Circuito Mágico"></a>
+                   <a href="assets/img/hero-background.jpg" class="gallery-item"><img src="assets/img/hero-background.jpg" alt="Foto 2 del Circuito Mágico"></a>
+                   <a href="assets/img/login-art.jpg" class="gallery-item"><img src="assets/img/login-art.jpg" alt="Foto 3 del Circuito Mágico"></a>
+                   <a href="assets/img/lima-dron.jpg" class="gallery-item"><img src="assets/img/lima-dron.jpg" alt="Foto 4 del Circuito Mágico"></a>
+               </div>
+            </section>
+
+            <section class="content-wrapper">
+                <div class="section-header">
+                    <h2>Reseñas Destacadas</h2>
+                    <a href="reseñas.html" class="btn">Ver todas las reseñas</a>
+                </div>
+                <div class="grid-container">
+                    <div class="review-card">
+                        <div class="user-info">
+                            <img src="assets/icons/Profile.png" alt="Avatar de Ana" class="user-avatar">
+                            <span class="user-name">Ana K.</span>
+                            <span class="user-location">Lima, Perú</span>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-stars">★★★★★</div>
+                            <p>"¡Un espectáculo imperdible! Las fuentes son hermosas y la música crea un ambiente mágico. Perfecto para una salida nocturna."</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="user-info">
+                            <img src="assets/icons/Profile.png" alt="Avatar de Carlos" class="user-avatar">
+                            <span class="user-name">Carlos S.</span>
+                            <span class="user-location">Arequipa, Perú</span>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-stars">★★★★☆</div>
+                            <p>"Muy bonito y bien cuidado. Lo único malo son las colas para entrar los fines de semana. Recomiendo ir un día de semana."</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="user-info">
+                            <img src="assets/icons/Profile.png" alt="Avatar de Maria" class="user-avatar">
+                            <span class="user-name">Maria G.</span>
+                            <span class="user-location">Bogotá, Colombia</span>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-stars">★★★★★</div>
+                            <p>"Una de las mejores atracciones de Lima. Mis hijos se divirtieron muchísimo en la fuente de los niños. ¡Totalmente recomendado!"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="user-actions-section">
+                <h3>¿Te gustó este lugar?</h3>
+                <div class="action-buttons-container">
+                    <a href="valoraciones.html" class="btn btn-primary">✍️ Dar Reseña</a>
+                    <button class="btn btn-secondary" id="btn-favorito">❤️ Guardar como favorito</button>
+                </div>
+            </section>
         </main>
-
     </div>
-
+    
+    <script src="js/main.js" defer></script>
 </body>
 </html>
