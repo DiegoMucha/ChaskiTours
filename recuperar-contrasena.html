@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/rgf-old-style.css" />
-    <title>Recuperar contraseña | Chaski Tours</title>
-  </head>
-  <body>
-    <button class="close-circle" aria-label="Cerrar" onclick="location.href='inicio-sesion.html'">
-      <img src="assets/icons/close-circle.png" alt="Cerrar" />
-    </button>
-    <header class="header">
-      <section class="banner" aria-label="Promoción">
-        <div class="abstract-design" aria-hidden="true">
-          <div class="group">
-            <div class="BACKGROUND">
-              <div class="group-wrapper">
-                <img class="img" src="assets/icons/vector.png" alt="" />
-              </div>
-            </div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Chaski Tours</title>
+    <link rel="stylesheet" href="css/rgf-style.css" />
+</head>
+<body class="login-page">
+
+        <header class="header" id="main-header">
+       <div class="top-banner" id="top-banner">
+         <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+         <button class="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
-        <p class="text">✨Descubre los encantos de Lima</p>
-        <a href="landing-page.html" class="text-button">Más información</a>
-      </section>
-      <nav class="navigation-bar" aria-label="Navegación principal">
-        <a class="logo" href="home.html">
-          <img class="imagotipo" src="assets/icons/imagotipo.png" alt="Chaski Tours" />
-        </a>
-        <ul class="buttons-container">
-          <li><a class="button" href="home.html"><span class="text-3">Inicio</span></a></li>
-          <li><a class="text-button-2" href="nosotros.html">Nosotros</a></li>
-          <li><a class="text-button-2" href="sitios-destacados.html">Lugares</a></li>
-          <li><a class="text-button-2" href="preguntas-freq.html">Preguntas Frecuentes</a></li>
-        </ul>
-        <div class="frame" aria-label="Usuario">
-          <button class="user-dropdown" aria-haspopup="listbox" aria-expanded="false">
-            <span class="listbox-main-wrapper">
-              <span class="listbox-main">
-                <span class="frame-2">
-                  <img class="ellipse" src="assets/icons/ellipse-4.png" alt="Usuario" />
-                  <img class="chevron-down" src="assets/icons/chevron-down.png" alt="" />
-                </span>
-              </span>
-            </span>
-          </button>
-        </div>
-      </nav>
+        <nav class="main-nav">
+             <a href="home.html" class="logo">
+                 <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                 <span class="logo-text">Chaski<br>Tours</span>
+             </a>
+             <div class="nav-links">
+                 <a href="home.html">Inicio</a>
+                 <a href="listado_lugares.html">Lugares</a>
+                 <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+             </div>
+             <div class="nav-actions">
+                 <div class="user-profile-dropdown" id="user-profile-container">
+                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                 
+                     <div class="dropdown-menu" id="user-dropdown-menu">
+                         <a href="editar_perfil.html">Mi Perfil</a>
+                         <a href="preferidos.html">Mis Preferidos</a>
+                         <div class="dropdown-divider"></div>
+                         <a href="inicio-sesión.html" id="logout-btn">Cerrar Sesión</a>
+                     </div>
+                 </div>
+             </div>
+        </nav>
     </header>
-    <main class="desktop-recuperar">
-      <section class="main-container">
-        <aside class="left-side-column">
-          <section class="login-form" aria-label="Formulario de recuperación de contraseña">
-            <header class="intro">
-              <h1 class="bienvenido-de-nuevo">Recupera tu cuenta 🔑</h1>
-              <p class="text-wrapper">Introduce tu correo asociado para cambiar tu contraseña</p>
-            </header>
-            <form class="form" autocomplete="on" action="recuperar-contrasena-exito.html" method="get">
-              <div class="input">
-                <label for="email" class="label">Email</label>
-                <input id="email" name="email" class="input-field" type="email" placeholder="Ejemplo@email.com" required autocomplete="username" />
-              </div>
-              <button type="submit" class="main-button"><span class="sign-in">Enviar enlace</span></button>
+
+    <div class="login-body-container">
+        <main class="login-content">
+            <div class="login-header">
+                <h1>Recupera tu cuenta 🔑</h1>
+                <p>Introduce tu correo asociado para enviarte un enlace de recuperación.</p>
+            </div>
+
+            <form class="login-form" id="recover-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required autocomplete="username">
+                </div>
+                
+                <button type="submit" class="btn btn-full-width">Enviar enlace</button>
             </form>
-            <p class="no-tienes-una-cuenta">
-              <span class="span">¿No tienes una cuenta?</span>
-              <span class="text-wrapper-4">&nbsp;</span>
-              <a href="crear-cuenta.html" class="text-wrapper-5">Regístrate</a>
+
+            <p class="signup-link">
+                ¿Lo recordaste? <a href="inicio-sesion.html">Volver a Iniciar Sesión</a>
             </p>
-            <footer>
-              <small class="p">© 2025 ALL RIGHTS RESERVED</small>
-            </footer>
-          </section>
-        </aside>
-        <figure class="art">
-          <img class="login-art" src="assets/img/lima-dron.jpg" alt="Vista aérea de Lima" />
-        </figure>
-      </section>
-    </main>
-  </body>
+            <p class="copyright">© 2025 ALL RIGHTS RESERVED</p>
+        </main>
+        
+        <div class="login-image-wrapper">
+        </div>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
 </html>
