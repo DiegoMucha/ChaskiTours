@@ -191,5 +191,23 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // --- FUNCIONALIDAD PARA FORMULARIO DE SUSCRIPCIÓN (CTA) ---
+    const ctaForm = document.querySelector('.cta-form');
+
+    if (ctaForm) {
+        ctaForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene que la página se recargue
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if(emailInput.value) {
+                alert('¡Gracias por suscribirte! Recibirás nuestras mejores recomendaciones.');
+                emailInput.value = ''; // Limpia el campo de correo
+            } else {
+                alert('Por favor, ingresa un correo electrónico.');
+            }
+        });
+    }
+
 });
 
