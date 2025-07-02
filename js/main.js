@@ -1,0 +1,80 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- LÓGICA DE INICIO DE SESIÓN ---
+
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const profileContainer = document.getElementById('user-profile-container');
+    const dropdownMenu = document.getElementById('user-dropdown-menu');
+    const loginBtn = document.getElementById('login-btn');
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (profileContainer) {
+        if (isLoggedIn) {
+            // **COMPORTAMIENTO SI LA SESIÓN ESTÁ INICIADA**
+            profileContainer.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
+        } else {
+            // **COMPORTAMIENTO SI LA SESIÓN NO ESTÁ INICIADA**
+            profileContainer.addEventListener('click', function() {
+                // Redirige a la página de inicio de sesión
+                window.location.href = 'inicio-sesion.html';
+            });
+        }
+    }
+
+    // Event listener para el botón de INICIAR SESIÓN
+    if (loginBtn) {
+        loginBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Previene el envío del formulario
+            // Simula el inicio de sesión
+            localStorage.setItem('isLoggedIn', 'true');
+            // Redirige al home
+            window.location.href = 'home.html';
+        });
+    }
+
+    // Event listener para el botón de CERRAR SESIÓN
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            // Simula el cierre de sesión
+            localStorage.setItem('isLoggedIn', 'false');
+            // Redirige a la página de inicio de sesión
+            window.location.href = 'inicio-sesion.html';
+        });
+    }
+
+    // Cierra el menú desplegable si se hace clic fuera de él
+    document.addEventListener('click', function() {
+        if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+
+
+    // --- OTRAS FUNCIONALIDADES ---
+
+    // Funcionalidad para cerrar el banner superior
+    const topBanner = document.querySelector('.top-banner');
+    const closeBannerBtn = document.querySelector('.close-banner-btn');
+    if (topBanner && closeBannerBtn) {
+        closeBannerBtn.addEventListener('click', () => {
+            topBanner.style.display = 'none';
+        });
+    }
+
+    // Funcionalidad para el Header Fijo (Sticky Header)
+    const header = document.getElementById('main-header');
+    if (header) {
+        const navOffsetTop = header.querySelector('.main-nav').offsetTop;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > navOffsetTop) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    }
+});

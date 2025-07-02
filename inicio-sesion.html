@@ -9,8 +9,9 @@
 <body class="login-page">
 
     <header class="header">
-        <div class="top-banner">
+        <div class="top-banner" id="top-banner">
             <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+            <button class="close-banner-btn" id="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
             <a href="home.html" class="logo">
@@ -49,7 +50,7 @@
                 </div>
                 <a href="recuperar-contrasena" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
                 
-                <button type="submit" formaction="editar_perfil.html" class="btn btn-full-width">Ingresar</button>
+                <button type="submit" id="login-btn" formaction="home.html" class="btn btn-full-width">Ingresar</button>
                 <div class="divider">o</div>
                 <a href="https://accounts.google.com/signin" class="btn btn-secondary btn-full-width">
                     <img src="assets/icons/google.png" alt="Google" class="google-icon">
@@ -66,6 +67,6 @@
         <div class="login-image-wrapper">
             </div>
     </div>
-
+<script src="js/main.js"></script>
 </body>
 </html>
