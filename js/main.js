@@ -187,4 +187,74 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+          // --- LÓGICA PARA PÁGINA DE RESEÑAS (FILTRO + PAGINACIÓN) ---
+          const reviewsContainer = document.querySelector('.reviews-list');
+    
+          if (reviewsContainer) {
+              const filterRows = document.querySelectorAll('#ratings-filter-container .rating-row');
+              const allReviews = Array.from(reviewsContainer.querySelectorAll('.review-card'));
+              const paginationNav = document.querySelector('.reviews-page-layout .pagination');
+              let currentFilter = 'all';
+              const reviewsPerPage = 3; // ¿Cuántas reseñas quieres por página?
+      
+              // Función principal que dibuja las reseñas
+              function displayReviews(page = 1) {
+                  // 1. Filtrar las reseñas según el filtro actual
+                  const filteredReviews = allReviews.filter(review => {
+                      if (currentFilter === 'all') return true;
+                      return review.dataset.rating === currentFilter;
+                  });
+      
+                  // 2. Ocultar o mostrar paginación
+                  const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
+                  paginationNav.style.display = totalPages > 1 ? 'flex' : 'none';
+      
+                  // 3. Crear y actualizar botones de paginación
+                  paginationNav.innerHTML = ''; // Limpiar paginación anterior
+                  for (let i = 1; i <= totalPages; i++) {
+                      const pageLink = document.createElement('a');
+                      pageLink.href = '#';
+                      pageLink.className = 'page-number';
+                      pageLink.textContent = i;
+                      if (i === page) pageLink.classList.add('active');
+                      pageLink.addEventListener('click', (e) => {
+                          e.preventDefault();
+                          displayReviews(i);
+                      });
+                      paginationNav.appendChild(pageLink);
+                  }
+      
+                  // 4. Mostrar solo las reseñas de la página actual
+                  const start = (page - 1) * reviewsPerPage;
+                  const end = start + reviewsPerPage;
+                  
+                  // Primero, poner todas las tarjetas en el contenedor (pero ocultas)
+                  allReviews.forEach(review => {
+                      review.style.display = 'none';
+                      reviewsContainer.appendChild(review); // Asegura que estén todas en el DOM
+                  });
+      
+                  // Luego, mostrar solo las que corresponden a la página y filtro actual
+                  filteredReviews.slice(start, end).forEach(review => {
+                      review.style.display = 'flex';
+                  });
+              }
+      
+              // Añadir evento de clic a las filas de filtro
+              filterRows.forEach(row => {
+                  row.addEventListener('click', function() {
+                      // Actualizar el filtro activo visualmente
+                      filterRows.forEach(r => r.classList.remove('filter-active'));
+                      this.classList.add('filter-active');
+                      
+                      // Cambiar el filtro actual y volver a dibujar desde la página 1
+                      currentFilter = this.dataset.filter;
+                      displayReviews(1);
+                  });
+              });
+      
+              // Carga inicial al entrar a la página
+              displayReviews(1);
+          }
 }); 

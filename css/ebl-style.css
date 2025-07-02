@@ -1062,3 +1062,23 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* ==========================================================================
+   7. ESTILOS ADICIONALES PARA PÁGINA DE RESEÑAS
+   ========================================================================== */
+
+   .ratings-summary .rating-row {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.ratings-summary .rating-row:hover {
+    background-color: #e6e0c6; /* Un color sutil al pasar el mouse */
+}
+
+.ratings-summary .rating-row.filter-active {
+    background-color: #d2c4a7; /* Color más oscuro para el filtro activo */
+    font-weight: bold;
+}
