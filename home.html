@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a Chaski Tours - Explora Lima</title>
+    <title>Bienvenido a Chaski Tours</title>
     <link rel="stylesheet" href="css/rgf-style.css" />
 </head>
 <body>
@@ -11,8 +11,9 @@
 <div class="page-container">
 
     <header class="header">
-        <div class="top-banner">
-             <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+       <div class="top-banner" id="top-banner">
+         <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+         <button class="close-banner-btn" id="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
              <a href="home.html" class="logo">
@@ -24,14 +25,19 @@
                  <a href="listado_lugares.html">Lugares</a>
                  <a href="preguntas_freq.html">Preguntas Frecuentes</a>
              </div>
-             <div class="nav-actions">
-                <div class="user-profile-dropdown">
-                    <a href="inicio-sesion.html">
-                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                    </a>
-                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-                </div>
-            </div>
+      <div class="nav-actions">
+    <div class="user-profile-dropdown" id="user-dropdown-container">
+        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar" id="user-avatar-icon">
+        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+        
+        <div class="dropdown-menu" id="user-dropdown-menu">
+            <a href="editar-perfil.html">Mi Perfil</a>
+            <a href="preferidos.html">Lugares Preferidos</a>
+            <div class="dropdown-divider"></div>
+            <a href="inicio-sesion.html">Cerrar Sesión</a>
+        </div>
+    </div>
+</div>
         </nav>
     </header>
 
@@ -56,7 +62,7 @@
                             <input type="text" id="tour-type" placeholder="Tipo de tour">
                         </div>
                     </div>
-                    <a href="listado_lugares.html" class="search-action-btn" aria-label="Buscar">
+                    <a href="sitios-destacados.html" class="search-action-btn" aria-label="Buscar">
                          <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda" style="filter: none;">
                     </a>
                 </div>
@@ -87,7 +93,7 @@
         <section class="content-wrapper">
             <div class="section-header">
                 <h2>Sitios destacados</h2>
-                <a href="sitios-destacados.html" class="btn">Ver todos los lugares</a>
+                <a href="listado_lugares.html" class="btn">Ver todos los lugares</a>
             </div>
             <div class="grid-container">
                 <article class="site-card">
@@ -164,5 +170,6 @@
     </footer>
 
 </div>
-</body>
+<script src="js/main.js"></script> </body>
 </html>
+>>>>>>> 59fdab6 (feat: añadido main.js con menu desplegable en el usuario, boton cerrar banner funcional)
