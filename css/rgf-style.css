@@ -551,3 +551,53 @@ a {
         transform: translateY(0);
     }
 }
+
+/* --- Estilos para la barra de búsqueda interactiva --- */
+
+.search-input-group {
+    position: relative; /* Necesario para posicionar el dropdown */
+    cursor: pointer;
+}
+
+.search-input-group input {
+    pointer-events: none; /* Hace que el clic atraviese el input y llegue al contenedor */
+}
+
+.search-dropdown {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: calc(100% + 5px); /* Se posiciona debajo del input */
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 1px solid var(--grey-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.search-dropdown.show {
+    display: block; /* Clase para mostrar el dropdown */
+}
+
+.search-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Apuntamos a la nueva clase .dropdown-item */
+.search-dropdown .dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer; /* Añadimos el cursor para indicar que es clickeable */
+}
+
+.search-dropdown .dropdown-item:hover {
+    background-color: #f7f7f7;
+}
