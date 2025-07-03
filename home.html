@@ -47,25 +47,49 @@
             <div class="hero-home-content">
                 <h1>La vida es una aventura, <br>sácale el máximo provecho</h1>
             
-                <div class="hero-search-bar">
-                    <div class="search-input-group">
-                        <img src="assets/icons/location.png" alt="Ícono de ubicación" class="search-icon">
-                        <div class="input-text">
-                            <label for="destination">Dónde</label>
-                            <input type="text" id="destination" placeholder="Buscar destino">
+                    <div class="hero-search-bar">
+                        <div class="search-input-group" id="destination-group">
+                            <img src="assets/icons/location.png" alt="Ícono de ubicación" class="search-icon">
+                            <div class="input-text">
+                                <label for="destination">Dónde</label>
+                                <input type="text" id="destination" placeholder="Buscar destino" readonly>
+                            </div>
+                            <div class="search-dropdown" id="destination-dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item">Barranco</li>
+                                    <li class="dropdown-item">Cercado de Lima</li>
+                                    <li class="dropdown-item">Jesús María</li>
+                                    <li class="dropdown-item">La Molina</li>
+                                    <li class="dropdown-item">Magdalena</li>
+                                    <li class="dropdown-item">Miraflores</li>
+                                    <li class="dropdown-item">Pueblo Libre</li>
+                                    <li class="dropdown-item">San Borja</li>
+                                    <li class="dropdown-item">San Isidro</li>
+                                    <li class="dropdown-item">San Miguel</li>
+                                    <li class="dropdown-item">Surco</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="search-input-group">
-                        <img src="assets/icons/filter.png" alt="Ícono de tipo de tour" class="search-icon">
-                        <div class="input-text">
-                            <label for="tour-type">Tipo de tour</label>
-                            <input type="text" id="tour-type" placeholder="Tipo de tour">
+                    
+                        <div class="search-input-group" id="tour-type-group">
+                            <img src="assets/icons/filter.png" alt="Ícono de tipo de tour" class="search-icon">
+                            <div class="input-text">
+                                <label for="tour-type">Tipo de tour</label>
+                                <input type="text" id="tour-type" placeholder="Tipo de tour" readonly>
+                            </div>
+                            <div class="search-dropdown" id="tour-type-dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item">Gastronomía</li>
+                                    <li class="dropdown-item">Arte y Cultura</li>
+                                    <li class="dropdown-item">Entretenimiento</li>
+                                </ul>
+                            </div>
                         </div>
+                    
+                        <a href="sitios-destacados.html" class="search-action-btn" aria-label="Buscar">
+                            <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda" style="filter: none;">
+                        </a>
                     </div>
-                    <a href="sitios-destacados.html" class="search-action-btn" aria-label="Buscar">
-                         <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda" style="filter: none;">
-                    </a>
-                </div>
                 </div>
         </section>
 
