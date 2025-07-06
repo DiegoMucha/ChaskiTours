@@ -2436,6 +2436,11 @@ p {
 .estrella:hover ~ .estrella {
   background-color: yellow;
 }
+
+.estrella:hover {
+  background-color: yellow;
+}
+
 .texto {
   width: 40%;
   height: 50px;
