@@ -26,10 +26,12 @@
           <div class="card">
             <div class="container">
               <div class="text-container">
-                <p class="heading">
-                  13/05/2025 - Inicio de sesión<br /><br />12/05/2025 - Edición de perfil<br /><br />07/05/2025 - Plaza
-                  Mayor de Lima<br /><br />04/05/2025 - Creación de cuenta
-                </p>
+                <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+                  <input type="text" id="searchInput" placeholder="Buscar actividades..." style="padding: 10px; width: 300px; border-radius: 8px; border: 1px solid #aaa;">
+                                
+                  <button id="sortButton" class="btn">Ordenar por fecha ↑</button>
+                </div>
+                <div class="heading" style="height: 300px; overflow-y: auto;" id="activityList"></div>
               </div>
             </div>
             <div class="sub-container">
@@ -48,5 +50,8 @@
         </div>
       </div>
     </div>
+  
+    <script src="js/historial.js"></script>
+    <div id="toast"></div>
   </body>
 </html>

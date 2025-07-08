@@ -40,6 +40,25 @@ a {
     position: relative;
     height: 1140px;
   }
+
+  #toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001b0a;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#toast.show {
+  opacity: 1;
+}
+
   
   .desktop-historial-de .main-container {
     display: flex;
@@ -196,7 +215,7 @@ a {
     align-items: flex-end;
     gap: 50px;
     position: absolute;
-    top: 232px;
+    top: 170px;
     left: 682px;
   }
   
