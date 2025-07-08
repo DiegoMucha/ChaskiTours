@@ -29,6 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.getElementById('main-header');
     const topBanner = document.querySelector('.top-banner') || document.getElementById('top-banner');
 
+      // --- REDIRECCIÓN DE BÚSQUEDA POR TIPO DE TOUR (HOME) ---
+    const btnBuscarTipoTour = document.getElementById('buscar-tipo-tour');
+    // Usar la variable tourTypeInput ya declarada arriba
+    if (btnBuscarTipoTour && tourTypeInput) {
+        btnBuscarTipoTour.addEventListener('click', function() {
+            const tipo = tourTypeInput.value.trim();
+            if (tipo) {
+                const url = 'listado_lugares.html?categoria=' + encodeURIComponent(tipo);
+                window.location.href = url;
+            } else {
+                window.location.href = 'listado_lugares.html';
+            }
+        });
+    }
 
 
     // --- LÓGICA DE INTERFAZ Y MENÚ DE SESIÓN ---
@@ -64,15 +78,19 @@ document.addEventListener('DOMContentLoaded', function() {
             closeAllDropdowns(dropdown);
             dropdown.classList.toggle('show');
         });
-        dropdown.addEventListener('click', function(event) {
-            if (event.target.classList.contains('dropdown-item')) {
-                input.value = event.target.textContent;
+        // Cerrar dropdown al seleccionar una opción
+        dropdown.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('mousedown', function(event) {
+                input.value = item.textContent;
                 dropdown.classList.remove('show');
-            }
+            });
         });
     }
     setupSearchDropdown(destinationGroup, destinationDropdown, destinationInput);
     setupSearchDropdown(tourTypeGroup, tourTypeDropdown, tourTypeInput);
+
+    // Cerrar todos los dropdowns al hacer click fuera de ellos
+    document.addEventListener('click', () => closeAllDropdowns());
 
 
 
