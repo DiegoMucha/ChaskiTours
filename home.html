@@ -10,9 +10,10 @@
 
 <div class="page-container">
 
-    <header class="header">
-        <div class="top-banner">
-             <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+    <header class="header" id="main-header">
+       <div class="top-banner" id="top-banner">
+         <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+         <button class="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
              <a href="home.html" class="logo">
@@ -20,18 +21,23 @@
                  <span class="logo-text">Chaski<br>Tours</span>
              </a>
              <div class="nav-links">
-                 <a href="home.html" class="active">Inicio</a>
+                 <a href="home.html">Inicio</a>
                  <a href="listado_lugares.html">Lugares</a>
                  <a href="preguntas_freq.html">Preguntas Frecuentes</a>
              </div>
              <div class="nav-actions">
-                <div class="user-profile-dropdown">
-                    <a href="inicio-sesion.html">
-                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                    </a>
-                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-                </div>
-            </div>
+                 <div class="user-profile-dropdown" id="user-profile-container">
+                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                 
+                     <div class="dropdown-menu" id="user-dropdown-menu">
+                         <a href="editar_perfil.html">Mi Perfil</a>
+                         <a href="preferidos.html">Mis Preferidos</a>
+                         <div class="dropdown-divider"></div>
+                         <a href="inicio-sesión.html" id="logout-btn">Cerrar Sesión</a>
+                     </div>
+                 </div>
+             </div>
         </nav>
     </header>
 
@@ -41,25 +47,49 @@
             <div class="hero-home-content">
                 <h1>La vida es una aventura, <br>sácale el máximo provecho</h1>
             
-                <div class="hero-search-bar">
-                    <div class="search-input-group">
-                        <img src="assets/icons/location.png" alt="Ícono de ubicación" class="search-icon">
-                        <div class="input-text">
-                            <label for="destination">Dónde</label>
-                            <input type="text" id="destination" placeholder="Buscar destino">
+                    <div class="hero-search-bar">
+                        <div class="search-input-group" id="destination-group">
+                            <img src="assets/icons/location.png" alt="Ícono de ubicación" class="search-icon">
+                            <div class="input-text">
+                                <label for="destination">Dónde</label>
+                                <input type="text" id="destination" placeholder="Buscar destino" readonly>
+                            </div>
+                            <div class="search-dropdown" id="destination-dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item">Barranco</li>
+                                    <li class="dropdown-item">Cercado de Lima</li>
+                                    <li class="dropdown-item">Jesús María</li>
+                                    <li class="dropdown-item">La Molina</li>
+                                    <li class="dropdown-item">Magdalena</li>
+                                    <li class="dropdown-item">Miraflores</li>
+                                    <li class="dropdown-item">Pueblo Libre</li>
+                                    <li class="dropdown-item">San Borja</li>
+                                    <li class="dropdown-item">San Isidro</li>
+                                    <li class="dropdown-item">San Miguel</li>
+                                    <li class="dropdown-item">Surco</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="search-input-group">
-                        <img src="assets/icons/filter.png" alt="Ícono de tipo de tour" class="search-icon">
-                        <div class="input-text">
-                            <label for="tour-type">Tipo de tour</label>
-                            <input type="text" id="tour-type" placeholder="Tipo de tour">
+                    
+                        <div class="search-input-group" id="tour-type-group">
+                            <img src="assets/icons/filter.png" alt="Ícono de tipo de tour" class="search-icon">
+                            <div class="input-text">
+                                <label for="tour-type">Tipo de tour</label>
+                                <input type="text" id="tour-type" placeholder="Tipo de tour" readonly>
+                            </div>
+                            <div class="search-dropdown" id="tour-type-dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item">Gastronomía</li>
+                                    <li class="dropdown-item">Arte y Cultura</li>
+                                    <li class="dropdown-item">Entretenimiento</li>
+                                </ul>
+                            </div>
                         </div>
+                    
+                        <a href="sitios-destacados.html" class="search-action-btn" aria-label="Buscar">
+                            <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda" style="filter: none;">
+                        </a>
                     </div>
-                    <a href="listado_lugares.html" class="search-action-btn" aria-label="Buscar">
-                         <img src="assets/icons/search-normal.png" alt="Ícono de búsqueda" style="filter: none;">
-                    </a>
-                </div>
                 </div>
         </section>
 
@@ -87,7 +117,7 @@
         <section class="content-wrapper">
             <div class="section-header">
                 <h2>Sitios destacados</h2>
-                <a href="sitios-destacados.html" class="btn">Ver todos los lugares</a>
+                <a href="listado_lugares.html" class="btn">Ver todos los lugares</a>
             </div>
             <div class="grid-container">
                 <article class="site-card">
@@ -164,5 +194,5 @@
     </footer>
 
 </div>
-</body>
+<script src="js/main.js"></script> </body>
 </html>
