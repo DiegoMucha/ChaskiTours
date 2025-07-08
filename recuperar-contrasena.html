@@ -8,26 +8,34 @@
 </head>
 <body class="login-page">
 
-    <header class="header">
-        <div class="top-banner">
-            <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+    <header class="header" id="main-header">
+       <div class="top-banner" id="top-banner">
+         <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+         <button class="close-banner-btn" aria-label="Cerrar">&times;</button>
         </div>
         <nav class="main-nav">
-            <a href="home.html" class="logo">
-                <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
-                <span class="logo-text">Chaski<br>Tours</span>
-            </a>
-            <div class="nav-links">
-                <a href="home.html">Inicio</a>
-                <a href="listado_lugares.html">Lugares</a>
-                <a href="pregunta_freq.html">Preguntas Frecuentes</a>
-            </div>
-            <div class="nav-actions">
-                <div class="user-profile-dropdown">
-                    <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-                </div>
-            </div>
+             <a href="home.html" class="logo">
+                 <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                 <span class="logo-text">Chaski<br>Tours</span>
+             </a>
+             <div class="nav-links">
+                 <a href="home.html">Inicio</a>
+                 <a href="listado_lugares.html">Lugares</a>
+                 <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+             </div>
+             <div class="nav-actions">
+                 <div class="user-profile-dropdown" id="user-profile-container">
+                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                 
+                     <div class="dropdown-menu" id="user-dropdown-menu">
+                         <a href="editar_perfil.html">Mi Perfil</a>
+                         <a href="preferidos.html">Mis Preferidos</a>
+                         <div class="dropdown-divider"></div>
+                         <a href="inicio-sesión.html" id="logout-btn">Cerrar Sesión</a>
+                     </div>
+                 </div>
+             </div>
         </nav>
     </header>
 
@@ -38,7 +46,7 @@
                 <p>Introduce tu correo asociado para enviarte un enlace de recuperación.</p>
             </div>
 
-            <form class="login-form" method="get">
+            <form class="login-form" id="recover-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required autocomplete="username">
@@ -57,5 +65,6 @@
         </div>
     </div>
 
+<script src="js/main.js"></script>
 </body>
 </html>
