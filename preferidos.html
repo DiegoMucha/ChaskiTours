@@ -5,29 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lugares Favoritos</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/rgf-style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <img src="assets/icons/chaski-isotipo.png" alt="Chaski Tours Logo" />
-        <span>CHASKI TOURS</span>
-      </div>
-      <nav class="nav-links">
-        <a href="">Inicio</a>
-        <a href="">Nosotros</a>
-        <a href="">Lugares</a>
-        <a class="faq" href="">FAQ</a>
-      </nav>
-      <div class="icons">
-        <img src="assets/icons/reserve.png" alt="Icon 1" />
-        <img src="assets/icons/ellipse-4.png" alt="Icon 2" />
-      </div>
+    <header class="header">
+        <div class="top-banner">
+             <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+        </div>
+        <nav class="main-nav">
+             <a href="home.html" class="logo">
+                 <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                 <span class="logo-text">Chaski<br>Tours</span>
+             </a>
+             <div class="nav-links">
+                 <a href="home.html">Inicio</a>
+                 <a href="listado_lugares.html" class="active">Lugares</a>
+                 <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+             </div>
+             <div class="nav-actions">
+                <div class="user-profile-dropdown">
+                    <a href="inicio-sesion.html">
+                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                    </a>
+                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                </div>
+            </div>
+        </nav>
     </header>
 
     <div class="favoritos">
       <div class="contenido">
         <div class="titulo">
-          <h3>Lugares turísticos preferidos</h3>
+          <h3 class="txt_lugares">Lugares turísticos preferidos</h3>
           <img class="corazon" src="assets/img/corazon.png" alt="corazon" />
         </div>
         <div class="lugares_fav">
@@ -36,7 +45,7 @@
             <div class="txt_fav">
               <img class="img_fav" src="assets/img/corazon.png" alt="" />
               <p class="txt_pre">Plaza de armas</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="" />
+              <img class="compartir" src="assets/img/compartir.png" alt="Compartir" />
             </div>
           </div>
           <div class="cuadrado">
@@ -81,5 +90,40 @@
         />
       </div>
     </div>
+    <div id="compartir-popup" class="popup oculto">
+  <div class="popup-content">
+    <h3>Compartir lugar</h3>
+    <p id="lugares-seleccionados"></p>
+    <input type="email" id="email" placeholder="Correo del destinatario" />
+    <div class="popup-buttons">
+      <button id="enviar-compartir">Compartir</button>
+      <button id="cancelar-compartir">Cancelar</button>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+        <div class="footer-content content-wrapper">
+            <div class="footer-logo">
+                <a href="home.html" class="logo">
+                    <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                </a>
+                <p>&copy; 2025 Chaski Tours. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="home.html">Inicio</a>
+                <a href="">Nosotros</a>
+                <a href="sitios-destacados.html">Lugares</a>
+            </div>
+            <div class="footer-links">
+                <h4>Soporte</h4>
+                <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

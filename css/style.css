@@ -2363,6 +2363,11 @@ p {
 }
 .titulo {
   display: flex;
+  margin-top: 5px;
+}
+.txt_lugares{
+  margin-top: 6px;
+  font-weight: bold;
 }
 .corazon {
   width: 34px;
@@ -2416,6 +2421,7 @@ p {
   height: 26px;
   margin-top: 15px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .cont_calificacion {
@@ -2965,3 +2971,40 @@ p {
     .formulario-horizontal button:hover {
       background-color: #003a1a;
     }
+
+    .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #000c05;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup.oculto {
+  display: none;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compartir.seleccionado {
+  filter: brightness(0.5); /* ejemplo visual opcional */
+  filter: brightness(0.6);
+  /* O cambia el color, tamaño, borde, etc. */
+  cursor: pointer;
+  border: 2px solid #006400;
+  border-radius: 50%;
+}
