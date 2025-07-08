@@ -83,12 +83,55 @@ a {
   width: 100%;
 }
 
+#toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001b0a;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#toast.show {
+  opacity: 1;
+}
+
+.btn.liked {
+  background-color: #003a1a;
+}
 .desktop-configura .overlap-group-2 {
   position: absolute;
   width: 77.5%;
   height: 623px;
   top: 0;
   left: 13%;
+}
+
+.site-card.selected {
+  border: 3px solid #001b0a;
+  box-shadow: 0 0 15px rgba(0, 27, 10, 0.3);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.site-card.liked {
+  border: 3px solid #ff0077;
+  box-shadow: 0 0 15px rgba(255, 0, 119, 0.3);
+}
+.like-button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.like-button:hover {
+  transform: scale(1.2);
 }
 
 .desktop-configura .overlap {
