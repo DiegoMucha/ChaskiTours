@@ -314,7 +314,7 @@
    /* --- 3.2 Página: VER DETALLES --- */
    .hero {
      height: 460px;
-     background-image: url('../assets/img/hero-background.jpg'); 
+     background-image: url('../assets/img/Hero_CircuitoMagico.jpg'); 
      background-size: cover;
      background-position: center;
      display: flex;
@@ -552,7 +552,7 @@
      grid-template-columns: 2fr 1fr;
      gap: 48px;
      padding: 40px 80px;
-     align-items: start;
+     align-items: stretch;
    }
    
    .reviews-content {
@@ -754,6 +754,161 @@
       font-family: 'Urbanist', sans-serif;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil para destacarla */
     }
+
+/* ==========================================================================
+   3.X NUEVAS SECCIONES PÁGINA DE DETALLES
+   ========================================================================== */
+
+/* --- 3.X.1 Sección: Planifica tu Visita --- */
+
+
+.planning-grid {
+  display: grid;
+  /* Crea columnas flexibles que se adaptan al espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.planning-item {
+    background-color: transparent; /* Sin color de relleno */
+    border: 2px solid #D2C4A7; /* Un borde un poco más grueso y de un color que contrasta */
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planning-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  /* Usamos un filtro para que el color del icono coincida con la paleta */
+  filter: invert(13%) sepia(19%) saturate(839%) hue-rotate(346deg) brightness(94%) contrast(90%);
+}
+
+.planning-item h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.planning-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* --- 3.X.2 Sección: Galería --- */
+.gallery-section {
+  padding-top: 0; /* Menos espacio superior ya que sigue a otra sección */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* --- 3.X.3 Reutilización de estilos de Reseñas --- */
+/* Modificación para las tarjetas de reseña en la página de detalles */
+.grid-container .review-card {
+  /* El estilo .review-card ya existe, solo ajustamos si es necesario */
+  height: 100%; /* Asegura que todas las tarjetas tengan la misma altura en el grid */
+  box-shadow: none; /* Quitamos la sombra si no la queremos aquí */
+}
+
+
+/* ==========================================================================
+   4. NUEVOS ESTILOS PARA PÁGINA DE DETALLES (AÑADIR AL FINAL)
+   ========================================================================== */
+
+/* --- Estilo para la calificación dentro del Hero --- */
+.hero-rating {
+  margin-top: 24px;
+}
+
+.hero-rating span {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+}
+
+/* --- Estilos para la nueva sección de acciones del usuario --- */
+.user-actions-section {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: var(--card-background); /* Un color de fondo sutil */
+}
+
+.user-actions-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.action-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Para que se vea bien en móviles */
+}
+
+/* Ajustes a los botones para dar jerarquía */
+.btn.btn-primary {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+}
+.btn.btn-primary:hover {
+  background-color: #003a1a;
+}
+
+.btn.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary-dark);
+}
+.btn.btn-secondary:hover {
+  background-color: rgba(0, 27, 10, 0.1);
+  color: var(--primary-dark);
+}
+
+
+
+
    /* ==========================================================================
       4. RESPONSIVIDAD (Media Queries)
       ========================================================================== */
@@ -796,3 +951,202 @@
      .cta-form { flex-direction: column; }
      .footer-content { flex-direction: column; align-items: center; text-align: center; }
    }
+
+   /* ==========================================================================
+   5. ESTILOS PARA FUNCIONALIDADES JS
+   ========================================================================== */
+
+/* --- Menú desplegable del usuario --- */
+.user-profile-dropdown {
+  position: relative; /* Necesario para posicionar el menú */
+}
+
+.dropdown-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 120%; /* Posición debajo del ícono de perfil */
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--grey-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* Clase que el JS añade para mostrar el menú */
+.dropdown-menu.show {
+  display: block; 
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-dark);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f7f7f7;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--grey-border);
+  margin: 8px 0;
+}
+
+/* --- Estilo para el header fijo (sticky) --- */
+.header.sticky .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   6. ESTILOS PARA LIGHTBOX DE GALERÍA (FUNCIONALIDAD JS)
+   ========================================================================== */
+
+   .lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================================================================
+   7. ESTILOS ADICIONALES PARA PÁGINA DE RESEÑAS
+   ========================================================================== */
+
+   .ratings-summary .rating-row {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.ratings-summary .rating-row:hover {
+    background-color: #e6e0c6; /* Un color sutil al pasar el mouse */
+}
+
+.ratings-summary .rating-row.filter-active {
+    background-color: #d2c4a7; /* Color más oscuro para el filtro activo */
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   8. ESTILOS PARA PÁGINA DE SERVICIOS
+   ========================================================================== */
+
+   .servicios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espacio entre cada servicio */
+    padding: 40px 0;
+}
+
+/* Contenedor principal de cada servicio */
+.servicio-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Estilos para el texto de cada servicio */
+.servicio-texto h2 {
+    font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.servicio-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: var(--text-muted);
+}
+
+/* Estilos para la imagen de cada servicio */
+.servicio-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Para alternar la imagen a la derecha */
+.servicio-item--reverse .servicio-imagen {
+    order: 2; /* Cambia el orden visual */
+}
+.servicio-item--reverse .servicio-texto {
+    order: 1;
+}
+
+/* --- Responsividad para la página de servicios --- */
+@media (max-width: 768px) {
+    .servicio-item,
+    .servicio-item--reverse {
+        grid-template-columns: 1fr; /* Apila las columnas en móvil */
+        gap: 30px;
+    }
+
+    .servicio-item--reverse .servicio-imagen,
+    .servicio-item--reverse .servicio-texto {
+        order: initial; /* Resetea el orden en móvil */
+    }
+
+    .servicio-texto h2 {
+        font-size: 28px;
+    }
+}
