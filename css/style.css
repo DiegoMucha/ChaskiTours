@@ -2363,6 +2363,11 @@ p {
 }
 .titulo {
   display: flex;
+  margin-top: 5px;
+}
+.txt_lugares{
+  margin-top: 6px;
+  font-weight: bold;
 }
 .corazon {
   width: 34px;
@@ -2416,6 +2421,7 @@ p {
   height: 26px;
   margin-top: 15px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .cont_calificacion {
@@ -2425,6 +2431,7 @@ p {
   align-items: center;
 }
 .img_cal {
+  margin: 20px;
   width: 377px;
   height: 302px;
 }
@@ -2434,6 +2441,7 @@ p {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .estrella {
@@ -2459,6 +2467,11 @@ p {
 .estrella:hover ~ .estrella {
   background-color: yellow;
 }
+
+.estrella:hover {
+  background-color: yellow;
+}
+
 .texto {
   width: 40%;
   height: 50px;
@@ -2475,7 +2488,7 @@ p {
   margin-right: 40px;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #001b0a;
   color: white;
   border: none;
   border-radius: 5px;
@@ -2485,17 +2498,19 @@ p {
 }
 /* Efecto al pasar el mouse por encima de los botones */
 .boton:hover {
-  background-color: #0056b3;
+  background-color: #003a1a;
 }
 /* Estilo para el botón de Cancelar */
 .boton.cancelar {
-  background-color: #dc3545;
+  background-color: #001b0a;
 }
 .boton.cancelar:hover {
-  background-color: #c82333;
+  background-color: #003a1a;
 }
 .cal_pro {
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 .resenas {
   display: flex;
@@ -2503,14 +2518,14 @@ p {
 }
 .calif {
   display: flex;
+  margin-bottom: 10px;
 }
 .img_per_cal {
   width: 140px;
 }
-.valo {
-}
+
 .estrella_col {
-  margin-top: 15px;
+  margin-top: 0px;
   width: 20px;
   height: 20px;
   background-color: yellow;
@@ -2528,7 +2543,7 @@ p {
   );
 }
 .estrella_peq {
-  margin-top: 15px;
+  margin-top: 0px;
   width: 20px;
   height: 20px;
   background-color: black;
@@ -2545,7 +2560,6 @@ p {
     39% 35%
   );
 }
-
 
 
 .desktop-configura .button-2 {
@@ -2957,3 +2971,40 @@ p {
     .formulario-horizontal button:hover {
       background-color: #003a1a;
     }
+
+    .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #000c05;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup.oculto {
+  display: none;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compartir.seleccionado {
+  filter: brightness(0.5); /* ejemplo visual opcional */
+  filter: brightness(0.6);
+  /* O cambia el color, tamaño, borde, etc. */
+  cursor: pointer;
+  border: 2px solid #006400;
+  border-radius: 50%;
+}
