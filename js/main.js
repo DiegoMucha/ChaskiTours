@@ -235,18 +235,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- BOTÓN DE FAVORITOS (Página de Detalles) ---
     const btnFavorito = document.getElementById('btn-favorito');
     if (btnFavorito) {
-        btnFavorito.addEventListener('click', function() {
-            this.classList.toggle('active');
-            if (this.classList.contains('active')) {
-                this.textContent = '❤️ Guardado';
-                this.style.backgroundColor = 'var(--primary-dark)';
-                this.style.color = 'var(--text-light)';
+        // Obtenemos los datos del lugar desde los atributos data-* en el HTML
+        const placeInfo = {
+            id: document.body.dataset.placeId,
+            name: document.body.dataset.placeName,
+            image: document.body.dataset.placeImage,
+            rating: document.body.dataset.placeRating
+        };
+    
+        // Función para obtener los favoritos desde localStorage
+        const getFavorites = () => JSON.parse(localStorage.getItem('userFavorites')) || [];
+    
+        // Función para guardar los favoritos en localStorage
+        const saveFavorites = (favorites) => localStorage.setItem('userFavorites', JSON.stringify(favorites));
+    
+        // Función para actualizar la apariencia del botón
+        const updateButtonState = () => {
+            const favorites = getFavorites();
+            const isFavorite = favorites.some(fav => fav.id === placeInfo.id);
+            
+            if (isFavorite) {
+                btnFavorito.classList.add('active');
+                btnFavorito.textContent = '❤️ Guardado';
+                btnFavorito.style.backgroundColor = 'var(--primary-dark)';
+                btnFavorito.style.color = 'var(--text-light)';
             } else {
-                this.textContent = '❤️ Guardar como favorito';
-                this.style.backgroundColor = 'transparent';
-                this.style.color = 'var(--primary-dark)';
+                btnFavorito.classList.remove('active');
+                btnFavorito.textContent = '❤️ Guardar como favorito';
+                btnFavorito.style.backgroundColor = 'transparent';
+                btnFavorito.style.color = 'var(--primary-dark)';
             }
+        };
+    
+        // Evento click para añadir o quitar de favoritos
+        btnFavorito.addEventListener('click', function() {
+            let favorites = getFavorites();
+            const isFavoriteIndex = favorites.findIndex(fav => fav.id === placeInfo.id);
+    
+            if (isFavoriteIndex > -1) {
+                // Si ya es favorito, lo quitamos
+                favorites.splice(isFavoriteIndex, 1);
+                console.log('Lugar eliminado de favoritos:', placeInfo.name);
+            } else {
+                // Si no es favorito, lo añadimos
+                favorites.push(placeInfo);
+                console.log('Lugar añadido a favoritos:', placeInfo.name);
+            }
+    
+            saveFavorites(favorites);
+            updateButtonState(); // Actualizamos el botón inmediatamente
         });
+    
+        // Al cargar la página, verificamos si el lugar ya es favorito para mostrar el estado correcto del botón
+        updateButtonState();
     }
 
     // --- GALERÍA LIGHTBOX (Página de Detalles) ---
