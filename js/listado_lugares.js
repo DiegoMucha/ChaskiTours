@@ -23,28 +23,28 @@ const lugares = [
   {
     titulo: "La Choza Náutica",
     descripcion: "Restaurante de comida marina popular por sus porciones generosas y sabor criollo.",
-    imagen: "assets/img/choza-nautica.jpg",
+    imagen: "assets/img/la_choza_nautica.png",
     calificacion: "4.65 (275)",
     categoria: "Gastronomía"
   },
   {
     titulo: "El Bistró",
     descripcion: "Restaurante de cocina fusión peruana con ambiente acogedor y platos innovadores.",
-    imagen: "assets/img/el-bistro.jpg",
+    imagen: "assets/img/el_bistro.png",
     calificacion: "4.70 (180)",
     categoria: "Gastronomía"
   },
   {
     titulo: "Tanta",
     descripcion: "Cadena de restaurantes creada por Gastón Acurio, conocida por su cocina peruana contemporánea.",
-    imagen: "assets/img/tanta.jpg",
+    imagen: "assets/img/tanta.png",
     calificacion: "4.68 (320)",
     categoria: "Gastronomía"
   },
   {
     titulo: "Museo de Arte de Lima (MALI)",
     descripcion: "Museo con una rica colección de arte peruano desde la época precolombina hasta hoy.",
-    imagen: "assets/img/mali.jpg",
+    imagen: "assets/img/museo_arte_lima.png",
     calificacion: "4.83 (300)",
     categoria: "Arte y Cultura"
   },
@@ -58,28 +58,28 @@ const lugares = [
   {
     titulo: "Museo Pedro de Osma",
     descripcion: "Museo que exhibe arte virreinal en una mansión histórica de Barranco.",
-    imagen: "assets/img/museo_osma.jpg",
+    imagen: "assets/img/museo_pedro.png",
     calificacion: "4.75 (160)",
     categoria: "Arte y Cultura"
   },
   {
     titulo: "Don Tito",
     descripcion: "Restaurante famoso por su pollo a la brasa, con sabor tradicional y buena atención.",
-    imagen: "assets/img/don_tito.jpg",
+    imagen: "assets/img/don_tito.png",
     calificacion: "4.70 (290)",
     categoria: "Gastronomía"
   },
   {
     titulo: "Parque de las Leyendas",
     descripcion: "Zoológico y parque arqueológico con gran variedad de animales y áreas naturales.",
-    imagen: "assets/img/parque_leyendas.jpg",
+    imagen: "assets/img/parque_leyendas.png",
     calificacion: "4.60 (600)",
     categoria: "Entretenimiento"
   },
   {
     titulo: "Parque de la Imaginación",
     descripcion: "Centro interactivo para niños con juegos y exhibiciones de ciencia y tecnología.",
-    imagen: "assets/img/parque_imaginacion.jpg",
+    imagen: "assets/img/parque_imaginacion.png",
     calificacion: "4.50 (220)",
     categoria: "Entretenimiento"
   }
@@ -199,7 +199,6 @@ function renderizarLugaresFiltrados(lista, pagina) {
   });
 }
 
-// Reescribe esta función para aceptar cantidad dinámica de páginas
 function actualizarBotones(numPaginas) {
   const paginacion = document.querySelector(".pagination");
   paginacion.innerHTML = "";
