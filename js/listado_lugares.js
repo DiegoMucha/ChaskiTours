@@ -7,17 +7,45 @@ const lugares = [
     categoria: "Arte y Cultura"
   },
   {
-    titulo: "Circuito Mágico del Agua",
-    descripcion: "Parque atractivo con fuentes de agua iluminadas, ideal para visitar de noche.",
-    imagen: "assets/img/circuito-magico-agua.png",
-    calificacion: "4.76 (343)",
-    categoria: "Entretenimiento"
-  },
-  {
     titulo: "Puente de los Suspiros",
     descripcion: "Puente romántico en Barranco rodeado de arte urbano y cafeterías.",
     imagen: "assets/img/puente-suspiros.jpg",
-    calificacion: "4.76 (343)",
+    calificacion: "4.72 (410)",
+    categoria: "Arte y Cultura"
+  },
+  {
+    titulo: "Circuito Mágico del Agua",
+    descripcion: "Parque atractivo con fuentes de agua iluminadas, ideal para visitar de noche.",
+    imagen: "assets/img/circuito-magico-agua.png",
+    calificacion: "4.80 (530)",
+    categoria: "Entretenimiento"
+  },
+  {
+    titulo: "La Choza Náutica",
+    descripcion: "Restaurante de comida marina popular por sus porciones generosas y sabor criollo.",
+    imagen: "assets/img/la_choza_nautica.png",
+    calificacion: "4.65 (275)",
+    categoria: "Gastronomía"
+  },
+  {
+    titulo: "El Bistró",
+    descripcion: "Restaurante de cocina fusión peruana con ambiente acogedor y platos innovadores.",
+    imagen: "assets/img/el_bistro.png",
+    calificacion: "4.70 (180)",
+    categoria: "Gastronomía"
+  },
+  {
+    titulo: "Tanta",
+    descripcion: "Cadena de restaurantes creada por Gastón Acurio, conocida por su cocina peruana contemporánea.",
+    imagen: "assets/img/tanta.png",
+    calificacion: "4.68 (320)",
+    categoria: "Gastronomía"
+  },
+  {
+    titulo: "Museo de Arte de Lima (MALI)",
+    descripcion: "Museo con una rica colección de arte peruano desde la época precolombina hasta hoy.",
+    imagen: "assets/img/museo_arte_lima.png",
+    calificacion: "4.83 (300)",
     categoria: "Arte y Cultura"
   },
   {
@@ -28,60 +56,32 @@ const lugares = [
     categoria: "Arte y Cultura"
   },
   {
-    titulo: "Parque Kennedy",
-    descripcion: "Parque central de Miraflores, famoso por sus gatos y su vida nocturna.",
-    imagen: "assets/img/parque_kennedy.png",
-    calificacion: "4.65 (300)",
-    categoria: "Entretenimiento"
-  },
-  {
-    titulo: "Malecón de Miraflores",
-    descripcion: "Paseo con vistas al mar, ideal para caminatas, ciclismo y parapente.",
-    imagen: "assets/img/malecon.png",
-    calificacion: "4.89 (420)",
-    categoria: "Entretenimiento"
-  },
-  {
-    titulo: "Huaca Pucllana",
-    descripcion: "Sitio arqueológico preincaico ubicado en el corazón de Miraflores.",
-    imagen: "assets/img/huaca_pucllana.jpg",
-    calificacion: "4.70 (190)",
+    titulo: "Museo Pedro de Osma",
+    descripcion: "Museo que exhibe arte virreinal en una mansión histórica de Barranco.",
+    imagen: "assets/img/museo_pedro.png",
+    calificacion: "4.75 (160)",
     categoria: "Arte y Cultura"
   },
   {
-    titulo: "Mercado de Surquillo",
-    descripcion: "Mercado tradicional con ingredientes frescos y puestos de comida típica.",
-    imagen: "assets/img/mercado_surquillo.jpg",
-    calificacion: "4.60 (150)",
+    titulo: "Don Tito",
+    descripcion: "Restaurante famoso por su pollo a la brasa, con sabor tradicional y buena atención.",
+    imagen: "assets/img/don_tito.png",
+    calificacion: "4.70 (290)",
     categoria: "Gastronomía"
   },
   {
-    titulo: "Barranco Beer Company",
-    descripcion: "Cervecería artesanal popular entre locales y turistas.",
-    imagen: "assets/img/barranco_beer.jpg",
-    calificacion: "4.75 (215)",
-    categoria: "Gastronomía"
-  },
-  {
-    titulo: "Museo de Arte de Lima (MALI)",
-    descripcion: "Museo con una rica colección de arte peruano desde la época precolombina hasta hoy.",
-    imagen: "assets/img/mali.jpg",
-    calificacion: "4.83 (300)",
-    categoria: "Arte y Cultura"
-  },
-  {
-    titulo: "Larcomar",
-    descripcion: "Centro comercial frente al mar con tiendas, restaurantes y cine.",
-    imagen: "assets/img/larcomar.jpg",
-    calificacion: "4.70 (500)",
+    titulo: "Parque de las Leyendas",
+    descripcion: "Zoológico y parque arqueológico con gran variedad de animales y áreas naturales.",
+    imagen: "assets/img/parque_leyendas.png",
+    calificacion: "4.60 (600)",
     categoria: "Entretenimiento"
   },
   {
-    titulo: "Restaurante Central",
-    descripcion: "Uno de los mejores restaurantes del mundo, con enfoque en insumos peruanos.",
-    imagen: "assets/img/central.jpg",
-    calificacion: "4.95 (390)",
-    categoria: "Gastronomía"
+    titulo: "Parque de la Imaginación",
+    descripcion: "Centro interactivo para niños con juegos y exhibiciones de ciencia y tecnología.",
+    imagen: "assets/img/parque_imaginacion.png",
+    calificacion: "4.50 (220)",
+    categoria: "Entretenimiento"
   }
 ];
   
@@ -199,7 +199,6 @@ function renderizarLugaresFiltrados(lista, pagina) {
   });
 }
 
-// Reescribe esta función para aceptar cantidad dinámica de páginas
 function actualizarBotones(numPaginas) {
   const paginacion = document.querySelector(".pagination");
   paginacion.innerHTML = "";
