@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Marcellus+SC&family=Urbanist:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/ebl-style.css" />
+    <link rel="stylesheet" href="css/ebl-style.css" /> 
 </head>
 <body>
 
     <div class="page-container">
 
-        <header class="header">
-            <div class="top-banner">
+        <header class="header" id="main-header">
+            <div class="top-banner" id="top-banner">
                 <p>✨Descubre los encantos de Lima <a href="#">Más información</a></p>
                 <button class="close-banner-btn" aria-label="Cerrar">×</button>
             </div>
@@ -30,18 +30,25 @@
                     <a href="listado_lugares.html" class="active">Lugares</a>
                     <a href="preguntas_freq.html">Preguntas Frecuentes</a>
                 </div>
+
                 <div class="nav-actions">
-                    <a href="preferidos.html">
-                        <img src="assets/icons/signpost.svg" alt="Carrito de compras" class="action-icon">
+                    <a href="notificaciones-recibidas.html">
+                        <img src="assets/icons/signpost.svg" alt="Mis notificaciones" class="action-icon">
                     </a>
-                    <a href="inicio-sesion.html">
-                        <div class="user-profile-dropdown">
-                            <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                            <img src="assets/icons/chevron-down.svg" alt="Desplegar menú" class="dropdown-arrow">
+                    
+                    <div class="user-profile-dropdown" id="user-profile-container">
+                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                    
+                        <div class="dropdown-menu" id="user-dropdown-menu">
+                            <a href="editar_perfil.html">Mi Perfil</a>
+                            <a href="preferidos.html">Mis Preferidos</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logout-btn">Cerrar Sesión</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </nav>
+                </nav>
         </header>
 
         <main class="content-wrapper">
@@ -55,10 +62,11 @@
                     <input type="text" id="search-input" placeholder="Buscar sitio por nombre...">
                 </div>
             </section>
+            
             <div class="grid-container">
 
                 <article class="site-card">
-                    <img src="assets/img/image-2.png" alt="Plaza Mayor de Lima" class="card-image">
+                    <img src="assets/img/plaza_lima.png" alt="Plaza Mayor de Lima" class="card-image">
                     <div class="card-content">
                         <h2 class="card-title">Plaza Mayor de Lima</h2>
                         <div class="card-footer">
@@ -72,7 +80,7 @@
                 </article>
 
                 <article class="site-card">
-                    <img src="assets/img/image-6.png" alt="Puente de los Suspiros" class="card-image">
+                    <img src="assets/img/puente-suspiros.jpg" alt="Puente de los Suspiros" class="card-image">
                     <div class="card-content">
                         <h2 class="card-title">Puente de los Suspiros</h2>
                         <div class="card-footer">
@@ -86,7 +94,7 @@
                 </article>
                 
                 <article class="site-card">
-                    <img src="assets/img/image-4.png" alt="Circuito Mágico del Agua" class="card-image">
+                    <img src="assets/img/circuito-magico-agua.png" alt="Circuito Mágico del Agua" class="card-image">
                     <div class="card-content">
                         <h2 class="card-title">Circuito Mágico del Agua</h2>
                         <div class="card-footer">
@@ -186,13 +194,11 @@
             </div>
 
             <nav class="pagination">
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="page-number">4</a>
             </nav>
 
         </main>
     </div>
-    </body>
+
+    <script src="js/main.js" defer></script>
+</body>
 </html>

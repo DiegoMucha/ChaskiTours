@@ -4,120 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseñas de la Plaza Mayor de Lima - Chaski Tours</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Marcellus+SC&family=Urbanist:wght@500&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/ebl-style.css" />
 </head>
 <body>
-    <div class="page-container">
+<div class="page-container">
 
-        <header class="header">
-            <div class="top-banner">
-                <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
-                <button class="close-banner-btn" aria-label="Cerrar">×</button>
-            </div>
-            <nav class="main-nav">
-                <a href="home.html" class="logo">
-                    <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
-                    <span class="logo-text">Chaski<br>Tours</span>
-                </a>
-                <div class="nav-links">
-                    <a href="home.html">Inicio</a>
-                    <a href="listado_lugares.html">Lugares</a>
-                    <a href="preguntas_freq.html">Preguntas Frecuentes</a>
-                </div>
-                <div class="nav-actions">
-                    <div class="user-profile-dropdown">
-                        <a href="inicio-sesion.html">
-                            <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                        </a>
-                        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="reviews-page-layout">
-
-            <main class="reviews-content">
-                <a href="home.html" class="back-link">← Inicio</a>
-                
-                <h1 class="page-title">Reseñas de la Plaza Mayor de Lima</h1>
-
-                <section class="ratings-summary">
-                    <div class="rating-row">
-                        <span>5 estrellas</span>
-                        <div class="rating-bar"><div class="bar-fill" style="width: 15%;"></div></div>
-                        <span>8</span>
-                    </div>
-                    <div class="rating-row">
-                        <span>4 estrellas</span>
-                        <div class="rating-bar"><div class="bar-fill" style="width: 20%;"></div></div>
-                        <span>10</span>
-                    </div>
-                    <div class="rating-row">
-                        <span>3 estrellas</span>
-                        <div class="rating-bar"><div class="bar-fill" style="width: 35%;"></div></div>
-                        <span>17</span>
-                    </div>
-                    <div class="rating-row">
-                        <span>2 estrellas</span>
-                        <div class="rating-bar"><div class="bar-fill" style="width: 80%;"></div></div>
-                        <span>51</span>
-                    </div>
-                    <div class="rating-row">
-                        <span>1 estrellas</span>
-                        <div class="rating-bar"><div class="bar-fill" style="width: 100%;"></div></div>
-                        <span>256</span>
-                    </div>
-                </section>
-
-                <div class="reviews-list">
-                    <article class="review-card">
-                        <div class="user-info">
-                            <img src="assets/icons/Profile.png" alt="Foto de Sergio V." class="user-avatar">
-                            <span class="user-name">Sergio V.</span>
-                            <span class="user-location">Surco</span>
-                        </div>
-                        <div class="review-body">
-                            <div class="review-stars">★★★★★</div>
-                            <p>Me encantó la experiencia con Chaski Tours. La información es clara, el diseño intuitivo y las recomendaciones realmente auténticas. Encontré lugares que nunca habría visitado por mi cuenta. ¡Totalmente recomendado!</p>
-                        </div>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="user-info">
-                             <img src="assets/icons/Profile.png" alt="Foto de Juan" class="user-avatar">
-                            <span class="user-name">Juan</span>
-                            <span class="user-location">San Borja</span>
-                        </div>
-                        <div class="review-body">
-                            <div class="review-stars">★★★★★</div>
-                            <p>Me encantó la experiencia con Chaski Tours. La información es clara, el diseño intuitivo y las recomendaciones realmente auténticas. Encontré lugares que nunca habría visitado por mi cuenta. ¡Totalmente recomendado!</p>
-                        </div>
-                    </article>
-                    
-                    </div>
-
-                <nav class="pagination">
-                     <a href="#" class="page-link">Anterior</a>
-                     <a href="#" class="page-number">1</a>
-                     <a href="#" class="page-number active">2</a>
-                     <a href="#" class="page-number">3</a>
-                     <a href="#" class="page-number">4</a>
-                     <a href="#" class="page-number">5</a>
-                     <a href="#" class="page-link">Siguiente</a>
-                </nav>
-            </main>
-
-            <aside class="featured-image">
-                <img src="assets/img/lima-dron.jpg" alt="Vista de la Plaza Mayor de Lima">
-            </aside>
-            
+    <header class="header" id="main-header">
+        <div class="top-banner" id="top-banner">
+            <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+            <button class="close-banner-btn" aria-label="Cerrar">×</button>
         </div>
+        <nav class="main-nav">
+            <a href="home.html" class="logo">
+                <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                <span class="logo-text">Chaski<br>Tours</span>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Inicio</a>
+                <a href="listado_lugares.html" class="active">Lugares</a>
+                <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+            </div>
+            <div class="nav-actions">
+                 <div class="user-profile-dropdown" id="user-profile-container">
+                     <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                     <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                     <div class="dropdown-menu" id="user-dropdown-menu">
+                         <a href="editar_perfil.html">Mi Perfil</a>
+                         <a href="preferidos.html">Mis Preferidos</a>
+                         <div class="dropdown-divider"></div>
+                         <a href="#" id="logout-btn">Cerrar Sesión</a>
+                     </div>
+                 </div>
+            </div>
+            </nav>
+    </header>
+
+    <div class="reviews-page-layout">
+
+        <main class="reviews-content">
+            <a href="ver-detalles.html" class="back-link">← Volver a los detalles</a>
+            
+            <h1 class="page-title">Reseñas de la Plaza Mayor de Lima</h1>
+
+            <section class="ratings-summary" id="ratings-filter-container">
+                <div class="rating-row filter-active" data-filter="all"> <span>Mostrar todas</span>
+                </div>
+                <div class="rating-row" data-filter="5">
+                    <span>5 estrellas</span>
+                    <div class="rating-bar"><div class="bar-fill" style="width: 70%;"></div></div>
+                    <span>256</span>
+                </div>
+                <div class="rating-row" data-filter="4">
+                    <span>4 estrellas</span>
+                    <div class="rating-bar"><div class="bar-fill" style="width: 15%;"></div></div>
+                    <span>51</span>
+                </div>
+                <div class="rating-row" data-filter="3">
+                    <span>3 estrellas</span>
+                    <div class="rating-bar"><div class="bar-fill" style="width: 8%;"></div></div>
+                    <span>17</span>
+                </div>
+                <div class="rating-row" data-filter="2">
+                    <span>2 estrellas</span>
+                    <div class="rating-bar"><div class="bar-fill" style="width: 4%;"></div></div>
+                    <span>10</span>
+                </div>
+                <div class="rating-row" data-filter="1">
+                    <span>1 estrella</span>
+                    <div class="rating-bar"><div class="bar-fill" style="width: 2%;"></div></div>
+                    <span>8</span>
+                </div>
+            </section>
+
+            <div class="reviews-list">
+                <article class="review-card" data-rating="5">
+                    <div class="user-info">
+                        <img src="assets/icons/Profile.png" alt="Foto de Sergio V." class="user-avatar">
+                        <span class="user-name">Sergio V.</span>
+                        <span class="user-location">Surco</span>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-stars">★★★★★</div>
+                        <p>Me encantó la experiencia con Chaski Tours. La información es clara, el diseño intuitivo y las recomendaciones realmente auténticas.</p>
+                    </div>
+                </article>
+
+                <article class="review-card" data-rating="4">
+                    <div class="user-info">
+                         <img src="assets/icons/Profile.png" alt="Foto de Ana" class="user-avatar">
+                         <span class="user-name">Ana L.</span>
+                         <span class="user-location">Miraflores</span>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-stars">★★★★☆</div>
+                        <p>Muy bonito, aunque había demasiada gente un fin de semana. Recomiendo ir en días de semana para una experiencia más tranquila.</p>
+                    </div>
+                </article>
+
+                <article class="review-card" data-rating="5">
+                    <div class="user-info">
+                        <img src="assets/icons/Profile.png" alt="Foto de Juan" class="user-avatar">
+                        <span class="user-name">Juan P.</span>
+                        <span class="user-location">San Borja</span>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-stars">★★★★★</div>
+                        <p>Un lugar icónico y lleno de historia. Es el corazón de Lima y se nota. Perfecto para tomar fotos y caminar.</p>
+                    </div>
+                </article>
+                 <article class="review-card" data-rating="3">
+                    <div class="user-info">
+                         <img src="assets/icons/Profile.png" alt="Foto de Carlos" class="user-avatar">
+                         <span class="user-name">Carlos M.</span>
+                         <span class="user-location">La Molina</span>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-stars">★★★☆☆</div>
+                        <p>Es un lugar histórico importante, pero necesita un poco más de limpieza en los alrededores. Aun así, vale la pena la visita.</p>
+                    </div>
+                </article>
+            </div>
+
+            <nav class="pagination">
+                  <a href="#" class="page-number active">1</a>
+                  <a href="#" class="page-number">2</a>
+                  <a href="#" class="page-number">3</a>
+            </nav>
+        </main>
+
+        <aside class="featured-image">
+            <img src="assets/img/plaza-mayor-lima.jpg" alt="Vista de la Plaza Mayor de Lima">
+        </aside>
+        
     </div>
+</div>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>

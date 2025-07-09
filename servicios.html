@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - Chaski Tours</title>
+    <link rel="stylesheet" href="css/ebl-style.css" />
+</head>
+<body>
+<div class="page-container">
+
+    <header class="header" id="main-header">
+        <div class="top-banner" id="top-banner">
+            <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+            <button class="close-banner-btn" aria-label="Cerrar">×</button>
+        </div>
+        <nav class="main-nav">
+            <a href="home.html" class="logo">
+                <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                <span class="logo-text">Chaski<br>Tours</span>
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Inicio</a>
+                <a href="listado_lugares.html">Lugares</a>
+                <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+            </div>
+            <div class="nav-actions">
+                <div class="user-profile-dropdown" id="user-profile-container">
+                    <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                    <div class="dropdown-menu" id="user-dropdown-menu">
+                        <a href="editar_perfil.html">Mi Perfil</a>
+                        <a href="preferidos.html">Mis Preferidos</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" id="logout-btn">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="page-header">
+            <h1>Nuestros Servicios</h1>
+            <p>Descubre cómo Chaski Tours te ayuda a planificar la aventura perfecta en Lima.</p>
+        </section>
+    
+        <div class="servicios-container">
+    
+            <article class="servicio-item" id="guia">
+                <div class="servicio-imagen">
+                    <img src="assets/img/ArteyCultura.jpg" alt="Persona revisando un mapa de la ciudad">
+                </div>
+                <div class="servicio-texto">
+                    <h2>Guía Coordinada</h2>
+                    <p>Accede a información verificada, datos curiosos, precios actualizados y todo lo necesario para que te sientas seguro y bien informado en cada paso de tu visita. Nuestras guías son curadas por expertos locales.</p>
+                    <a href="sitios-destacados.html" class="btn">Explorar Lugares</a>
+                </div>
+            </article>
+    
+            <article class="servicio-item servicio-item--reverse" id="itinerario">
+                <div class="servicio-imagen">
+                    <img src="assets/img/circuito_agua.png" alt="Planificación de un itinerario de viaje">
+                </div>
+                <div class="servicio-texto">
+                    <h2>Itinerario Personalizado</h2>
+                    <p>Guarda tus lugares favoritos, organízalos por día y recibe sugerencias de rutas optimizadas para aprovechar al máximo tu tiempo en la ciudad. Tu viaje, a tu propio ritmo.</p>
+                    <a href="preferidos.html" class="btn">Empezar a Planificar</a>
+                </div>
+            </article>
+    
+            <article class="servicio-item" id="entradas">
+                <div class="servicio-imagen">
+                    <img src="assets/img/Hero_CircuitoMagico.jpg" alt="Entradas a un evento turístico">
+                </div>
+                <div class="servicio-texto">
+                    <h2>Compra de Entradas</h2>
+                    <p>Evita las colas y asegura tu ingreso a los lugares más populares de Lima. Gestiona y accede a todos tus tickets de forma digital desde nuestra plataforma, para que solo te preocupes por disfrutar.</p>
+                    <a href="listado_lugares.html" class="btn">Ver Lugares con Tickets</a>
+                </div>
+            </article>
+    
+        </div>
+    </main>
+    
+    </div>
+<script src="js/main.js" defer></script>
+</body>
+</html>
