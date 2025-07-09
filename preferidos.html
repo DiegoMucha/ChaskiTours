@@ -1,129 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lugares Favoritos</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/rgf-style.css" />
-  </head>
-  <body>
-    <header class="header">
-        <div class="top-banner">
-             <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
-        </div>
-        <nav class="main-nav">
-             <a href="home.html" class="logo">
-                 <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
-                 <span class="logo-text">Chaski<br>Tours</span>
-             </a>
-             <div class="nav-links">
-                 <a href="home.html">Inicio</a>
-                 <a href="listado_lugares.html" class="active">Lugares</a>
-                 <a href="preguntas_freq.html">Preguntas Frecuentes</a>
-             </div>
-             <div class="nav-actions">
-                <div class="user-profile-dropdown">
-                    <a href="inicio-sesion.html">
-                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
-                    </a>
-                    <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
-                </div>
+    <title>Chaski Tours - Mis Preferidos</title>
+    
+    <link rel="stylesheet" href="css/ebl-style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Marcellus+SC&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header" id="main-header">
+            <div class="top-banner" id="top-banner">
+                <p>✨Descubre los encantos de Lima <a href="index.html">Más información</a></p>
+                <button class="close-banner-btn" aria-label="Cerrar">×</button>
             </div>
-        </nav>
-    </header>
-
-    <div class="favoritos">
-      <div class="contenido">
-        <div class="titulo">
-          <h3 class="txt_lugares">Lugares turísticos preferidos</h3>
-          <img class="corazon" src="assets/img/corazon.png" alt="corazon" />
-        </div>
-        <div class="lugares_fav">
-          <div class="cuadrado">
-            <img class="img_lugar" src="assets/img/plaza-de-armas.jpg" alt="" />
-            <div class="txt_fav">
-              <img class="img_fav" src="assets/img/corazon.png" alt="" />
-              <p class="txt_pre">Plaza de armas</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="Compartir" />
-            </div>
-          </div>
-          <div class="cuadrado">
-            <img
-              class="img_lugar"
-              src="assets/img/circuito-magico-del-agua.jpg"
-              alt=""
-            />
-            <div class="txt_fav">
-              <img class="img_fav" src="assets/img/corazon.png" alt="" />
-              <p class="txt_pre">Circuito mágico del agua</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="" />
-            </div>
-          </div>
-          <div class="cuadrado">
-            <img class="img_lugar" src="assets/img/larcomar.jpg" alt="" />
-            <div class="txt_fav">
-              <img class="img_fav" src="assets/img/corazon.png" alt="" />
-              <p class="txt_pre">Larcomar</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="" />
-            </div>
-          </div>
-          <div class="cuadrado">
-            <img
-              class="img_lugar"
-              src="assets/img/puente_suspiros.jpg"
-              alt=""
-            />
-            <div class="txt_fav">
-              <img class="img_fav" src="assets/img/corazon.png" alt="" />
-              <p class="txt_pre">Puente de los suspiros</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fondo">
-        <img
-          class="fondo_imagen_fav"
-          src="assets/img/fondo_favoritos2.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-    <div id="compartir-popup" class="popup oculto">
-  <div class="popup-content">
-    <h3>Compartir lugar</h3>
-    <p id="lugares-seleccionados"></p>
-    <input type="email" id="email" placeholder="Correo del destinatario" />
-    <div class="popup-buttons">
-      <button id="enviar-compartir">Compartir</button>
-      <button id="cancelar-compartir">Cancelar</button>
-    </div>
-  </div>
-</div>
-    <footer class="footer">
-        <div class="footer-content content-wrapper">
-            <div class="footer-logo">
+            <nav class="main-nav">
                 <a href="home.html" class="logo">
                     <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                    <span class="logo-text">Chaski<br>Tours</span>
                 </a>
-                <p>&copy; 2025 Chaski Tours. Todos los derechos reservados.</p>
+                <div class="nav-links">
+                    <a href="home.html">Inicio</a>
+                    <a href="listado_lugares.html">Lugares</a>
+                    <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="notificaciones-recibidas.html">
+                        <img src="assets/icons/signpost.svg" alt="Mis Preferidos" class="action-icon">
+                    </a>
+                    <div class="user-profile-dropdown" id="user-profile-container">
+                        <img src="assets/icons/ellipse-4.png" alt="Perfil de Usuario" class="user-avatar">
+                        <img src="assets/icons/chevron-down.png" alt="Desplegar menú" class="dropdown-arrow">
+                        <div class="dropdown-menu" id="user-dropdown-menu">
+                            <a href="editar_perfil.html">Mi Perfil</a>
+                            <a href="preferidos.html" class="active">Mis Preferidos</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logout-btn">Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="content-wrapper">
+            <div class="page-header">
+                <h1>Mis Lugares Preferidos</h1>
+                <p>Aquí encontrarás todos los destinos que has guardado para tu próxima aventura en Lima.</p>
             </div>
-            <div class="footer-links">
-                <h4>Navegación</h4>
-                <a href="home.html">Inicio</a>
-                <a href="">Nosotros</a>
-                <a href="sitios-destacados.html">Lugares</a>
+
+            <div id="favoritos-grid" class="grid-container">
+                </div>
+
+            <div id="no-favoritos-mensaje" style="display: none; text-align: center; padding: 50px 20px;">
+                <img src="assets/icons/signpost.svg" alt="Explorar" style="width: 80px; margin-bottom: 20px; filter: opacity(0.5);">
+                <h2 style="font-size: 28px; font-weight: 700;">Aún no has guardado ningún lugar.</h2>
+                <p style="font-size: 18px; color: var(--text-muted); margin-top: 10px; margin-bottom: 30px;">
+                    ¡Usa el ícono ❤️ para guardar tus lugares preferidos aquí!
+                </p>
+                <a href="listado_lugares.html" class="btn" style="margin-top: 10px;">Explorar Lugares</a>
             </div>
-            <div class="footer-links">
-                <h4>Soporte</h4>
-                <a href="preguntas_freq.html">Preguntas Frecuentes</a>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
+        </main>
+
+        <div id="compartir-popup" class="popup oculto">
+            <div class="popup-content">
+                <h3>Compartir lugar</h3>
+                <p id="lugares-seleccionados"></p>
+                <input type="email" id="email" placeholder="Correo del destinatario" />
+                <div class="popup-buttons">
+                    <button id="enviar-compartir" class="btn">Compartir</button>
+                    <button id="cancelar-compartir" class="btn">Cancelar</button>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <footer class="footer">
+            <div class="footer-content content-wrapper">
+                <div class="footer-logo">
+                    <a href="home.html" class="logo">
+                        <img src="assets/icons/chaski-isotipo.png" alt="Logo Chaski Tours" class="logo-img">
+                    </a>
+                    <p>&copy; 2025 Chaski Tours. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <a href="home.html">Inicio</a>
+                    <a href="">Nosotros</a>
+                    <a href="sitios-destacados.html">Lugares</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Soporte</h4>
+                    <a href="preguntas_freq.html">Preguntas Frecuentes</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('favoritos-grid');
+            const noFavoritesMessage = document.getElementById('no-favoritos-mensaje');
+            const favorites = JSON.parse(localStorage.getItem('userFavorites')) || [];
+
+            if (!grid || !noFavoritesMessage) return;
+
+            if (favorites.length === 0) {
+                noFavoritesMessage.style.display = 'block';
+                grid.style.display = 'none';
+            } else {
+                noFavoritesMessage.style.display = 'none';
+                grid.style.display = 'grid';
+                grid.innerHTML = ''; 
+
+                favorites.forEach(place => {
+                    const cardHTML = `
+                        <div class="site-card">
+                            <img src="${place.image}" alt="Imagen de ${place.name}" class="card-image">
+                            <div class="card-content">
+                                <h3 class="card-title">${place.name}</h3>
+                                <div class="card-footer">
+                                    <div class="rating">
+                                        <img src="assets/icons/shape.svg" alt="Rating" class="rating-icon">
+                                        <span>${place.rating}</span>
+                                    </div>
+                                    <a href="ver-detalles.html" class="btn">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += cardHTML;
+                });
+            }
+        });
+    </script>
+    
     <script src="js/main.js" defer></script>
-  </body>
+</body>
 </html>
