@@ -45,7 +45,7 @@
             <div class="txt_fav">
               <img class="img_fav" src="assets/img/corazon.png" alt="" />
               <p class="txt_pre">Plaza de armas</p>
-              <img class="compartir" src="assets/img/compartir.png" alt="" />
+              <img class="compartir" src="assets/img/compartir.png" alt="Compartir" />
             </div>
           </div>
           <div class="cuadrado">
@@ -90,6 +90,17 @@
         />
       </div>
     </div>
+    <div id="compartir-popup" class="popup oculto">
+  <div class="popup-content">
+    <h3>Compartir lugar</h3>
+    <p id="lugares-seleccionados"></p>
+    <input type="email" id="email" placeholder="Correo del destinatario" />
+    <div class="popup-buttons">
+      <button id="enviar-compartir">Compartir</button>
+      <button id="cancelar-compartir">Cancelar</button>
+    </div>
+  </div>
+</div>
     <footer class="footer">
         <div class="footer-content content-wrapper">
             <div class="footer-logo">
@@ -113,5 +124,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
