@@ -220,8 +220,23 @@ function actualizarBotones(numPaginas) {
 
 // Escuchar radios
 document.addEventListener("DOMContentLoaded", () => {
-  renderizarLugaresFiltrados(lugares, paginaActual);
-  actualizarBotones(Math.ceil(lugares.length / lugaresPorPagina));
+  // Leer parámetro de la URL para filtro por categoría
+  const params = new URLSearchParams(window.location.search);
+  const categoriaURL = params.get('categoria');
+
+  if (categoriaURL) {
+    filtroCategoria = categoriaURL;
+    listaFiltrada = lugares.filter(lugar => lugar.categoria === filtroCategoria);
+    renderizarLugaresFiltrados(listaFiltrada, paginaActual);
+    actualizarBotones(Math.ceil(listaFiltrada.length / lugaresPorPagina));
+    // Marcar el radio correspondiente si existe
+    document.querySelectorAll('input[name="categoria"]').forEach(input => {
+      if (input.value === filtroCategoria) input.checked = true;
+    });
+  } else {
+    renderizarLugaresFiltrados(lugares, paginaActual);
+    actualizarBotones(Math.ceil(lugares.length / lugaresPorPagina));
+  }
 
   // Escucha selección de categoría
   document.querySelectorAll('input[name="categoria"]').forEach(input => {
