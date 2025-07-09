@@ -1150,3 +1150,81 @@
         font-size: 28px;
     }
 }
+
+/* ==========================================================================
+   9. ESTILOS PARA POPUP DE COMPARTIR
+   ========================================================================== */
+
+   .popup {
+    position: fixed; /* Se posiciona sobre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Asegura que esté por encima de todo */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* La clase 'oculto' es la que esconde la ventana */
+  .popup.oculto {
+    opacity: 0;
+    pointer-events: none; /* Evita que se pueda hacer clic en ella cuando está oculta */
+  }
+  
+  .popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+  }
+  
+  .popup-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+  }
+  
+  .popup-content p {
+      margin-bottom: 20px;
+      color: var(--text-muted);
+  }
+  
+  .popup-content input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--grey-border);
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Reutilizamos la clase .btn que ya tienes */
+  .popup-buttons button {
+      flex-grow: 1;
+  }
+  
+  /* Estilo para el botón de cancelar */
+  .popup-buttons button:last-child {
+      background-color: #f0f0f0;
+      color: var(--text-dark);
+      border: 1px solid var(--grey-border);
+  }
+  .popup-buttons button:last-child:hover {
+      background-color: #e0e0e0;
+  }
